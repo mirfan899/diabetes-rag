@@ -1,0 +1,334 @@
+<div class="ada-prescription-container">
+    <div class="content-wrapper">
+        <div class="form-header">
+            <h1>ADA-Compliant Medication Prescription</h1>
+            <p class="form-subtitle">Based on ADA 2024 Standards for Diabetes Care</p>
+        </div>
+
+        <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()" class="prescription-form">
+
+            <!-- Patient Demographics Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Patient Demographics
+                </h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" formControlName="firstName" class="form-control"
+                            [class.error]="getFieldError('firstName')">
+                        <div class="error-message" *ngIf="getFieldError('firstName')">
+                            {{ getFieldError('firstName') }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" formControlName="lastName" class="form-control"
+                            [class.error]="getFieldError('lastName')">
+                        <div class="error-message" *ngIf="getFieldError('lastName')">
+                            {{ getFieldError('lastName') }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth *</label>
+                        <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control"
+                            [class.error]="getFieldError('dateOfBirth')">
+                        <div class="error-message" *ngIf="getFieldError('dateOfBirth')">
+                            {{ getFieldError('dateOfBirth') }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" formControlName="gender" class="form-control"
+                            [class.error]="getFieldError('gender')">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" *ngIf="getFieldError('gender')">
+                            {{ getFieldError('gender') }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="weight">Weight (kg) *</label>
+                        <input type="number" id="weight" formControlName="weight" class="form-control"
+                            [class.error]="getFieldError('weight')" min="1" step="0.1">
+                        <div class="error-message" *ngIf="getFieldError('weight')">
+                            {{ getFieldError('weight') }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">Height (cm) *</label>
+                        <input type="number" id="height" formControlName="height" class="form-control"
+                            [class.error]="getFieldError('height')" min="1" step="0.1">
+                        <div class="error-message" *ngIf="getFieldError('height')">
+                            {{ getFieldError('height') }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>BMI</label>
+                        <div class="bmi-display" [class]="getBmiCategory()">
+                            {{ bmi > 0 ? bmi.toFixed(1) : '--' }}
+                            <span class="bmi-category">{{ getBmiCategoryText() }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical History Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-stethoscope"></i>
+                    Medical History
+                </h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="diabetesType">Diabetes Type *</label>
+                        <select id="diabetesType" formControlName="diabetesType" class="form-control"
+                            [class.error]="getFieldError('diabetesType')">
+                            <option value="">Select Diabetes Type</option>
+                            <option value="type1">Type 1 Diabetes</option>
+                            <option value="type2">Type 2 Diabetes</option>
+                            <option value="gestational">Gestational Diabetes</option>
+                            <option value="prediabetes">Prediabetes</option>
+                            <option value="none">No Diabetes</option>
+                        </select>
+                        <div class="error-message" *ngIf="getFieldError('diabetesType')">
+                            {{ getFieldError('diabetesType') }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregnancy Status - Only for Female Patients -->
+                <div class="form-row" *ngIf="prescriptionForm.get('gender')?.value === 'female'">
+                    <div class="form-group">
+                        <label for="pregnancyStatus">Pregnancy Status</label>
+                        <select id="pregnancyStatus" formControlName="pregnancyStatus" class="form-control">
+                            <option value="">Select Status</option>
+                            <option value="not-pregnant">Not Pregnant</option>
+                            <option value="pregnant">Pregnant</option>
+                            <option value="planning">Planning Pregnancy</option>
+                            <option value="breastfeeding">Breastfeeding</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" *ngIf="prescriptionForm.get('pregnancyStatus')?.value === 'pregnant'">
+                        <label for="gestationalAge">Gestational Age (weeks)</label>
+                        <input type="number" id="gestationalAge" formControlName="gestationalAge" class="form-control"
+                            min="1" max="42">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Comorbidities (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="hypertension"> Hypertension
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="cardiovascular-disease"> Cardiovascular Disease
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="kidney-disease"> Chronic Kidney Disease
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="liver-disease"> Liver Disease
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="thyroid-disorder"> Thyroid Disorder
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="pcos"> PCOS
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="depression"> Depression
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="sleep-apnea"> Sleep Apnea
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lab Values Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-vial"></i>
+                    Laboratory Values
+                </h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hba1c">HbA1c (%)</label>
+                        <input type="number" id="hba1c" formControlName="hba1c" class="form-control" min="0" max="20"
+                            step="0.1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bloodGlucose">Fasting Blood Glucose (mg/dL)</label>
+                        <input type="number" id="bloodGlucose" formControlName="bloodGlucose" class="form-control"
+                            min="0" step="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kidneyFunction">eGFR (mL/min/1.73m²)</label>
+                        <input type="number" id="kidneyFunction" formControlName="kidneyFunction" class="form-control"
+                            min="0" step="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="liverFunction">Liver Function Status</label>
+                        <select id="liverFunction" formControlName="liverFunction" class="form-control">
+                            <option value="">Select Status</option>
+                            <option value="normal">Normal</option>
+                            <option value="mild-impairment">Mild Impairment</option>
+                            <option value="moderate-impairment">Moderate Impairment</option>
+                            <option value="severe-impairment">Severe Impairment</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medication Selection Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-pills"></i>
+                    Medication Selection
+                </h2>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="selectedMedication">Select Medication *</label>
+                        <select id="selectedMedication" formControlName="selectedMedication" class="form-control"
+                            [class.error]="getFieldError('selectedMedication')" (change)="filterMedications()">
+                            <option value="">Select a medication</option>
+                            <option *ngFor="let medication of filteredMedications" [value]="medication.name"
+                                [disabled]="!isMedicationSuitable(medication)">
+                                {{ medication.name }} ({{ medication.category }})
+                                <span *ngIf="!isMedicationSuitable(medication)"> - Not Suitable</span>
+                            </option>
+                        </select>
+                        <div class="error-message" *ngIf="getFieldError('selectedMedication')">
+                            {{ getFieldError('selectedMedication') }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medication Details -->
+                <div class="medication-details" *ngIf="getSelectedMedication()">
+                    <h3>{{ getSelectedMedication()?.name }}</h3>
+                    <div class="medication-info">
+                        <div class="info-section">
+                            <h4>Indications:</h4>
+                            <ul>
+                                <li *ngFor="let condition of getSelectedMedication()?.conditions">{{ condition }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h4>Contraindications:</h4>
+                            <ul>
+                                <li *ngFor="let contraindication of getSelectedMedication()?.contraindications">{{
+                                    contraindication }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row" *ngIf="getSelectedMedication()">
+                    <div class="form-group full-width">
+                        <label for="selectedDose">Dosage *</label>
+                        <select id="selectedDose" formControlName="selectedDose" class="form-control"
+                            [class.error]="getFieldError('selectedDose')">
+                            <option value="">Select dosage</option>
+                            <option *ngFor="let dose of getSelectedMedication()?.doses" [value]="dose">
+                                {{ dose }}
+                            </option>
+                        </select>
+                        <div class="error-message" *ngIf="getFieldError('selectedDose')">
+                            {{ getFieldError('selectedDose') }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="prescriptionReason">Prescription Reason *</label>
+                        <textarea id="prescriptionReason" formControlName="prescriptionReason" class="form-control"
+                            [class.error]="getFieldError('prescriptionReason')" rows="3"
+                            placeholder="Explain the clinical rationale for prescribing this medication..."></textarea>
+                        <div class="error-message" *ngIf="getFieldError('prescriptionReason')">
+                            {{ getFieldError('prescriptionReason') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monitoring Plan Section -->
+            <div class="form-section" *ngIf="getSelectedMedication()">
+                <h2 class="section-title">
+                    <i class="fas fa-clipboard-check"></i>
+                    Required Monitoring
+                </h2>
+
+                <div class="monitoring-plan">
+                    <h4>Based on ADA guidelines, the following monitoring is required:</h4>
+                    <ul class="monitoring-list">
+                        <li *ngFor="let test of getSelectedMedication()?.monitoring">
+                            <i class="fas fa-check-circle"></i>
+                            {{ test }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Notes Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-sticky-note"></i>
+                    Additional Notes
+                </h2>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="additionalNotes">Additional Clinical Notes</label>
+                        <textarea id="additionalNotes" formControlName="additionalNotes" class="form-control" rows="4"
+                            placeholder="Any additional clinical considerations, patient education notes, or follow-up instructions..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" [disabled]="isSubmitting || !prescriptionForm.valid">
+                    <i class="fas fa-paper-plane" *ngIf="!isSubmitting"></i>
+                    <i class="fas fa-spinner fa-spin" *ngIf="isSubmitting"></i>
+                    {{ isSubmitting ? 'Submitting...' : 'Submit Prescription' }}
+                </button>
+
+                <button type="button" class="btn btn-secondary" (click)="prescriptionForm.reset()">
+                    <i class="fas fa-undo"></i>
+                    Reset Form
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

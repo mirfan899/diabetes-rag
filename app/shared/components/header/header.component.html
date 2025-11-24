@@ -1,0 +1,127 @@
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <button class="hamburger-menu" (click)="toggleSidebar()" aria-label="Toggle sidebar menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="logo-section">
+        <div class="logo">
+          <img src="assets/sugar-blood-level.png" alt="Sugar Blood Level" class="logo-img"
+            style="height:32px;width:32px;vertical-align:middle;" />
+          <span class="logo-text">GlucoPlanner</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="Search patients, doctors, appointments..." class="search-input">
+      </div>
+
+      <div class="notification-badge" (click)="toggleNotifications($event)">
+        <i class="fas fa-bell"></i>
+        <span class="badge" *ngIf="appointmentCount > 0">{{ appointmentCount }}</span>
+
+        <!-- Notifications Dropdown -->
+        <div class="notifications-dropdown" [class.show]="showNotifications" *ngIf="showNotifications">
+          <div class="notifications-header">
+            <h3>Notifications</h3>
+            <span class="notification-count">{{ appointmentCount }} new</span>
+          </div>
+
+          <div class="notifications-list" *ngIf="upcomingAppointments$ | async as appointments">
+            <div *ngFor="let appointment of appointments" class="notification-item"
+              (click)="navigateToAppointment(appointment.id)">
+              <div class="notification-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="notification-content">
+                <div class="notification-title">
+                  Upcoming Appointment
+                </div>
+                <div class="notification-message">
+                  {{ appointment.patientName }} - {{ formatAppointmentTime(appointment.date) }}
+                </div>
+                <div class="notification-time">
+                  {{ formatAppointmentDate(appointment.date) }}
+                </div>
+              </div>
+              <div class="notification-arrow">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+
+            <div class="no-notifications" *ngIf="appointments.length === 0">
+              <div class="no-notifications-icon">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <p>No new notifications</p>
+            </div>
+          </div>
+
+          <div class="notifications-footer">
+            <a href="/appointments" class="view-all-link">
+              View All Appointments
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-profile" (click)="toggleUserMenu($event)">
+        <app-avatar [firstName]="getFirstName(currentDoctor?.name)" [lastName]="getLastName(currentDoctor?.name)"
+          [imageUrl]="currentDoctor?.avatarUrl" [size]="32" class="profile-avatar">
+        </app-avatar>
+        <span class="profile-name">{{ currentDoctor?.name || 'Doctor' }}</span>
+        <i class="fas fa-chevron-down" [class.rotated]="showUserMenu"></i>
+        <div class="user-menu" [class.show]="showUserMenu">
+          <!-- Doctor Profile Section -->
+          <div class="profile-section" *ngIf="currentDoctor">
+            <div class="profile-header">
+              <div class="profile-avatar-large">
+                <app-avatar [firstName]="getFirstName(currentDoctor?.name)"
+                  [lastName]="getLastName(currentDoctor?.name)" [imageUrl]="currentDoctor?.avatarUrl" [size]="48"
+                  class="avatar-component">
+                </app-avatar>
+              </div>
+              <div class="profile-info">
+                <h4 class="profile-name-large">{{ currentDoctor?.name || 'Doctor' }}</h4>
+                <p class="profile-role">{{ currentDoctor?.specialization || 'General Medicine' }}</p>
+                <p class="profile-department">{{ currentDoctor?.department || 'Medical Department' }}</p>
+              </div>
+            </div>
+
+            <div class="profile-details">
+              <div class="detail-row" *ngIf="currentDoctor?.experience">
+                <i class="fas fa-briefcase"></i>
+                <span>{{ currentDoctor.experience }} years experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-divider"></div>
+
+          <!-- Menu Actions -->
+          <div class="menu-item" (click)="navigateToProfile()">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </div>
+          <div class="menu-item" (click)="navigateToSettings()">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </div>
+          <div class="menu-item" (click)="navigateToAppointments()">
+            <i class="fas fa-calendar-alt"></i>
+            <span>My Appointments</span>
+          </div>
+          <div class="menu-divider"></div>
+          <div class="menu-item logout" (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

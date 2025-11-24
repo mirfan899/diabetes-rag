@@ -1,0 +1,194 @@
+<div class="patient-form-page">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <button class="btn btn-outline" (click)="cancel()">
+          <i class="fas fa-arrow-left"></i>
+          Back
+        </button>
+        <h1 class="page-title">
+          <i class="fas fa-user"></i>
+          {{ isEditMode ? 'Edit Patient' : 'Add New Patient' }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit()" #patientFormRef="ngForm">
+        <!-- Error Message Display -->
+        <div class="error-message" *ngIf="errorMessage">
+          <i class="fas fa-exclamation-triangle"></i>
+          {{ errorMessage }}
+        </div>
+
+        <!-- Left Column -->
+        <div class="form-column">
+          <div class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-user"></i>
+              Personal Information
+            </h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" [(ngModel)]="patientForm.firstName" name="firstName" required
+                  class="form-input" placeholder="Enter first name">
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" [(ngModel)]="patientForm.lastName" name="lastName" required
+                  class="form-input" placeholder="Enter last name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" [(ngModel)]="patientForm.email" name="email" required class="form-input"
+                  placeholder="Enter email address">
+              </div>
+
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" id="phoneNumber" [(ngModel)]="patientForm.phoneNumber" name="phoneNumber" required
+                  class="form-input" placeholder="Enter phone number">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dateOfBirth">Date of Birth *</label>
+                <input type="date" id="dateOfBirth" [(ngModel)]="patientForm.dateOfBirth" name="dateOfBirth" required
+                  class="form-input" [class.error]="!patientForm.dateOfBirth && formSubmitted">
+                <div class="error-message" *ngIf="!patientForm.dateOfBirth && formSubmitted">
+                  Date of birth is required
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" [(ngModel)]="patientForm.gender" name="gender" class="form-select">
+                  <option value="">Select gender</option>
+                  <option *ngFor="let gender of genders" [value]="gender">
+                    {{ gender | titlecase }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea id="address" [(ngModel)]="patientForm.address" name="address"
+                placeholder="Enter full address..." rows="3" class="form-textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Status *</label>
+              <div class="radio-group">
+                <div class="radio-option">
+                  <input type="radio" id="statusActive" name="isActive" [value]="true"
+                    [(ngModel)]="patientForm.isActive" class="radio-input">
+                  <label for="statusActive" class="radio-label">
+                    <span class="radio-custom"></span>
+                    Active
+                  </label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="statusInactive" name="isActive" [value]="false"
+                    [(ngModel)]="patientForm.isActive" class="radio-input">
+                  <label for="statusInactive" class="radio-label">
+                    <span class="radio-custom"></span>
+                    Inactive
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="form-column">
+          <div class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-heartbeat"></i>
+              Medical Information
+            </h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="hospitalNo">Hospital Number</label>
+                <input type="text" id="hospitalNo" [(ngModel)]="patientForm.hospitalNo" name="hospitalNo"
+                  class="form-input" placeholder="Enter hospital number">
+              </div>
+
+              <div class="form-group">
+                <label for="bloodType">Blood Type</label>
+                <select id="bloodType" [(ngModel)]="patientForm.bloodType" name="bloodType" class="form-select">
+                  <option value="">Select blood type</option>
+                  <option *ngFor="let bloodType of bloodTypes" [value]="bloodType">
+                    {{ bloodType }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="allergies">Allergies</label>
+              <textarea id="allergies" [(ngModel)]="patientForm.allergies" name="allergies"
+                placeholder="List any known allergies..." rows="3" class="form-textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="medicalHistory">Medical History</label>
+              <textarea id="medicalHistory" [(ngModel)]="patientForm.medicalHistory" name="medicalHistory"
+                placeholder="Relevant medical history, surgeries, conditions..." rows="4"
+                class="form-textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="currentMedications">Current Medications</label>
+              <textarea id="currentMedications" [(ngModel)]="patientForm.currentMedications" name="currentMedications"
+                placeholder="List current medications and dosages..." rows="4" class="form-textarea"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-phone"></i>
+              Emergency Contact
+            </h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emergencyContactName">Emergency Contact Name</label>
+                <input type="text" id="emergencyContactName" [(ngModel)]="patientForm.emergencyContactName"
+                  name="emergencyContactName" class="form-input" placeholder="Enter emergency contact name">
+              </div>
+
+              <div class="form-group">
+                <label for="emergencyContactPhone">Emergency Contact Phone</label>
+                <input type="tel" id="emergencyContactPhone" [(ngModel)]="patientForm.emergencyContactPhone"
+                  name="emergencyContactPhone" class="form-input" placeholder="Enter emergency contact phone">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" (click)="cancel()">
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="!patientFormRef.valid || isLoading">
+            <i class="fas fa-spinner fa-spin" *ngIf="isLoading"></i>
+            <i class="fas fa-save" *ngIf="!isLoading"></i>
+            {{ isLoading ? 'Saving...' : (isEditMode ? 'Update Patient' : 'Add Patient') }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

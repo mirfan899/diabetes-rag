@@ -1,0 +1,147 @@
+<div class="dashboard">
+  <div class="dashboard-header">
+    <div class="welcome-section">
+      <h1 class="page-title">Dashboard</h1>
+      <p class="page-subtitle">Welcome back! Here's what's happening at your clinic today.</p>
+    </div>
+    <div class="quick-actions">
+      <button class="btn btn-primary" routerLink="/appointments/new">
+        <i class="fas fa-plus"></i>
+        New Appointment
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="stats-grid" *ngIf="dashboardStats$ | async as stats">
+    <div class="stat-card">
+      <div class="stat-icon bg-primary">
+        <i class="fas fa-calendar-check"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">{{ stats.todayAppointments }}</h3>
+        <p class="stat-label">Today's Appointments</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon bg-secondary">
+        <i class="fas fa-user-md"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">{{ stats.totalDoctors }}</h3>
+        <p class="stat-label">Active Doctors</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon bg-success">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">{{ stats.totalPatients }}</h3>
+        <p class="stat-label">Total Patients</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon bg-warning">
+        <i class="fas fa-clock"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">{{ stats.upcomingAppointments }}</h3>
+        <p class="stat-label">Upcoming Appointments</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <!-- Today's Appointments -->
+    <div class="content-section">
+      <div class="section-header">
+        <h2 class="section-title">Today's Appointments</h2>
+        <a routerLink="/appointments" class="section-link">
+          View All
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="appointments-list" *ngIf="todayAppointments$ | async as appointments">
+        <div *ngFor="let appointment of appointments; trackBy: trackByAppointmentId" class="appointment-card hover-lift"
+          (click)="openPrescriptionForm(appointment.patient.id, appointment.id)">
+          <div class="appointment-time">
+            <div class="time">{{ appointment.date | date:'shortTime' }}</div>
+            <div class="duration">{{ appointment.duration }}min</div>
+          </div>
+
+          <div class="appointment-info">
+            <div class="patient-info">
+              <app-avatar [firstName]="appointment.patient.user.firstName"
+                [lastName]="appointment.patient.user.lastName" [size]="40" class="patient-avatar no-box">
+              </app-avatar>
+              <div class="patient-details">
+                <h4 class="patient-name">{{ appointment.patient.user.firstName }} {{ appointment.patient.user.lastName
+                  }}</h4>
+                <p class="appointment-type">{{ appointment.type | titlecase }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-status">
+            <span class="status-badge" [ngClass]="{
+                'badge-primary': appointment.status === 'SCHEDULED',
+                'badge-success': appointment.status === 'COMPLETED',
+                'badge-warning': appointment.status === 'IN_PROGRESS',
+                'badge-error': appointment.status === 'CANCELLED'
+              }">
+              {{ appointment.status | titlecase }}
+            </span>
+          </div>
+        </div>
+
+        <div *ngIf="appointments.length === 0" class="empty-state">
+          <i class="fas fa-calendar-times"></i>
+          <h3>No appointments today</h3>
+          <p>Looks like it's a quiet day at the clinic.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Patients -->
+    <div class="content-section">
+      <div class="section-header">
+        <h2 class="section-title">Recent Patients</h2>
+        <a routerLink="/patients" class="section-link">
+          View All
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="patients-grid" *ngIf="recentPatients$ | async as patients">
+        <div *ngFor="let patient of patients.slice(0, 6); trackBy: trackByPatientId" class="patient-card hover-lift">
+          <div class="patient-header">
+            <app-avatar [firstName]="patient.user.firstName" [lastName]="patient.user.lastName" [size]="48"
+              class="patient-image">
+            </app-avatar>
+            <div class="patient-info">
+              <h4 class="patient-name">{{ patient.user.firstName }} {{ patient.user.lastName }}</h4>
+              <p class="patient-meta">{{ patient.user.gender | titlecase }} • {{ getAge(patient.user.dateOfBirth) }}
+                years</p>
+            </div>
+          </div>
+
+          <div class="patient-stats">
+            <div class="stat">
+              <span class="stat-label">Total Visits</span>
+              <span class="stat-value">{{ patient.totalVisits }}</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Last Visit</span>
+              <span class="stat-value">{{ patient.lastVisit | date:'shortDate' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

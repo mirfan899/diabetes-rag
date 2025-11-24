@@ -1,0 +1,187 @@
+.eula-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.eula-popup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.eula-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .important-notice {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+}
+
+.eula-content {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+
+  .intro-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .eula-section {
+    margin-bottom: 20px;
+
+    h4 {
+      color: #667eea;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: #555;
+      font-size: 14px;
+    }
+  }
+
+  .agreement-notice {
+    background: #f8f9ff;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 24px;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      color: #667eea;
+      font-size: 16px;
+    }
+  }
+}
+
+.eula-actions {
+  padding: 24px;
+  background: #f8f9fa;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  border-top: 1px solid #e9ecef;
+
+  button {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .btn-cancel {
+    background: #6c757d;
+    color: white;
+
+    &:hover {
+      background: #5a6268;
+    }
+  }
+
+  .btn-agree {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+
+    &:hover {
+      background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .eula-overlay {
+    padding: 10px;
+  }
+
+  .eula-popup {
+    max-height: 95vh;
+  }
+
+  .eula-header {
+    padding: 20px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .eula-content {
+    padding: 20px;
+  }
+
+  .eula-actions {
+    padding: 20px;
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+}

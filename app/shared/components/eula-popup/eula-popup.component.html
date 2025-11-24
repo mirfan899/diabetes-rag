@@ -1,0 +1,86 @@
+<div class="eula-overlay" (click)="onCancel()">
+  <div class="eula-popup" (click)="$event.stopPropagation()">
+    <div class="eula-header">
+      <h2>Clinical Decision Support Software</h2>
+      <h3>End User License Agreement (EULA) and Disclaimer</h3>
+      <p class="important-notice">IMPORTANT: PLEASE READ BEFORE PROCEEDING</p>
+    </div>
+    
+    <div class="eula-content">
+      <p class="intro-text">
+        This Clinical Decision Support Software ("Software") is intended for use by licensed healthcare
+        professionals only. By continuing, you acknowledge and agree to the following:
+      </p>
+      
+      <div class="eula-section">
+        <h4>1. Medical Disclaimer</h4>
+        <p>
+          This Software is not a replacement for the clinical judgment of the treating physician. It is designed to
+          guide physicians by presenting available treatment modalities based on the latest international clinical
+          guidelines.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>2. No Replacement for Clinical Judgment</h4>
+        <p>
+          The Software is intended solely as a supportive tool. The final decisions regarding patient care must be
+          made by the treating physician after evaluating all individual clinical circumstances.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>3. No Warranties</h4>
+        <p>
+          The Software is provided "as is" without warranties of any kind, express or implied. No guarantee is
+          made regarding the accuracy, completeness, or fitness of the recommendations provided.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>4. Limitation of Liability</h4>
+        <p>
+          The developer shall bear no liability for any outcomes, damages, or losses resulting from the use—or
+          misuse—of this Software. This includes, but is not limited to, adverse medical decisions or system
+          failures.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>5. User Responsibility</h4>
+        <p>
+          Use of this Software confirms that you are a qualified medical professional. You accept full
+          responsibility for all decisions informed by this Software.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>6. Indemnification</h4>
+        <p>
+          You agree to indemnify and hold harmless the developer against any claims or liabilities arising from
+          your use of the Software.
+        </p>
+      </div>
+      
+      <div class="eula-section">
+        <h4>7. Governing Law</h4>
+        <p>
+          This Agreement is governed by the laws of the jurisdiction in which the Software is used.
+        </p>
+      </div>
+      
+      <div class="agreement-notice">
+        <p>✅ By clicking "I Agree", you confirm that you understand and accept the terms above.</p>
+      </div>
+    </div>
+    
+    <div class="eula-actions">
+      <button type="button" class="btn-cancel" (click)="onCancel()">
+        CANCEL
+      </button>
+      <button type="button" class="btn-agree" (click)="onAgree()">
+        I AGREE
+      </button>
+    </div>
+  </div>
+</div>

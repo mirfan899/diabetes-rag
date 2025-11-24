@@ -1,0 +1,96 @@
+<div class="doctors-page">
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">
+        <i class="fas fa-user-md"></i>
+        My Profile
+      </h1>
+      <button class="btn btn-primary" (click)="editProfile()">
+        <i class="fas fa-edit"></i>
+        Edit Profile
+      </button>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <!-- Current Doctor Profile -->
+    <div class="current-doctor-section" *ngIf="currentDoctor$ | async as doctor">
+      <div class="doctor-profile-card">
+        <div class="profile-header">
+          <div class="doctor-avatar">
+            <app-avatar [firstName]="doctor.name?.split(' ')[0] || 'Doctor'"
+              [lastName]="doctor.name?.split(' ').slice(1).join(' ') || ''" [size]="120" class="avatar-component">
+            </app-avatar>
+          </div>
+
+          <div class="profile-info">
+            <h2 class="doctor-name">
+              {{ doctor.name?.startsWith('Dr.') ? doctor.name : 'Dr. ' + doctor.name }}
+            </h2>
+            <p class="doctor-specialty">{{ doctor.specialization }}</p>
+            <div class="status-badge" [class.available]="true">
+              <i class="fas fa-circle"></i>
+              Available
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-details">
+          <div class="details-grid">
+            <div class="detail-item">
+              <div class="detail-label">
+                <i class="fas fa-envelope"></i>
+                Email
+              </div>
+              <div class="detail-value">{{ doctor.email }}</div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-label">
+                <i class="fas fa-phone"></i>
+                Phone
+              </div>
+              <div class="detail-value">{{ doctor.phoneNumber }}</div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-label">
+                <i class="fas fa-stethoscope"></i>
+                Specialization
+              </div>
+              <div class="detail-value">{{ doctor.specialization }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <button class="btn btn-primary" (click)="editProfile()">
+            <i class="fas fa-edit"></i>
+            Edit Profile
+          </button>
+          <button class="btn btn-outline" (click)="viewPatients()">
+            <i class="fas fa-users"></i>
+            View My Patients
+          </button>
+          <button class="btn btn-outline" (click)="viewAppointments()">
+            <i class="fas fa-calendar"></i>
+            View Appointments
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- No doctor logged in -->
+    <div class="no-doctor-section" *ngIf="!(currentDoctor$ | async)">
+      <div class="no-doctor-card">
+        <i class="fas fa-user-md"></i>
+        <h3>No Doctor Profile Found</h3>
+        <p>Please log in to view your doctor profile.</p>
+        <button class="btn btn-primary" (click)="goToLogin()">
+          <i class="fas fa-sign-in-alt"></i>
+          Go to Login
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

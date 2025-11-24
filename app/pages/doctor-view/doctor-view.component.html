@@ -1,0 +1,191 @@
+<div class="doctor-view-page" *ngIf="doctor$ | async as doctor">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <h1 class="page-title">
+          <i class="fas fa-user-md"></i>
+          Doctor Profile
+        </h1>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" (click)="scheduleAppointment()">
+          <i class="fas fa-calendar-plus"></i>
+          Schedule Appointment
+        </button>
+        <button class="btn btn-secondary" (click)="editDoctor()">
+          <i class="fas fa-edit"></i>
+          Edit Doctor
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="content-layout">
+      <!-- Left Side - Doctor Information -->
+      <div class="doctor-info-section">
+        <div class="doctor-header">
+          <div class="doctor-avatar">
+            <app-avatar [firstName]="doctor.firstName" [lastName]="doctor.lastName" [size]="60"
+              class="avatar-component">
+            </app-avatar>
+          </div>
+
+          <div class="doctor-basic-info">
+            <h2 class="doctor-name">
+              Dr. {{ doctor.firstName }} {{ doctor.lastName }}
+            </h2>
+            <div class="doctor-details">
+              <span class="specialization">
+                <i class="fas fa-stethoscope"></i>
+                {{ doctor.specialization }}
+              </span>
+              <span class="department">
+                <i class="fas fa-building"></i>
+                {{ doctor.department }}
+              </span>
+            </div>
+          </div>
+
+          <div class="doctor-status">
+            <span class="status-badge" [class.available]="doctor.isAvailable" [class.unavailable]="!doctor.isAvailable">
+              {{ doctor.isAvailable ? 'Available' : 'Unavailable' }}
+            </span>
+          </div>
+        </div>
+
+        <div class="info-sections">
+          <!-- Personal Information -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-user"></i>
+              Personal Information
+            </h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Email:</span>
+                <span class="value">{{ doctor.email }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Phone:</span>
+                <span class="value">{{ doctor.phoneNumber }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Experience:</span>
+                <span class="value">{{ doctor.experience }} years</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Rating:</span>
+                <span class="value">{{ doctor.rating ? doctor.rating + '/5' : 'Not rated' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Information -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-briefcase"></i>
+              Professional Information
+            </h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Specialization:</span>
+                <span class="value">{{ doctor.specialization }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Department:</span>
+                <span class="value">{{ doctor.department }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Experience:</span>
+                <span class="value">{{ doctor.experience }} years</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Status:</span>
+                <span class="value" [class.available]="doctor.isAvailable" [class.unavailable]="!doctor.isAvailable">
+                  {{ doctor.isAvailable ? 'Available' : 'Unavailable' }}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience & Achievements -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-award"></i>
+              Experience & Achievements
+            </h3>
+            <div class="experience-content">
+              <div class="experience-item">
+                <div class="experience-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="experience-details">
+                  <h4>Medical Education</h4>
+                  <p>Specialized in {{ doctor.specialization }} with {{ doctor.experience }} years of clinical
+                    experience</p>
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="experience-icon">
+                  <i class="fas fa-hospital"></i>
+                </div>
+                <div class="experience-details">
+                  <h4>Department</h4>
+                  <p>Currently serving in the {{ doctor.department }} department</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Quick Actions -->
+      <div class="actions-section">
+        <div class="section-header">
+          <h3 class="section-title">
+            <i class="fas fa-tasks"></i>
+            Quick Actions
+          </h3>
+        </div>
+
+        <div class="action-cards">
+          <div class="action-card" (click)="scheduleAppointment()">
+            <div class="action-icon">
+              <i class="fas fa-calendar-plus"></i>
+            </div>
+            <div class="action-content">
+              <h4>Schedule Appointment</h4>
+              <p>Book a new appointment with this doctor</p>
+            </div>
+          </div>
+
+          <div class="action-card" (click)="editDoctor()">
+            <div class="action-icon">
+              <i class="fas fa-edit"></i>
+            </div>
+            <div class="action-content">
+              <h4>Edit Profile</h4>
+              <p>Update doctor information and settings</p>
+            </div>
+          </div>
+
+          <div class="action-card" (click)="viewAppointments()">
+            <div class="action-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="action-content">
+              <h4>View Appointments</h4>
+              <p>See all appointments for this doctor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading-spinner" *ngIf="isLoading">
+  <i class="fas fa-spinner fa-spin"></i>
+  <p>Loading doctor information...</p>
+</div>

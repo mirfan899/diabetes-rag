@@ -1,0 +1,144 @@
+<div class="appointments-page">
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">
+        <i class="fas fa-calendar-alt"></i>
+        Appointments
+      </h1>
+      <button class="btn btn-primary" (click)="scheduleNewAppointment()">
+        <i class="fas fa-plus"></i>
+        New Appointment
+      </button>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <!-- Filters Section -->
+    <div class="filters-section">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="Search appointments by patient name..." [(ngModel)]="searchQuery"
+          (input)="onSearch()" class="search-input">
+      </div>
+
+      <div class="filter-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" [(ngModel)]="selectedDate" (change)="onDateChange()" class="filter-input"
+          placeholder="All dates">
+      </div>
+
+      <div class="filter-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="selectedStatus" (change)="onStatusChange()" class="filter-select">
+          <option *ngFor="let status of statusOptions" [value]="status">
+            {{ status === 'All' ? 'All' : status.split("_").join(" ") | titlecase }}
+          </option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="itemsPerPage">Appointments per page:</label>
+        <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()" class="filter-select">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Appointments Table -->
+    <div class="appointments-table-container">
+      <table class="appointments-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time Slot</th>
+            <th>Patient Name</th>
+            <th>Appointment Type</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appointment of paginatedAppointments$ | async" class="appointment-row">
+            <td class="date-cell">
+              <div class="date-info">
+                <span class="date">{{ formatDate(appointment.date) }}</span>
+                <span class="duration">{{ appointment.duration }} min</span>
+              </div>
+            </td>
+            <td class="time-cell">
+              <span class="time-slot">{{ formatTime(appointment.date) }}</span>
+            </td>
+            <td class="patient-cell">
+              <div class="patient-info">
+                <span class="patient-name">{{ appointment.patientName }}</span>
+                <span class="patient-age">{{ appointment.patientAge }} years old</span>
+              </div>
+            </td>
+            <td class="type-cell">
+              <span class="appointment-type">{{ appointment.type | titlecase }}</span>
+            </td>
+            <td class="status-cell">
+              <span class="status-badge" [class]="'status-' + getStatusClass(appointment.status)">
+                {{ appointment.status.split("_").join(" ") | titlecase }}
+              </span>
+            </td>
+            <td class="actions-cell">
+              <div class="action-buttons">
+                <button class="btn btn-sm btn-outline" (click)="editAppointment(appointment.id)"
+                  title="Edit Appointment">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-outline" (click)="viewAppointmentDetails(appointment.id)"
+                  title="View Details">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn btn-sm btn-primary"
+                  (click)="openPrescriptionForm(appointment.patientId, appointment.id)" title="Write Prescription">
+                  <i class="fas fa-prescription"></i>
+                </button>
+                <button class="btn btn-sm btn-danger" (click)="deleteAppointment(appointment.id)"
+                  title="Delete Appointment">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="(filteredAppointments$ | async)?.length === 0" class="empty-state">
+      <h3>No appointments found</h3>
+    </div>
+
+    <!-- Pagination -->
+    <div *ngIf="totalPages > 1" class="pagination-container">
+      <div class="pagination-info">
+        Showing {{ (currentPage - 1) * itemsPerPage + 1 }} to {{ Math.min(currentPage * itemsPerPage, totalItems) }} of
+        {{ totalItems }} appointments
+      </div>
+      <div class="pagination-controls">
+        <button class="btn btn-sm btn-outline" (click)="previousPage()" [disabled]="currentPage === 1">
+          <i class="fas fa-chevron-left"></i>
+          Previous
+        </button>
+
+        <div class="page-numbers">
+          <button *ngFor="let page of getPageNumbers()" class="btn btn-sm page-btn"
+            [class.active]="page === currentPage" (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        </div>
+
+        <button class="btn btn-sm btn-outline" (click)="nextPage()" [disabled]="currentPage === totalPages">
+          Next
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

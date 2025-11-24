@@ -1,0 +1,223 @@
+<div class="patient-view-page" *ngIf="patient$ | async as patient">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <button class="btn btn-outline" (click)="goBack()">
+          <i class="fas fa-arrow-left"></i>
+          Back to Patients
+        </button>
+        <h1 class="page-title">
+          <i class="fas fa-user"></i>
+          Patient Profile
+        </h1>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" (click)="writePrescription()">
+          <i class="fas fa-prescription"></i>
+          Write Prescription
+        </button>
+        <button class="btn btn-secondary" (click)="editPatient()">
+          <i class="fas fa-edit"></i>
+          Edit Patient
+        </button>
+        <button class="btn btn-outline" (click)="scheduleAppointment()">
+          <i class="fas fa-calendar-plus"></i>
+          Schedule Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="content-layout">
+      <!-- Left Side - Patient Information -->
+      <div class="patient-info-section">
+        <div class="patient-header">
+          <div class="patient-avatar">
+            <app-avatar [firstName]="patient.user.firstName" [lastName]="patient.user.lastName" [size]="60"
+              class="avatar-component">
+            </app-avatar>
+          </div>
+
+          <div class="patient-basic-info">
+            <h2 class="patient-name">
+              {{ patient.user.fullName || (patient.user.firstName + ' ' + patient.user.lastName) }}
+            </h2>
+            <div class="patient-details">
+              <span class="age" *ngIf="patient.user.dateOfBirth">
+                {{ calculateAge(patient.user.dateOfBirth) }} years old
+              </span>
+              <span class="gender">
+                <div class="gender-icon" [ngClass]="patient.user.gender">
+                  <i class="fas" [ngClass]="patient.user.gender === 'male' ? 'fa-mars' : 'fa-venus'"></i>
+                </div>
+                <span class="gender-text">{{ patient.user.gender | titlecase }}</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="patient-status">
+            <span class="status-badge" [class.active]="patient.user.isActive" [class.inactive]="!patient.user.isActive">
+              {{ patient.user.isActive ? 'Active' : 'Inactive' }}
+            </span>
+          </div>
+        </div>
+
+        <div class="info-sections">
+          <!-- Personal Information -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-user"></i>
+              Personal Information
+            </h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Email:</span>
+                <span class="value">{{ patient.user.email }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Phone:</span>
+                <span class="value">{{ patient.user.phoneNumber }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Date of Birth:</span>
+                <span class="value">{{ patient.user.dateOfBirth ? formatDate(patient.user.dateOfBirth) : 'Not specified'
+                  }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Address:</span>
+                <span class="value">{{ patient.user.address || 'Not specified' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medical Information -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-heartbeat"></i>
+              Medical Information
+            </h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Blood Type:</span>
+                <span class="value">{{ patient.bloodType || 'Not specified' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Emergency Contact:</span>
+                <span class="value">{{ patient.emergencyContactName || 'Not specified' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Emergency Phone:</span>
+                <span class="value">{{ patient.emergencyContactPhone || 'Not specified' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Allergies -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-exclamation-triangle"></i>
+              Allergies
+            </h3>
+            <div class="allergies-list" *ngIf="toArray(patient.allergies).length > 0">
+              <span *ngFor="let allergy of toArray(patient.allergies)" class="allergy-tag">
+                {{ allergy }}
+              </span>
+            </div>
+            <div class="empty-state" *ngIf="toArray(patient.allergies).length === 0">
+              <p>No allergies recorded</p>
+            </div>
+          </div>
+
+          <!-- Medical History -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-history"></i>
+              Medical History
+            </h3>
+            <div class="medical-history" *ngIf="toArray(patient.medicalHistory).length > 0">
+              <p *ngFor="let history of toArray(patient.medicalHistory)">{{ history }}</p>
+            </div>
+            <div class="empty-state" *ngIf="toArray(patient.medicalHistory).length === 0">
+              <p>No medical history recorded</p>
+            </div>
+          </div>
+
+          <!-- Current Medications -->
+          <div class="info-section">
+            <h3 class="section-title">
+              <i class="fas fa-pills"></i>
+              Current Medications
+            </h3>
+            <div class="medications-list" *ngIf="toArray(patient.currentMedications).length > 0">
+              <span *ngFor="let medication of toArray(patient.currentMedications)" class="medication-tag">
+                {{ medication }}
+              </span>
+            </div>
+            <div class="empty-state" *ngIf="toArray(patient.currentMedications).length === 0">
+              <p>No current medications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Appointment History -->
+      <div class="prescription-section">
+        <div class="section-header">
+          <h3 class="section-title">
+            <i class="fas fa-calendar-check"></i>
+            Appointment History
+          </h3>
+        </div>
+
+        <div class="prescriptions-list">
+          <div *ngFor="let appointment of appointments" class="prescription-card">
+            <div class="prescription-header">
+              <div class="prescription-date">
+                <i class="fas fa-calendar"></i>
+                {{ formatDate(appointment.date) }}
+              </div>
+              <div class="prescription-doctor">
+                <i class="fas fa-user-md"></i>
+                {{ getDoctorName(appointment) }}
+              </div>
+              <div class="appointment-status">
+                <span class="status-badge" [class]="getAppointmentStatusClass(appointment.status)">
+                  {{ appointment.status }}
+                </span>
+              </div>
+            </div>
+
+            <div class="appointment-details">
+              <div class="detail-item" *ngIf="appointment.type">
+                <span class="label">Type:</span>
+                <span class="value">{{ appointment.type }}</span>
+              </div>
+              <div class="detail-item" *ngIf="appointment.duration">
+                <span class="label">Duration:</span>
+                <span class="value">{{ appointment.duration }} minutes</span>
+              </div>
+              <div class="detail-item" *ngIf="appointment.notes">
+                <span class="label">Notes:</span>
+                <span class="value">{{ appointment.notes }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="no-prescriptions" *ngIf="appointments.length === 0">
+            <i class="fas fa-calendar-check"></i>
+            <p>No appointments found</p>
+            <button class="btn btn-primary" (click)="scheduleAppointment()">
+              Schedule First Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading-spinner" *ngIf="isLoading">
+  <i class="fas fa-spinner fa-spin"></i>
+  <p>Loading patient information...</p>
+</div>

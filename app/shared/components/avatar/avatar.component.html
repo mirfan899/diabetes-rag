@@ -1,0 +1,15 @@
+<div 
+  class="avatar" 
+  [style.background-color]="!imageUrl ? backgroundColor : 'transparent'"
+  [style.width.px]="size"
+  [style.height.px]="size"
+  [style.font-size.px]="size * 0.4">
+  @if (imageUrl) {
+    <img 
+      [src]="imageUrl" 
+      [alt]="altText"
+      class="avatar-image">
+  } @else {
+    <span class="initials">{{ initials }}</span>
+  }
+</div>

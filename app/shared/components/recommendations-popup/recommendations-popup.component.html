@@ -1,0 +1,172 @@
+<div class="popup-overlay" *ngIf="isVisible" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+        <div class="popup-header">
+            <h3 class="popup-title">
+                <i class="fas fa-prescription"></i>
+                Medical Recommendations
+            </h3>
+            <button class="close-button" (click)="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="popup-body">
+            <!-- Loading State -->
+            <div class="loading-state" *ngIf="isLoading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading recommendations...</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state" *ngIf="error && !isLoading">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>{{ error }}</p>
+                <button class="btn btn-primary" (click)="loadRecommendations()">
+                    <i class="fas fa-refresh"></i>
+                    Try Again
+                </button>
+            </div>
+
+            <!-- Recommendations Content -->
+            <div class="recommendations-content" *ngIf="recommendations && !isLoading && !error">
+                <!-- Header Info -->
+                <div class="recommendation-header">
+                    <div class="header-info">
+                        <div class="info-item">
+                            <span class="label">Guidelines:</span>
+                            <span class="value">{{ recommendations.guidelines }}</span>
+                        </div>
+                        <div class="info-item" *ngIf="recommendations.diabetesType">
+                            <span class="label">Diabetes Type:</span>
+                            <span class="value">{{ recommendations.diabetesType }}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Created:</span>
+                            <span class="value">{{ formatDate(recommendations.createdAt) }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medicines Section -->
+                <div class="section" *ngIf="recommendations.medicines">
+                    <h4 class="section-title">
+                        <i class="fas fa-pills"></i>
+                        Medicine Recommendations
+                    </h4>
+                    <div class="medicines-list">
+                        <div class="medicine-item" *ngFor="let medicine of formatArray(recommendations.medicines)">
+                            <div class="medicine-name">{{ medicine.medicine_name || medicine.name }}</div>
+                            <div class="medicine-details">
+                                <div class="medicine-dose" *ngIf="medicine.quantity_dose_strength || medicine.dose">
+                                    <strong>Dosage:</strong> {{ medicine.quantity_dose_strength || medicine.dose }}
+                                </div>
+                                <div class="medicine-reason" *ngIf="medicine.reason">
+                                    <strong>Reason:</strong>
+                                    <span [innerHTML]="formatText(getMedicineReason(medicine))"></span>
+                                </div>
+                                <div class="medicine-reference" *ngIf="medicine.reference">
+                                    <strong>Reference:</strong> {{ medicine.reference }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Recommendations -->
+                <div class="section" *ngIf="recommendations.lifestyle">
+                    <h4 class="section-title">
+                        <i class="fas fa-heart"></i>
+                        Lifestyle Recommendations
+                    </h4>
+                    <div class="lifestyle-list">
+                        <div class="lifestyle-item" *ngFor="let item of formatArray(recommendations.lifestyle)">
+                            <i class="fas fa-check-circle"></i>
+                            <span [innerHTML]="formatText(item)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical Notes -->
+                <div class="section" *ngIf="recommendations.clinicalNotes">
+                    <h4 class="section-title">
+                        <i class="fas fa-stethoscope"></i>
+                        Clinical Notes
+                    </h4>
+                    <div class="notes-list">
+                        <div class="note-item" *ngFor="let note of formatArray(recommendations.clinicalNotes)">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span [innerHTML]="formatText(note)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Required Investigations -->
+                <div class="section" *ngIf="recommendations.investigations">
+                    <h4 class="section-title">
+                        <i class="fas fa-microscope"></i>
+                        Required Investigations
+                    </h4>
+                    <div class="investigations-list">
+                        <div class="investigation-item"
+                            *ngFor="let investigation of formatArray(recommendations.investigations)">
+                            <i class="fas fa-flask"></i>
+                            <span [innerHTML]="formatText(investigation)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor's Notes -->
+                <div class="section">
+                    <div class="section-header">
+                        <h4 class="section-title">
+                            <i class="fas fa-sticky-note"></i>
+                            Doctor's Notes
+                        </h4>
+                        <button class="btn btn-sm btn-outline" *ngIf="!isEditingNotes" (click)="startEditingNotes()">
+                            <i class="fas fa-edit"></i>
+                            {{ recommendations?.notes ? 'Edit' : 'Add' }} Notes
+                        </button>
+                    </div>
+
+                    <div class="notes-content">
+                        <!-- Display mode -->
+                        <div *ngIf="!isEditingNotes" class="note-display">
+                            <div class="note-text" *ngIf="recommendations?.notes"
+                                [innerHTML]="formatText(recommendations.notes)"></div>
+                            <div class="no-notes" *ngIf="!recommendations?.notes">
+                                <i class="fas fa-sticky-note"></i>
+                                <p>No notes added yet. Click "Add Notes" to add doctor's notes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Edit mode -->
+                        <div *ngIf="isEditingNotes" class="note-edit">
+                            <textarea [(ngModel)]="editedNotes" class="notes-textarea"
+                                placeholder="Add doctor's notes about medications, instructions, or special considerations..."
+                                rows="4">
+                            </textarea>
+                            <div class="edit-actions">
+                                <button class="btn btn-sm btn-secondary" (click)="cancelEditingNotes()"
+                                    [disabled]="isSavingNotes">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-sm btn-primary" (click)="saveNotes()" [disabled]="isSavingNotes">
+                                    <i class="fas fa-spinner fa-spin" *ngIf="isSavingNotes"></i>
+                                    <i class="fas fa-save" *ngIf="!isSavingNotes"></i>
+                                    {{ isSavingNotes ? 'Saving...' : 'Save Notes' }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-footer">
+            <button class="btn btn-secondary" (click)="closePopup()">
+                <i class="fas fa-times"></i>
+                Close
+            </button>
+        </div>
+    </div>
+</div>

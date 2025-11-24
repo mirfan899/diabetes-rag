@@ -1,0 +1,120 @@
+<div class="doctor-form-page">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <button class="btn btn-outline" (click)="cancel()">
+          <i class="fas fa-arrow-left"></i>
+          Back
+        </button>
+        <h1 class="page-title">
+          <i class="fas fa-user-md"></i>
+          {{ isEditMode ? 'Edit Doctor' : 'Add New Doctor' }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit()" #doctorFormRef="ngForm">
+        <!-- Personal Information -->
+        <div class="info-section">
+          <h3 class="section-title">
+            <i class="fas fa-user"></i>
+            Personal Information
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" [(ngModel)]="doctorForm.firstName" name="firstName" required
+                class="form-input" placeholder="Enter first name">
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" [(ngModel)]="doctorForm.lastName" name="lastName" required
+                class="form-input" placeholder="Enter last name">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" [(ngModel)]="doctorForm.email" name="email" required class="form-input"
+                placeholder="Enter email address">
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number *</label>
+              <input type="tel" id="phoneNumber" [(ngModel)]="doctorForm.phoneNumber" name="phoneNumber" required
+                class="form-input" placeholder="Enter phone number">
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Information -->
+        <div class="info-section">
+          <h3 class="section-title">
+            <i class="fas fa-stethoscope"></i>
+            Professional Information
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="specialization">Specialization *</label>
+              <select id="specialization" [(ngModel)]="doctorForm.specialization" name="specialization" required
+                class="form-select">
+                <option value="">Select specialization</option>
+                <option *ngFor="let spec of specializations" [value]="spec">
+                  {{ spec }}
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select id="department" [(ngModel)]="doctorForm.department" name="department" class="form-select">
+                <option value="">Select department</option>
+                <option *ngFor="let dept of departments" [value]="dept">
+                  {{ dept }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">Years of Experience</label>
+              <input type="number" id="experience" [(ngModel)]="doctorForm.experience" name="experience" min="0"
+                max="50" class="form-input" placeholder="Enter years of experience">
+            </div>
+
+            <div class="form-group">
+              <label for="isAvailable">Availability</label>
+              <div class="checkbox-group">
+                <input type="checkbox" id="isAvailable" [(ngModel)]="doctorForm.isAvailable" name="isAvailable"
+                  class="form-checkbox">
+                <label for="isAvailable" class="checkbox-label">
+                  Available for appointments
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" (click)="cancel()">
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="!doctorFormRef.valid || isLoading">
+            <i class="fas fa-spinner fa-spin" *ngIf="isLoading"></i>
+            <i class="fas fa-save" *ngIf="!isLoading"></i>
+            {{ isLoading ? 'Saving...' : (isEditMode ? 'Update Doctor' : 'Add Doctor') }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

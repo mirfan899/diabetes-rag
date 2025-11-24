@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+openai
+chromadb
+pypdf
+pdfplumber
+langchain
+langchain-openai
+python-dotenv
+numpy
+tiktoken
+pandas
+sentence-transformers
+

@@ -1,0 +1,99 @@
+<div class="login-container">
+  <div class="login-background">
+    <div class="login-overlay"></div>
+  </div>
+
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <img src="assets/sugar-blood-level.png" alt="GlucoPlanner Logo" class="logo-image">
+        </div>
+        <h1 class="app-title">GlucoPlanner</h1>
+        <p class="app-subtitle">Diabetes Decision Support System</p>
+      </div>
+    </div>
+
+    <div class="login-form-container">
+      <div class="form-header">
+        <h2 class="form-title">{{ isSignup ? 'Create Account' : 'Welcome Back' }}</h2>
+        <p class="form-subtitle">{{ isSignup ? 'Sign up to start managing your clinic' : 'Sign in to your account' }}
+        </p>
+      </div>
+
+      <div class="tabs">
+        <button [class.active]="!isSignup" (click)="isSignup = false; error = ''" class="tab-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          Sign In
+        </button>
+        <button [class.active]="isSignup" (click)="isSignup = true; error = ''" class="tab-btn">
+          <i class="fas fa-user-plus"></i>
+          Sign Up
+        </button>
+      </div>
+
+      <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="login-form">
+        <div class="form-group" *ngIf="isSignup">
+          <label class="form-label">Full Name</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input formControlName="name" type="text" placeholder="Enter your full name" class="form-input"
+              [class.error]="doctorForm.get('name')?.invalid && doctorForm.get('name')?.touched">
+          </div>
+          <div class="error-message" *ngIf="doctorForm.get('name')?.invalid && doctorForm.get('name')?.touched">
+            Full name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number or Email</label>
+          <div class="input-wrapper">
+            <i class="fas" [class.fa-phone]="!isEmailLogin" [class.fa-envelope]="isEmailLogin" class="input-icon"></i>
+            <input formControlName="identifier" type="text" placeholder="Enter your phone number or email address"
+              class="form-input" (input)="detectInputType($event)"
+              [class.error]="doctorForm.get('identifier')?.invalid && doctorForm.get('identifier')?.touched">
+          </div>
+          <div class="error-message"
+            *ngIf="doctorForm.get('identifier')?.invalid && doctorForm.get('identifier')?.touched">
+            Please enter a valid phone number or email address
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input formControlName="password" type="password" placeholder="Enter your password" class="form-input"
+              [class.error]="doctorForm.get('password')?.invalid && doctorForm.get('password')?.touched">
+          </div>
+          <div class="error-message" *ngIf="doctorForm.get('password')?.invalid && doctorForm.get('password')?.touched">
+            Password is required
+          </div>
+        </div>
+
+        <div class="form-error" *ngIf="error">
+          <i class="fas fa-exclamation-circle"></i>
+          {{ error }}
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="doctorForm.invalid || isLoading">
+          <i class="fas fa-spinner fa-spin" *ngIf="isLoading"></i>
+          <span *ngIf="!isLoading">{{ isSignup ? 'Create Account' : 'Sign In' }}</span>
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p class="footer-text">
+          {{ isSignup ? 'Already have an account?' : "Don't have an account?" }}
+          <button type="button" class="link-btn" (click)="isSignup = !isSignup; error = ''">
+            {{ isSignup ? 'Sign In' : 'Sign Up' }}
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EULA Popup -->
+  <app-eula-popup *ngIf="showEulaPopup" (agree)="onEulaAgree()" (cancel)="onEulaCancel()">
+  </app-eula-popup>
+</div>

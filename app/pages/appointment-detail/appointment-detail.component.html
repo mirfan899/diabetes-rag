@@ -1,0 +1,212 @@
+<div class="appointment-detail-page" *ngIf="appointmentWithDetails$ | async as appointmentDetails">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <button class="btn btn-outline" (click)="goBack()">
+          <i class="fas fa-arrow-left"></i>
+          Back to Appointments
+        </button>
+        <h1 class="page-title">
+          <i class="fas fa-calendar-alt"></i>
+          Appointment Details
+        </h1>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary" (click)="editAppointment()">
+          <i class="fas fa-edit"></i>
+          Edit
+        </button>
+        <button class="btn btn-primary" (click)="startSoapNote()">
+          <i class="fas fa-notes-medical"></i>
+          SOAP Note
+        </button>
+        <button class="btn btn-success" (click)="writePrescription()">
+          <i class="fas fa-prescription"></i>
+          Write Prescription
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="content-layout">
+      <!-- Left Side - Appointment Overview -->
+      <div class="appointment-overview-section">
+        <!-- Appointment Header -->
+        <div class="appointment-header">
+          <div class="appointment-status">
+            <span class="status-badge" [class]="'status-' + getStatusClass(appointmentDetails.appointment.status)">
+              {{ appointmentDetails.appointment.status | titlecase }}
+            </span>
+          </div>
+
+          <div class="appointment-basic-info">
+            <h2 class="appointment-title">
+              {{ appointmentDetails.appointment.type | titlecase }} Appointment
+            </h2>
+            <div class="appointment-details">
+              <span class="appointment-date">
+                <i class="fas fa-calendar"></i>
+                {{ formatDateTime(appointmentDetails.appointment.date) }}
+              </span>
+              <span class="appointment-duration">
+                <i class="fas fa-clock"></i>
+                {{ appointmentDetails.appointment.duration }} minutes
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Information -->
+        <div class="info-section">
+          <h3 class="section-title">
+            <i class="fas fa-info-circle"></i>
+            Appointment Information
+          </h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Type:</span>
+              <span class="value">{{ appointmentDetails.appointment.type | titlecase }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Duration:</span>
+              <span class="value">{{ appointmentDetails.appointment.duration }} minutes</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Status:</span>
+              <span class="value status-text"
+                [class]="'status-' + getStatusClass(appointmentDetails.appointment.status)">
+                {{ appointmentDetails.appointment.status | titlecase }}
+              </span>
+            </div>
+            <div class="info-item" *ngIf="appointmentDetails.appointment.notes">
+              <span class="label">Notes:</span>
+              <span class="value">{{ appointmentDetails.appointment.notes }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="info-section">
+          <h3 class="section-title">
+            <i class="fas fa-history"></i>
+            Timeline
+          </h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker created"></div>
+              <div class="timeline-content">
+                <strong>Appointment Created</strong>
+                <span class="timeline-date">{{ appointmentDetails.appointment.createdAt | date:'medium' }}</span>
+              </div>
+            </div>
+            <div class="timeline-item"
+              *ngIf="appointmentDetails.appointment.updatedAt !== appointmentDetails.appointment.createdAt">
+              <div class="timeline-marker updated"></div>
+              <div class="timeline-content">
+                <strong>Last Updated</strong>
+                <span class="timeline-date">{{ appointmentDetails.appointment.updatedAt | date:'medium' }}</span>
+              </div>
+            </div>
+            <div class="timeline-item" *ngIf="appointmentDetails.appointment.status === 'COMPLETED'">
+              <div class="timeline-marker completed"></div>
+              <div class="timeline-content">
+                <strong>Appointment Completed</strong>
+                <span class="timeline-date">{{ appointmentDetails.appointment.updatedAt | date:'medium' }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Patient & Doctor Information -->
+      <div class="participants-section">
+        <!-- Patient Information -->
+        <div class="participant-card patient-card">
+          <div class="participant-header">
+            <div class="participant-avatar">
+              <app-avatar [firstName]="appointmentDetails.patient.user.firstName"
+                [lastName]="appointmentDetails.patient.user.lastName" [size]="50" class="avatar-component">
+              </app-avatar>
+            </div>
+            <div class="participant-info">
+              <h3 class="participant-name">
+                {{ appointmentDetails.patient.user.fullName }}
+              </h3>
+              <p class="participant-role">Patient</p>
+            </div>
+          </div>
+
+          <div class="participant-details">
+            <div class="detail-item">
+              <span class="label">Age:</span>
+              <span class="value">{{ calculateAge(appointmentDetails.patient.user.dateOfBirth) }} years</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Gender:</span>
+              <span class="value">{{ appointmentDetails.patient.user.gender | titlecase }}</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.patient.user.phoneNumber">
+              <span class="label">Phone:</span>
+              <span class="value">{{ appointmentDetails.patient.user.phoneNumber }}</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.patient.hospitalNo">
+              <span class="label">Hospital No:</span>
+              <span class="value">{{ appointmentDetails.patient.hospitalNo }}</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.patient.bloodType">
+              <span class="label">Blood Type:</span>
+              <span class="value">{{ appointmentDetails.patient.bloodType }}</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.patient.allergies">
+              <span class="label">Allergies:</span>
+              <span class="value">{{ appointmentDetails.patient.allergies }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Information -->
+        <div class="participant-card doctor-card">
+          <div class="participant-header">
+            <div class="participant-avatar">
+              <app-avatar [firstName]="appointmentDetails.doctor.firstName"
+                [lastName]="appointmentDetails.doctor.lastName" [size]="50" class="avatar-component">
+              </app-avatar>
+            </div>
+            <div class="participant-info">
+              <h3 class="participant-name">
+                Dr. {{ appointmentDetails.doctor.firstName }} {{ appointmentDetails.doctor.lastName }}
+              </h3>
+              <p class="participant-role">{{ appointmentDetails.doctor.specialization }}</p>
+            </div>
+          </div>
+
+          <div class="participant-details">
+            <div class="detail-item">
+              <span class="label">Department:</span>
+              <span class="value">{{ appointmentDetails.doctor.department }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Experience:</span>
+              <span class="value">{{ appointmentDetails.doctor.experience }} years</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.doctor.phoneNumber">
+              <span class="label">Phone:</span>
+              <span class="value">{{ appointmentDetails.doctor.phoneNumber }}</span>
+            </div>
+            <div class="detail-item" *ngIf="appointmentDetails.doctor.email">
+              <span class="label">Email:</span>
+              <span class="value">{{ appointmentDetails.doctor.email }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading State -->
+<div class="loading-spinner" *ngIf="!(appointmentWithDetails$ | async)">
+  <i class="fas fa-spinner fa-spin"></i>
+  <p>Loading appointment details...</p>
+</div>

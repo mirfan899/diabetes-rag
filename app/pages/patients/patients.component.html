@@ -1,0 +1,134 @@
+<div class="patients-page">
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">
+        <i class="fas fa-users"></i>
+        Patients
+      </h1>
+      <button class="btn btn-primary" (click)="addNewPatient()">
+        <i class="fas fa-user-plus"></i>
+        Add Patient
+      </button>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <!-- Filters Section -->
+    <div class="filters-section">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="Search patients by name..." [(ngModel)]="searchQuery" (input)="onSearch()"
+          class="search-input">
+      </div>
+
+      <div class="filter-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="selectedStatus" (change)="onStatusChange()" class="filter-select">
+          <option *ngFor="let status of statusOptions" [value]="status">
+            {{ status }}
+          </option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="itemsPerPage">Items per page:</label>
+        <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()" class="filter-select">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Patients Table -->
+    <div class="patients-table-container">
+      <table class="patients-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Contact</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of paginatedPatients$ | async" class="patient-row">
+            <td class="name-cell">
+              <div class="patient-info">
+                <app-avatar [firstName]="patient.user.firstName" [lastName]="patient.user.lastName" [size]="36"
+                  class="patient-avatar">
+                </app-avatar>
+                <div class="patient-details">
+                  <span class="patient-name">{{ patient.user.firstName }} {{ patient.user.lastName }}</span>
+                </div>
+              </div>
+            </td>
+            <td class="gender-cell">
+              <span class="gender-badge" [class]="'gender-' + (patient.user.gender.toLowerCase() || 'unknown')">{{
+                patient.user.gender | titlecase }}</span>
+            </td>
+            <td class="age-cell">
+              <span class="age">{{ calculateAge(patient.user.dateOfBirth) }} years</span>
+            </td>
+            <td class="contact-cell">
+              <span class="phone">{{ patient.user.phoneNumber }}</span>
+            </td>
+            <td class="status-cell">
+              <span class="status-badge" [class]="patient.user.isActive ? 'status-active' : 'status-inactive'">
+                {{ patient.user.isActive ? 'Active' : 'Inactive' }}
+              </span>
+            </td>
+            <td class="actions-cell">
+              <div class="action-buttons">
+                <button class="btn btn-sm btn-outline" (click)="viewPatientProfile(patient.id)" title="View Patient">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn btn-sm btn-outline" (click)="editPatient(patient.id)" title="Edit Patient">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-outline" (click)="scheduleAppointment(patient.id)"
+                  title="Schedule Appointment">
+                  <i class="fas fa-calendar-plus"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="(filteredPatients$ | async)?.length === 0" class="empty-state">
+      <h3>No patients found</h3>
+    </div>
+
+    <!-- Pagination -->
+    <div *ngIf="totalPages > 1" class="pagination-container">
+      <div class="pagination-info">
+        Showing {{ (currentPage - 1) * itemsPerPage + 1 }} to {{ Math.min(currentPage * itemsPerPage, totalItems) }} of
+        {{ totalItems }} patients
+      </div>
+      <div class="pagination-controls">
+        <button class="btn btn-sm btn-outline" (click)="previousPage()" [disabled]="currentPage === 1">
+          <i class="fas fa-chevron-left"></i>
+          Previous
+        </button>
+
+        <div class="page-numbers">
+          <button *ngFor="let page of getPageNumbers()" class="btn btn-sm page-btn"
+            [class.active]="page === currentPage" (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        </div>
+
+        <button class="btn btn-sm btn-outline" (click)="nextPage()" [disabled]="currentPage === totalPages">
+          Next
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

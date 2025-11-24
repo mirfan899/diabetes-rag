@@ -1,0 +1,344 @@
+.doctors-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+
+  .page-header {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .page-title {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        i {
+          font-size: 1.75rem;
+          color: #3498db;
+        }
+      }
+    }
+  }
+
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // Current Doctor Profile Styles
+  .current-doctor-section {
+    .doctor-profile-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e9ecef;
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e9ecef;
+
+        .doctor-avatar {
+          flex-shrink: 0;
+        }
+
+        .profile-info {
+          flex: 1;
+
+          .doctor-name {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+          }
+
+          .doctor-specialty {
+            margin: 0 0 1rem 0;
+            font-size: 1.1rem;
+            color: #6c757d;
+            font-weight: 500;
+          }
+
+          .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            &.available {
+              background: #d4edda;
+              color: #155724;
+              border: 1px solid #c3e6cb;
+
+              i {
+                color: #28a745;
+              }
+            }
+
+            i {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .profile-details {
+        margin-bottom: 2rem;
+
+        .details-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+
+          .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .detail-label {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: #6c757d;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+
+              i {
+                color: #3498db;
+                width: 16px;
+                text-align: center;
+              }
+            }
+
+            .detail-value {
+              font-size: 1.1rem;
+              color: #2c3e50;
+              font-weight: 500;
+              padding: 0.5rem 0;
+            }
+          }
+        }
+      }
+
+      .profile-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 8px;
+          font-weight: 500;
+          text-decoration: none;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &.btn-primary {
+            background: #3498db;
+            color: white;
+
+            &:hover {
+              background: #2980b9;
+              transform: translateY(-1px);
+            }
+          }
+
+          &.btn-outline {
+            background: transparent;
+            color: #3498db;
+            border: 2px solid #3498db;
+
+            &:hover {
+              background: #3498db;
+              color: white;
+              transform: translateY(-1px);
+            }
+          }
+
+          i {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  // No Doctor Section
+  .no-doctor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+
+    .no-doctor-card {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e9ecef;
+      max-width: 400px;
+
+      i {
+        font-size: 4rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      h3 {
+        margin: 0 0 1rem 0;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0 0 2rem 0;
+        color: #6c757d;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &.btn-primary {
+          background: #3498db;
+          color: white;
+
+          &:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+          }
+        }
+
+        i {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .doctors-page {
+    padding: 1rem;
+
+    .page-header {
+      padding: 1.5rem;
+
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+
+        .page-title {
+          font-size: 1.5rem;
+          justify-content: center;
+        }
+      }
+    }
+
+    .current-doctor-section {
+      .doctor-profile-card {
+        padding: 1.5rem;
+
+        .profile-header {
+          flex-direction: column;
+          text-align: center;
+          gap: 1.5rem;
+
+          .profile-info {
+            .doctor-name {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        .profile-details {
+          .details-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+        }
+
+        .profile-actions {
+          flex-direction: column;
+
+          .btn {
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .no-doctor-section {
+      .no-doctor-card {
+        padding: 2rem;
+        margin: 1rem;
+
+        i {
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-page {
+    .current-doctor-section {
+      .doctor-profile-card {
+        padding: 1rem;
+
+        .profile-header {
+          .profile-info {
+            .doctor-name {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+<div class="soap-note-page">
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <button class="btn btn-outline" (click)="goBack()">
+          <i class="fas fa-arrow-left"></i>
+          Back to Appointments
+        </button>
+        <h1 class="page-title">
+          <i class="fas fa-notes-medical"></i>
+          SOAP Note
+        </h1>
+      </div>
+      <div class="header-right">
+        <button class="btn btn-success" (click)="saveSoapNote()">
+          <i class="fas fa-save"></i>
+          Save Note
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="soap-layout">
+      <!-- Dialog Section -->
+      <div class="dialog-section">
+        <div class="section-header">
+          <h2>
+            <i class="fas fa-comments"></i>
+            Patient-Doctor Dialog
+          </h2>
+          <div class="sender-toggle">
+            <label class="toggle-label">Speaking as:</label>
+            <div class="toggle-buttons">
+              <button 
+                class="toggle-btn"
+                [class.active]="currentSender === 'doctor'"
+                (click)="currentSender = 'doctor'">
+                <i class="fas fa-user-md"></i>
+                Doctor
+              </button>
+              <button 
+                class="toggle-btn"
+                [class.active]="currentSender === 'patient'"
+                (click)="currentSender = 'patient'">
+                <i class="fas fa-user"></i>
+                Patient
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dialog-container">
+          <div class="messages-list">
+            <div 
+              *ngFor="let message of dialogMessages"
+              class="message"
+              [class.doctor]="message.sender === 'doctor'"
+              [class.patient]="message.sender === 'patient'">
+              
+              <div class="message-header">
+                <span class="sender">
+                  <i [class]="message.sender === 'doctor' ? 'fas fa-user-md' : 'fas fa-user'"></i>
+                  {{ message.sender === 'doctor' ? 'Doctor' : 'Patient' }}
+                </span>
+                <span class="timestamp">{{ formatTime(message.timestamp) }}</span>
+              </div>
+              
+              <div class="message-content">
+                {{ message.message }}
+              </div>
+            </div>
+          </div>
+
+          <div class="message-input">
+            <div class="input-group">
+              <textarea
+                [(ngModel)]="newMessage"
+                placeholder="Type a message..."
+                class="message-textarea"
+                rows="3">   </textarea>
+              <button 
+                class="btn btn-primary"
+                (click)="addMessage()"
+                [disabled]="!newMessage.trim()"
+                aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOAP Fields Section -->
+      <div class="soap-fields-section">
+        <div class="section-header">
+          <h2>
+            <i class="fas fa-clipboard-list"></i>
+            SOAP Documentation
+          </h2>
+        </div>
+
+        <div class="soap-fields">
+          <div class="soap-field">
+            <label for="subjective">
+              <strong>S</strong>ubjective
+              <span class="field-description">Patient's description of symptoms</span>
+            </label>
+            <textarea
+              id="subjective"
+              [(ngModel)]="subjective"
+              placeholder="What the patient tells you about their symptoms, feelings, and concerns..."
+              rows="4"></textarea>
+          </div>
+
+          <div class="soap-field">
+            <label for="objective">
+              <strong>O</strong>bjective
+              <span class="field-description">Observable and measurable findings</span>
+            </label>
+            <textarea
+              id="objective"
+              [(ngModel)]="objective"
+              placeholder="Physical examination findings, vital signs, test results..."
+              rows="4"></textarea>
+          </div>
+
+          <div class="soap-field">
+            <label for="assessment">
+              <strong>A</strong>ssessment
+              <span class="field-description">Clinical judgment and diagnosis</span>
+            </label>
+            <textarea
+              id="assessment"
+              [(ngModel)]="assessment"
+              placeholder="Your clinical assessment, differential diagnosis, clinical reasoning..."
+              rows="4"></textarea>
+          </div>
+
+          <div class="soap-field">
+            <label for="plan">
+              <strong>P</strong>lan
+              <span class="field-description">Treatment plan and next steps</span>
+            </label>
+            <textarea
+              id="plan"
+              [(ngModel)]="plan"
+              placeholder="Treatment plan, medications, follow-up instructions, patient education..."
+              rows="4"></textarea>
+          </div>
+        </div>
+
+        <!-- AI Plan Generation -->
+        <div class="ai-section">
+          <div class="ai-header">
+            <h3>
+              <i class="fas fa-robot"></i>
+              AI-Generated Care Plan
+            </h3>
+            <button 
+              class="btn btn-secondary"
+              (click)="generateAIPlan()"
+              [disabled]="isGeneratingPlan">
+              <i class="fas fa-magic" *ngIf="!isGeneratingPlan"></i>
+              <i class="fas fa-spinner fa-spin" *ngIf="isGeneratingPlan"></i>
+              {{ isGeneratingPlan ? 'Generating...' : 'Generate Plan' }}
+            </button>
+          </div>
+
+          <div class="generated-plan" *ngIf="generatedPlan">
+            <div class="plan-content">
+              <pre>{{ generatedPlan }}</pre>
+            </div>
+            <div class="plan-actions">
+              <button class="btn btn-outline btn-sm" (click)="plan = generatedPlan">
+                <i class="fas fa-copy"></i>
+                Copy to Plan
+              </button>
+            </div>
+          </div>
+
+          <div class="ai-placeholder" *ngIf="!generatedPlan && !isGeneratingPlan">
+            <i class="fas fa-lightbulb"></i>
+            <p>Click "Generate Plan" to get AI-powered treatment recommendations based on the dialog and SOAP notes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
