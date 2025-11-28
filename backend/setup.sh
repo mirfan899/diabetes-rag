@@ -58,20 +58,17 @@ pip install --upgrade pip
 echo "Installing dependencies..."
 pip install -r requirements.txt
 
-# Check for .env file
+# Optional .env reminder
 if [ ! -f ".env" ]; then
     echo ""
     echo "=========================================="
-    echo "WARNING: .env file not found!"
+    echo "INFO: .env file not found (optional)"
     echo "=========================================="
-    echo "Please create a .env file with your OPENAI_API_KEY:"
-    echo "  OPENAI_API_KEY=your_key_here"
+    echo "Create one if you need to override defaults, e.g.:"
+    echo "  OLLAMA_HOST=http://localhost:11434"
+    echo "  OLLAMA_EMBEDDING_MODEL=embeddinggemma"
+    echo "  OLLAMA_LLM_MODEL=gemma3:1b"
     echo ""
-    echo "You can copy .env.example to .env and edit it:"
-    echo "  cp .env.example .env"
-    echo ""
-else
-    echo ".env file found"
 fi
 
 echo ""
@@ -80,7 +77,7 @@ echo "Setup complete!"
 echo "=========================================="
 echo ""
 echo "Next steps:"
-echo "1. Make sure your .env file has OPENAI_API_KEY set"
+echo "1. Make sure Ollama is running and required models are pulled"
 echo "2. Run 'python init_db.py' to initialize ChromaDB with PDFs"
 echo "3. Run 'python main.py' to start the server"
 echo ""

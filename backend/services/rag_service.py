@@ -1,6 +1,7 @@
-from typing import Dict, List
+import os
+from typing import Dict
 from .chroma_service import ChromaService
-from .openai_service import OpenAIService
+from .ollama_service import OllamaService
 
 
 class RAGService:
@@ -8,7 +9,7 @@ class RAGService:
     
     def __init__(self):
         self.chroma_service = ChromaService()
-        self.openai_service = OpenAIService()
+        self.generation_service = OllamaService()
     
     def build_query(self, patient_data: Dict) -> str:
         """Build a search query from patient data."""
@@ -77,8 +78,8 @@ class RAGService:
             # Still try to generate recommendations with minimal context
             relevant_docs = []
         
-        # Generate recommendations using OpenAI with retrieved context
-        recommendations = self.openai_service.generate_recommendations(
+        # Generate recommendations using the local Gemma model with retrieved context
+        recommendations = self.generation_service.generate_recommendations(
             patient_data=patient_data,
             relevant_context=relevant_docs
         )

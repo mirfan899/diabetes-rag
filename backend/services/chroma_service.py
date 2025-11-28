@@ -1,7 +1,7 @@
 import os
 import chromadb
 from typing import List, Dict
-from sentence_transformers import SentenceTransformer
+import ollama
 
 
 class ChromaService:
@@ -11,23 +11,24 @@ class ChromaService:
         self.client = chromadb.PersistentClient(path=persist_directory)
         self.collection_name = collection_name
         self.collection = None
-        self.embedding_model = None
+        self.embedding_model_name = os.getenv("OLLAMA_EMBEDDING_MODEL", "embeddinggemma")
+        self.ollama_host = os.getenv("OLLAMA_HOST")
+        self.ollama_client = None
         self._initialize_collection()
-        self._initialize_embedding_model()
+        self._initialize_embedding_client()
     
-    def _initialize_embedding_model(self):
-        """Initialize local sentence-transformer model for embeddings."""
-        model_name = os.getenv("EMBEDDING_MODEL_NAME", "cross-encoder/ms-marco-MiniLM-L6-v2")
-        device = os.getenv("EMBEDDING_MODEL_DEVICE", None)
-        
-        print(f"Loading embedding model: {model_name}")
+    def _initialize_embedding_client(self):
+        """Initialize Ollama client for embeddings."""
+        print(f"Using Ollama embedding model: {self.embedding_model_name}")
         try:
-            if device:
-                self.embedding_model = SentenceTransformer(model_name, device=device)
+            if self.ollama_host:
+                self.ollama_client = ollama.Client(host=self.ollama_host)
             else:
-                self.embedding_model = SentenceTransformer(model_name)
-        except (OSError, RuntimeError, ValueError) as e:
-            raise RuntimeError(f"Failed to load embedding model '{model_name}': {e}") from e
+                self.ollama_client = ollama.Client()
+        except Exception as e:
+            raise RuntimeError(
+                f"Failed to connect to Ollama at '{self.ollama_host or 'default host'}': {e}"
+            ) from e
     
     def _initialize_collection(self):
         """Initialize or get existing ChromaDB collection."""
@@ -42,21 +43,27 @@ class ChromaService:
             print(f"Created new collection: {self.collection_name}")
     
     def get_embeddings(self, texts: List[str]) -> List[List[float]]:
-        """Get embeddings for a list of texts using a local sentence-transformer model."""
+        """Get embeddings for a list of texts using a local Ollama embedding model."""
         if not texts:
             return []
         
-        if self.embedding_model is None:
-            raise RuntimeError("Embedding model is not initialized")
+        if self.ollama_client is None:
+            raise RuntimeError("Ollama client is not initialized")
         
-        embeddings = self.embedding_model.encode(
-            texts,
-            batch_size=int(os.getenv("EMBEDDING_BATCH_SIZE", "32")),
-            show_progress_bar=False,
-            convert_to_numpy=True,
-            normalize_embeddings=True
-        )
-        return embeddings.tolist()
+        embeddings: List[List[float]] = []
+        for text in texts:
+            try:
+                response = self.ollama_client.embeddings(
+                    model=self.embedding_model_name,
+                    prompt=text
+                )
+                embeddings.append(response["embedding"])
+            except Exception as e:
+                raise RuntimeError(
+                    f"Failed to generate embedding with model '{self.embedding_model_name}': {e}"
+                ) from e
+        
+        return embeddings
     
     def add_documents(self, chunks: List[Dict]):
         """Add document chunks to ChromaDB."""

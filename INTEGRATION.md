@@ -16,11 +16,14 @@ cd backend
 ./setup.sh
 ```
 
-3. **Configure environment**:
+3. **Configure environment (optional)**:
+
+Create a `.env` file (or export vars) if you need to override defaults such as:
 
 ```bash
-cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
+OLLAMA_HOST=http://localhost:11434
+OLLAMA_EMBEDDING_MODEL=embeddinggemma
+OLLAMA_LLM_MODEL=gemma3:1b
 ```
 
 4. **Initialize ChromaDB**:
@@ -126,12 +129,6 @@ If you get errors about missing data:
 cd backend
 python init_db.py
 ```
-
-### OpenAI API Errors
-
-- Verify your `OPENAI_API_KEY` is set in `.env`
-- Check you have sufficient API credits
-- Verify the API key is valid
 
 ## Request/Response Format
 

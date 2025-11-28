@@ -4,15 +4,16 @@ A Python FastAPI backend that uses RAG (Retrieval Augmented Generation) to provi
 
 ## Features
 
-- **RAG System**: Uses ChromaDB for vector storage and SentenceTransformers for embeddings
+- **RAG System**: Uses ChromaDB for vector storage and Ollama `embeddinggemma` embeddings
 - **PDF Processing**: Extracts and processes clinical guidelines from PDF files
-- **OpenAI Integration**: Generates personalized medication recommendations
+- **Local LLM via Ollama**: Generates personalized medication recommendations with Gemma 3B
 - **FastAPI**: RESTful API that integrates with the Angular frontend
 
 ## Prerequisites
 
 - **pyenv**: Python version manager (required)
 - **Python 3.10.10**: Will be installed automatically via pyenv
+- **Ollama**: Local LLM runtime (https://ollama.ai)
 
 Install pyenv if you don't have it:
 
@@ -62,14 +63,23 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-4. **Set up environment variables**:
+4. **Install required Ollama models**:
 
 ```bash
-cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY for text generation
+ollama pull embeddinggemma
+ollama pull gemma3:1b
 ```
 
-5. **Initialize ChromaDB with PDFs**:
+5. **Set up environment variables (optional)**:
+
+```bash
+export OLLAMA_HOST=http://localhost:11434   # Override if running remotely
+export OLLAMA_EMBEDDING_MODEL=embeddinggemma
+export OLLAMA_LLM_MODEL=gemma3:1b
+export OLLAMA_TEMPERATURE=0.3
+```
+
+6. **Initialize ChromaDB with PDFs**:
 
 ```bash
 python init_db.py
@@ -79,10 +89,10 @@ This will:
 
 - Process all PDF files in the `../pdfs/` directory
 - Extract text and chunk it
-- Generate embeddings locally using SentenceTransformers
+- Generate embeddings locally using Ollama `embeddinggemma`
 - Store in ChromaDB
 
-6. **Run the server**:
+7. **Run the server**:
 
 ```bash
 python main.py
@@ -145,7 +155,7 @@ backend/
 └── services/
     ├── pdf_processor.py   # PDF text extraction and chunking
     ├── chroma_service.py  # ChromaDB vector store management
-    ├── openai_service.py  # OpenAI API integration
+    ├── ollama_service.py  # Local Gemma integration via Ollama
     └── rag_service.py     # RAG orchestration
 ```
 
@@ -153,12 +163,12 @@ backend/
 
 - **Chunk Size**: Default 1000 characters (configurable in `pdf_processor.py`)
 - **Chunk Overlap**: Default 200 characters
-- **Embedding Model**: `cross-encoder/ms-marco-MiniLM-L6-v2` (configurable via `EMBEDDING_MODEL_NAME`)
-- **LLM Model**: OpenAI `gpt-4-turbo-preview` (configurable in `openai_service.py`)
+- **Embedding Model**: Ollama `embeddinggemma` (configurable via `OLLAMA_EMBEDDING_MODEL`)
+- **LLM Model**: Ollama `gemma:3b` (configurable via `OLLAMA_LLM_MODEL`)
 
 ## Notes
 
-- Make sure you have sufficient OpenAI API credits for text generation
+- Keep Ollama running locally (`ollama serve`) for embedding and generation calls
 - The first run of `init_db.py` may take several minutes depending on PDF size
 - ChromaDB data is persisted in `./chroma_db/` directory
 - The API runs on `http://localhost:8000` by default
