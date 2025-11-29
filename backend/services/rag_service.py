@@ -2,14 +2,26 @@ import os
 from typing import Dict
 from .chroma_service import ChromaService
 from .ollama_service import OllamaService
+from .reranker_service import RerankerService
 
 
 class RAGService:
-    """RAG service that combines retrieval and generation."""
+    """RAG service that combines retrieval, reranking, and generation."""
     
     def __init__(self):
         self.chroma_service = ChromaService()
         self.generation_service = OllamaService()
+        # Initialize reranker if enabled
+        use_reranker = os.getenv("USE_RERANKER", "true").lower() == "true"
+        if use_reranker:
+            try:
+                self.reranker_service = RerankerService()
+                print("Reranker service initialized")
+            except Exception as e:
+                print(f"Warning: Could not initialize reranker: {e}. Continuing without reranking.")
+                self.reranker_service = None
+        else:
+            self.reranker_service = None
     
     def build_query(self, patient_data: Dict) -> str:
         """Build a search query from patient data."""
@@ -64,19 +76,32 @@ class RAGService:
         return query
     
     def get_recommendations(self, patient_data: Dict, n_results: int = 5) -> Dict:
-        """Get medicine recommendations using RAG."""
+        """Get medicine recommendations using RAG with optional reranking."""
         # Build search query
         query = self.build_query(patient_data)
         print(f"Search query: {query}")
         
-        # Retrieve relevant context
-        relevant_docs = self.chroma_service.query(query, n_results=n_results)
-        print(f"Retrieved {len(relevant_docs)} relevant documents")
+        # Retrieve more candidates if reranking is enabled, otherwise use n_results
+        retrieve_count = int(os.getenv("RERANKER_RETRIEVE_COUNT", "20")) if self.reranker_service else n_results
         
-        if not relevant_docs:
+        # Retrieve relevant context
+        retrieved_docs = self.chroma_service.query(query, n_results=retrieve_count)
+        print(f"Retrieved {len(retrieved_docs)} candidate documents")
+        
+        if not retrieved_docs:
             print("No relevant documents found. Using general knowledge.")
             # Still try to generate recommendations with minimal context
             relevant_docs = []
+        else:
+            # Rerank if reranker is available
+            if self.reranker_service and len(retrieved_docs) > n_results:
+                print(f"Reranking {len(retrieved_docs)} documents to get top {n_results}...")
+                relevant_docs = self.reranker_service.rerank(query, retrieved_docs, top_k=n_results)
+            else:
+                # Use top n_results from initial retrieval
+                relevant_docs = retrieved_docs[:n_results]
+        
+        print(f"Using {len(relevant_docs)} documents for generation")
         
         # Generate recommendations using the local Gemma model with retrieved context
         recommendations = self.generation_service.generate_recommendations(

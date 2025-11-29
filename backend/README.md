@@ -5,6 +5,7 @@ A Python FastAPI backend that uses RAG (Retrieval Augmented Generation) to provi
 ## Features
 
 - **RAG System**: Uses ChromaDB for vector storage and Ollama `embeddinggemma` embeddings
+- **Reranking**: Optional BGE reranker (`qllama/bge-reranker-large`) to improve retrieval relevance
 - **PDF Processing**: Extracts and processes clinical guidelines from PDF files
 - **Local LLM via Ollama**: Generates personalized medication recommendations with Gemma 3B
 - **FastAPI**: RESTful API that integrates with the Angular frontend
@@ -68,6 +69,7 @@ pip install -r requirements.txt
 ```bash
 ollama pull embeddinggemma
 ollama pull gemma3:1b
+ollama pull qllama/bge-reranker-large  # Optional: for reranking
 ```
 
 5. **Set up environment variables (optional)**:
@@ -77,6 +79,9 @@ export OLLAMA_HOST=http://localhost:11434   # Override if running remotely
 export OLLAMA_EMBEDDING_MODEL=embeddinggemma
 export OLLAMA_LLM_MODEL=gemma3:1b
 export OLLAMA_TEMPERATURE=0.3
+export OLLAMA_RERANKER_MODEL=qllama/bge-reranker-large  # Optional: reranker model
+export USE_RERANKER=true  # Enable/disable reranking (default: true)
+export RERANKER_RETRIEVE_COUNT=20  # Number of candidates to retrieve before reranking
 ```
 
 6. **Initialize ChromaDB with PDFs**:
@@ -156,6 +161,7 @@ backend/
     ├── pdf_processor.py   # PDF text extraction and chunking
     ├── chroma_service.py  # ChromaDB vector store management
     ├── ollama_service.py  # Local Gemma integration via Ollama
+    ├── reranker_service.py  # Document reranking using BGE reranker
     └── rag_service.py     # RAG orchestration
 ```
 
@@ -164,7 +170,10 @@ backend/
 - **Chunk Size**: Default 1000 characters (configurable in `pdf_processor.py`)
 - **Chunk Overlap**: Default 200 characters
 - **Embedding Model**: Ollama `embeddinggemma` (configurable via `OLLAMA_EMBEDDING_MODEL`)
-- **LLM Model**: Ollama `gemma:3b` (configurable via `OLLAMA_LLM_MODEL`)
+- **LLM Model**: Ollama `gemma3:1b` (configurable via `OLLAMA_LLM_MODEL`)
+- **Reranker Model**: Ollama `qllama/bge-reranker-large` (configurable via `OLLAMA_RERANKER_MODEL`)
+- **Reranking**: Enabled by default (set `USE_RERANKER=false` to disable)
+- **Reranker Retrieve Count**: Default 20 candidates before reranking (configurable via `RERANKER_RETRIEVE_COUNT`)
 
 ## Notes
 
