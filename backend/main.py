@@ -64,6 +64,13 @@ async def get_recommendations(request: RecommendationRequest):
         # Get recommendations using RAG
         recommendations = rag_service.get_recommendations(patient_data)
         
+        # Debug: Print parsed recommendations to validate
+        print("=" * 60)
+        print("DEBUG: Recommendations from RAG service (JSON):")
+        import json
+        print(json.dumps(recommendations, indent=2))
+        print("=" * 60)
+        
         # Convert to response model
         medicines = [
             MedicineRecommendation(**med) for med in recommendations.get("medicines", [])
@@ -75,6 +82,14 @@ async def get_recommendations(request: RecommendationRequest):
             notes=recommendations.get("notes", []),
             investigations=recommendations.get("investigations", [])
         )
+        
+        # Debug: Print final response to validate
+        print("DEBUG: Final response:")
+        print(f"  Response medicines: {len(response.medicines)}")
+        print(f"  Response lifestyle: {len(response.lifestyle)}")
+        print(f"  Response notes: {len(response.notes)} - {response.notes}")
+        print(f"  Response investigations: {len(response.investigations)} - {response.investigations}")
+        print("=" * 60)
         
         return response
         

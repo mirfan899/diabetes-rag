@@ -75,7 +75,7 @@ class RAGService:
         
         return query
     
-    def get_recommendations(self, patient_data: Dict, n_results: int = 5) -> Dict:
+    def get_recommendations(self, patient_data: Dict, n_results: int = 10) -> Dict:
         """Get medicine recommendations using RAG with optional reranking."""
         # Build search query
         query = self.build_query(patient_data)

@@ -35,14 +35,14 @@ class OllamaService:
         system_prompt = """You are a medical AI assistant specialized in diabetes care. Your role is to provide evidence-based medication recommendations based on clinical guidelines (ADA, AACE, NICE).
 
 You must:
-1. Base recommendations ONLY on the provided clinical guidelines context
+1. For MEDICATIONS: Base recommendations ONLY on the provided clinical guidelines context. If context is missing, you may use your medical knowledge but note it.
 2. Consider all patient factors (age, comorbidities, lab values, etc.)
 3. Provide specific medication names, dosages, and reasons
-4. Include lifestyle recommendations
-5. List important clinical notes and warnings
-6. Suggest necessary investigations/monitoring
+4. ALWAYS provide lifestyle recommendations using your medical knowledge (diet, exercise, weight management, etc.)
+5. ALWAYS provide clinical notes and warnings using your medical knowledge (monitoring requirements, side effects, contraindications, drug interactions)
+6. ALWAYS suggest necessary investigations/monitoring using your medical knowledge (lab tests like HbA1c, kidney function, lipid panel, eye exams, foot exams, follow-up appointments)
 
-Format your response as JSON with this structure:
+Format your response as JSON with this EXACT structure (all fields are required):
 {
   "medicines": [
     {
@@ -57,17 +57,34 @@ Format your response as JSON with this structure:
   "investigations": ["Test 1", "Test 2"]
 }
 
-IMPORTANT: Only recommend medications that are mentioned in the provided guidelines context. If the context doesn't contain relevant information, state that clearly."""
+CRITICAL RULES:
+- You MUST include ALL four fields: medicines, lifestyle, notes, and investigations
+- The lifestyle, notes, and investigations arrays MUST contain at least 2-3 items each
+- For lifestyle, notes, and investigations: Use your medical knowledge even if the context doesn't mention them
+- For medications: Prefer context, but you can use your knowledge if context is insufficient
+- NEVER return empty arrays for lifestyle, notes, or investigations"""
 
-        user_prompt = f"""Based on the following clinical guidelines and patient information, provide medication recommendations:
-
-CLINICAL GUIDELINES CONTEXT:
+        # Build context message
+        if context_text.strip():
+            context_section = f"""CLINICAL GUIDELINES CONTEXT:
 {context_text}
 
-PATIENT INFORMATION:
+"""
+        else:
+            context_section = "CLINICAL GUIDELINES CONTEXT: No specific guidelines retrieved. Use your medical knowledge for all recommendations.\n\n"
+        
+        user_prompt = f"""Based on the following clinical guidelines and patient information, provide comprehensive medication recommendations:
+
+{context_section}PATIENT INFORMATION:
 {patient_summary}
 
-Please provide evidence-based medication recommendations in the JSON format specified above."""
+REQUIREMENTS:
+1. Provide medication recommendations (prefer guidelines context if available, otherwise use your knowledge)
+2. ALWAYS provide lifestyle recommendations (diet, exercise, weight management) - use your medical knowledge
+3. ALWAYS provide clinical notes (monitoring, side effects, warnings) - use your medical knowledge  
+4. ALWAYS provide investigations (lab tests, screenings, follow-ups) - use your medical knowledge
+
+Please provide evidence-based recommendations in the JSON format specified above. Ensure lifestyle, notes, and investigations arrays each have at least 2-3 items."""
 
         try:
             response = self.client.chat(
@@ -79,23 +96,113 @@ Please provide evidence-based medication recommendations in the JSON format spec
                 options={"temperature": self.temperature},
             )
             content = response["message"]["content"]
+            print("=" * 60)
+            print("DEBUG: Raw response from Gemma model:")
+            print(content)
+            print("=" * 60)
+            
             json_payload = self._extract_json_block(content)
+            print("DEBUG: Extracted JSON payload:")
+            print(json_payload)
+            print("=" * 60)
+            
             recommendations = json.loads(json_payload)
 
+            # Debug: print raw JSON to see what LLM returned
+            print(f"DEBUG: Parsed recommendations keys: {list(recommendations.keys())}")
+            if "lifestyle" in recommendations:
+                print(f"DEBUG: lifestyle value: {recommendations['lifestyle']}")
+            if "notes" in recommendations:
+                print(f"DEBUG: notes value: {recommendations['notes']}")
+            if "investigations" in recommendations:
+                print(f"DEBUG: investigations value: {recommendations['investigations']}")
+
+            # Normalize all fields - ensure they exist and are lists
             if "medicines" not in recommendations:
                 recommendations["medicines"] = []
+            
+            # Ensure lifestyle exists
             if "lifestyle" not in recommendations:
                 recommendations["lifestyle"] = []
+            
+            # Ensure notes exists
             if "notes" not in recommendations:
                 recommendations["notes"] = []
+            
+            # Ensure investigations exists
             if "investigations" not in recommendations:
                 recommendations["investigations"] = []
+            
+            # Ensure lifestyle, notes and investigations are lists
+            if not isinstance(recommendations.get("lifestyle"), list):
+                if isinstance(recommendations.get("lifestyle"), str):
+                    recommendations["lifestyle"] = [recommendations["lifestyle"]]
+                else:
+                    recommendations["lifestyle"] = []
+            
+            if not isinstance(recommendations.get("notes"), list):
+                if isinstance(recommendations.get("notes"), str):
+                    recommendations["notes"] = [recommendations["notes"]]
+                else:
+                    recommendations["notes"] = []
+            
+            if not isinstance(recommendations.get("investigations"), list):
+                if isinstance(recommendations.get("investigations"), str):
+                    recommendations["investigations"] = [recommendations["investigations"]]
+                else:
+                    recommendations["investigations"] = []
 
+            # Validate and normalize medicine objects
+            validated_medicines = []
             for medicine in recommendations.get("medicines", []):
+                # Ensure all required fields are present
+                if not isinstance(medicine, dict):
+                    continue
+                
+                # Skip if missing critical fields
+                if "medicine_name" not in medicine:
+                    continue
+                
+                # Normalize reason field
                 if "reason" in medicine and isinstance(medicine["reason"], str):
                     medicine["reason"] = [medicine["reason"]]
                 elif "reason" not in medicine:
                     medicine["reason"] = []
+                
+                # Ensure required fields have defaults if missing
+                medicine["quantity_dose_strength"] = medicine.get("quantity_dose_strength", "Dosage not specified")
+                medicine["reference"] = medicine.get("reference", "Clinical guidelines")
+                
+                validated_medicines.append(medicine)
+            
+            recommendations["medicines"] = validated_medicines
+
+            # Final validation: If lifestyle, notes, or investigations are empty, add defaults
+            if not recommendations.get("lifestyle"):
+                print("WARNING: lifestyle is empty, adding default recommendations")
+                recommendations["lifestyle"] = [
+                    "Follow a balanced diet with controlled carbohydrates",
+                    "Engage in regular physical activity (at least 150 minutes per week)",
+                    "Maintain a healthy weight through diet and exercise",
+                    "Monitor blood glucose levels regularly"
+                ]
+            
+            if not recommendations.get("notes"):
+                print("WARNING: notes is empty, adding default notes")
+                recommendations["notes"] = [
+                    "Monitor blood glucose levels regularly",
+                    "Watch for signs of hypoglycemia or hyperglycemia",
+                    "Follow up with healthcare provider as recommended"
+                ]
+            
+            if not recommendations.get("investigations"):
+                print("WARNING: investigations is empty, adding default investigations")
+                recommendations["investigations"] = [
+                    "HbA1c test every 3-6 months",
+                    "Annual comprehensive eye exam",
+                    "Annual foot examination",
+                    "Kidney function tests annually"
+                ]
 
             return recommendations
 
