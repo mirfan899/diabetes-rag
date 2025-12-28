@@ -2,15 +2,24 @@ import sys
 import os
 from dotenv import load_dotenv
 
-# Add backend to path so imports work
-current_dir = os.getcwd()
-backend_dir = os.path.join(current_dir, 'backend')
-# Load env vars from backend/.env
+# Setup path to import 'services' from 'backend/'
+# We assume this file is in backend/tests/
+test_dir = os.path.dirname(os.path.abspath(__file__))
+backend_dir = os.path.dirname(test_dir)
+
+# Add backend_dir to sys.path so 'services' package is found
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
+
+# Load environment variables
 load_dotenv(os.path.join(backend_dir, '.env'))
 
-sys.path.append(backend_dir)
-
-from backend.services.agent_service import AgentService
+try:
+    from services.agent_service import AgentService
+except ImportError as e:
+    print(f"Import Error: {e}")
+    print(f"Sys Path: {sys.path}")
+    sys.exit(1)
 
 def test_agent():
     print("Initializing Agent Service...")
