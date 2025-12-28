@@ -6,6 +6,7 @@ chromadb
 pypdf
 pdfplumber
 langchain
+langchain-community
 python-dotenv
 numpy
 tiktoken

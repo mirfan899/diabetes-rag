@@ -11,7 +11,7 @@ This document provides a comprehensive architectural overview of the Diabetes RA
 5. [Design Patterns](#design-patterns)
 6. [Integration Architecture](#integration-architecture)
 7. [Deployment Architecture](#deployment-architecture)
-8. [Error Handling & Resilience](#error-handling--resilience)
+9. [Agentic RAG Architecture](#agentic-rag-architecture)
 
 ---
 
@@ -546,6 +546,7 @@ Each layer has specific error handling:
 
 ### Backend Framework
 - **FastAPI**: Modern async web framework
+- **LangChain**: Framework for building agents
 - **Pydantic**: Data validation and serialization
 - **Uvicorn**: ASGI server
 
@@ -790,6 +791,86 @@ Considerations:
 • Ollama: Use dedicated GPU server or vLLM for efficiency
 • FastAPI: Stateless, easily horizontally scalable
 • Caching: Redis layer for popular queries
+```
+
+---
+
+---
+
+## Agentic RAG Architecture
+
+The system has been upgraded to support **Agentic RAG**, moving beyond linear pipelines to a reasoning-based approach.
+
+### 1. Agent Service Layer
+
+**File**: `services/agent_service.py`
+
+```python
+AgentService
+├── Components
+│   ├── LangChain ChatOllama (LLM Wrapper)
+│   ├── LangChain ReAct Agent (Reasoning Loop)
+│   └── Tool Definitions
+│
+└── Execution Flow
+    └── run_agent(patient_data)
+        ├── 1. Analyze Patient Data
+        ├── 2. Formulate "Reasoning Traces" (Thoughts)
+        ├── 3. Select Tool (Search Guidelines)
+        ├── 4. Observe Tool Output
+        ├── 5. Iterate (Reason → Act → Observe)
+        └── 6. Synthesize Final JSON Response
+```
+
+**Key Difference**: Unlike the linear `RAGService`, the `AgentService` determines **what** to search for dynamically based on the patient's specific conditions (e.g., specific comorbidities).
+
+### 2. Tools Layer
+
+**File**: `services/tools.py`
+
+Wraps existing services into callable tools for the LLM.
+
+- **`search_clinical_guidelines`**: 
+    - **Input**: Natural language search query (e.g., "medications for diabetes with kidney failure")
+    - **Logic**: Calls `ChromaService` + `RerankerService`
+    - **Output**: Top 5 ranked textual snippets from guidelines
+
+### 3. Agentic Data Flow
+
+```
+Agent Loop (ReAct Pattern):
+
+   Start
+     │
+     ▼
+┌─────────┐
+│ Thought │ "Patient has neuropathy. I should check
+│ (LLM)   │  neuropathy-specific guidelines."
+└────┬────┘
+     │
+     ▼
+┌─────────┐      ┌─────────────────────────┐
+│ Action  │ ───► │ Tool: Search Guidelines │
+│ (Tool)  │      │ Query: "neuropathy..."  │
+└────┬────┘      └────────────┬────────────┘
+     │                        │
+     ◀────────────────────────┘
+     │
+┌─────────┐
+│ Observ- │ "Found: First-line treatment for
+│ ation   │  neuropathy is Pregabalin..."
+└────┬────┘
+     │
+     ▼
+┌─────────┐
+│ Thought │ "I have enough info. I will now
+│ (LLM)   │  formulate the recommendation."
+└────┬────┘
+     │
+     ▼
+   Final
+   Answer
+   (JSON)
 ```
 
 ---

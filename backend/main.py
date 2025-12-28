@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from models.schemas import RecommendationRequest, RecommendationResponse, MedicineRecommendation
 from services.rag_service import RAGService
+from services.agent_service import AgentService
 import os
 from dotenv import load_dotenv
 import uvicorn
@@ -22,6 +23,7 @@ app.add_middleware(
 
 # Initialize RAG service
 rag_service = None
+agent_service = None
 
 @app.on_event("startup")
 async def startup_event():
@@ -29,7 +31,8 @@ async def startup_event():
     global rag_service
     try:
         rag_service = RAGService()
-        print("RAG service initialized successfully")
+        agent_service = AgentService()
+        print("Services initialized successfully")
     except Exception as e:
         print(f"Error initializing RAG service: {e}")
         raise
@@ -92,6 +95,36 @@ async def get_recommendations(request: RecommendationRequest):
         print("=" * 60)
         
         return response
+        
+    except Exception as e:
+        print(f"Error generating recommendations: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error generating recommendations: {str(e)}"
+        )
+
+
+@app.post("/patients/agent-recommendations", response_model=RecommendationResponse)
+async def get_agent_recommendations(request: RecommendationRequest):
+    """Get recommendations using the Agentic RAG system."""
+    if not agent_service:
+        raise HTTPException(status_code=500, detail="Agent service not initialized")
+    
+    try:
+        patient_data = request.dict()
+        recommendations = agent_service.run_agent(patient_data)
+        
+        # Convert to response model
+        medicines = [
+            MedicineRecommendation(**med) for med in recommendations.get("medicines", [])
+        ]
+        
+        return RecommendationResponse(
+            medicines=medicines,
+            lifestyle=recommendations.get("lifestyle", []),
+            notes=recommendations.get("notes", []),
+            investigations=recommendations.get("investigations", [])
+        )
         
     except Exception as e:
         print(f"Error generating recommendations: {e}")
