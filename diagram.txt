@@ -1,0 +1,56 @@
+// Diabetes Agentic RAG System
+
+// Nodes
+// 1. Ingest Group Nodes
+PDFs [icon: file, label: "PDF Guidelines"]
+IngestScript [icon: terminal, label: "Ingestion Script"]
+VectorDB [icon: database, label: "Vector Database", color: "blue"]
+
+// 2. Backend Group Nodes
+PatientData [icon: user, label: "Patient Data"]
+BackendAPI [icon: server, label: "Backend API", color: "green"]
+
+// 3. Agent Group Nodes
+Agent [icon: robot, label: "Diabetes Agent", color: "purple"]
+GemmaModel [icon: chip, label: "Gemma 3 Model", color: "red"]
+GemmaEmbeddings [icon: search, label: "Gemma 3 Embeddings", color: "red"]
+Reranker [icon: sort, label: "Reranker", color: "orange"]
+
+// Groups
+Group IngestDocuments [label: "Ingest Documents"] {
+  PDFs
+  IngestScript
+  VectorDB
+  
+  PDFs > IngestScript [label: "Read"]
+  IngestScript > VectorDB [label: "Store"]
+}
+
+Group BackendAPI_Group [label: "Backend API"] {
+  PatientData
+  BackendAPI
+  
+  PatientData > BackendAPI [label: "POST Data"]
+}
+
+Group DiabetesAgent [label: "Diabetes Agent"] {
+  Agent
+  GemmaModel
+  GemmaEmbeddings
+  Reranker
+  
+  Agent > GemmaModel [label: "Reasoning"]
+  Agent > Reranker [label: "Refine Search"]
+  Reranker > GemmaEmbeddings [label: "Semantic Search"]
+}
+
+// Global Flows (Inter-Group Connections)
+BackendAPI > Agent [label: "Trigger Recommendation"]
+
+// Agent Searching VectorDB
+GemmaEmbeddings > VectorDB [label: "Query"]
+VectorDB > Reranker [label: "Retrieve Docs"]
+Reranker > Agent [label: "Evidence"]
+
+// Final Output
+Agent > BackendAPI [label: "Suggest Medicines"]
