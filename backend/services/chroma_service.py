@@ -2,12 +2,19 @@ import os
 import chromadb
 from typing import List, Dict
 import ollama
-
+from pathlib import Path
 
 class ChromaService:
     """Service for managing ChromaDB vector store."""
     
-    def __init__(self, collection_name: str = "diabetes_guidelines", persist_directory: str = "./chroma_db"):
+    def __init__(self, collection_name: str = "diabetes_guidelines", persist_directory: str = None):
+        if persist_directory is None:
+            # Default to backend/data/chroma_db
+            backend_dir = Path(__file__).parent.parent
+            data_dir = backend_dir / "data"
+            data_dir.mkdir(exist_ok=True)
+            persist_directory = str(data_dir / "chroma_db")
+            
         self.client = chromadb.PersistentClient(path=persist_directory)
         self.collection_name = collection_name
         self.collection = None
