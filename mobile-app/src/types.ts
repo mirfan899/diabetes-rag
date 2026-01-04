@@ -1,3 +1,12 @@
+
+export type RootStackParamList = {
+    Eula: undefined;
+    Login: undefined;
+    DoctorProfile: undefined;
+    Home: undefined;
+    Result: { result: RecommendationResponse };
+};
+
 export interface RecommendationRequest {
     guidelines: string;
     diabetes_type: string;
