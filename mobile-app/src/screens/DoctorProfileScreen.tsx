@@ -1,3 +1,4 @@
+console.error('[DoctorProfileScreen] EVALUATING');
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

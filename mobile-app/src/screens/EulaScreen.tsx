@@ -1,3 +1,4 @@
+console.error('[EulaScreen] EVALUATING');
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

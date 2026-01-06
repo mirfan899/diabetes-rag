@@ -1,0 +1,1000 @@
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.soundtrigger.SoundTriggerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.trust.TrustManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.backup.BackupManagerService$Lifecycle
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.appwidget.AppWidgetService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.voiceinteraction.VoiceInteractionManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.GestureLauncherService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.SensorNotificationService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.ContextHubSystemService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.emergency.EmergencyAffordanceService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.blob.BlobStoreManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.dreams.DreamManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.print.PrintManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.security.AttestationVerificationManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.companion.CompanionDeviceManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.companion.virtual.VirtualDeviceManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.restrictions.RestrictionsManagerService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.media.MediaSessionService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.media.MediaResourceMonitorService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.biometrics.sensors.fingerprint.FingerprintService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.biometrics.BiometricService
+01-04 23:27:09.696   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.biometrics.AuthService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.security.authenticationpolicy.AuthenticationPolicyService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.pm.ShortcutService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.pm.LauncherAppsService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.pm.CrossProfileAppsService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.people.PeopleService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.media.metrics.MediaMetricsManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.pm.BackgroundInstallControlService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.media.projection.MediaProjectionManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.slice.SliceManagerService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.stats.StatsCompanion$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.scheduling.RebootReadinessManagerService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.stats.pull.StatsPullAtomService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.stats.bootstrap.StatsBootstrapAtomService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.incident.IncidentCompanionService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.sdksandbox.SdkSandboxManagerService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.adservices.AdServicesManagerService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.ondevicepersonalization.OnDevicePersonalizationSystemService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_android.os.profiling.ProfilingService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.MmsServiceBroker
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.autofill.AutofillManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.credentials.CredentialManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.translation.TranslationManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.clipboard.ClipboardService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.appbinding.AppBindingService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.tracing.TracingServiceProxy
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.os.instrumentation.DynamicInstrumentationManagerService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.policy.PermissionPolicyService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.pm.StagingManager$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.crashrecovery.CrashRecoveryModule$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.app.GameManagerService$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.uwb.UwbService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.ranging.RangingService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.safetycenter.SafetyCenterService
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.appsearch.AppSearchModule$Lifecycle
+01-04 23:27:09.697   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.compos.IsolatedCompilationService
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.media.MediaCommunicationService
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.compat.overrides.AppCompatOverridesService$Lifecycle
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.healthconnect.HealthConnectManagerService
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.devicelock.DeviceLockService
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.SensitiveContentProtectionManagerService
+01-04 23:27:09.698   697  1807 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.system.virtualmachine.VirtualizationSystemService
+01-04 23:27:09.701   697   855 I WifiClientModeImpl[72686:wlan0]: Update current security type to 0
+01-04 23:27:09.702   697   855 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1698 com.android.server.wifi.ClientModeImpl.sendNetworkChangeBroadcast:3140 com.android.server.wifi.ClientModeImpl.lambda$sendNetworkChangeBroadcastWithCurrentState$14:3117 com.android.server.wifi.ClientModeImpl.$r8$lambda$mtuS9ulugUkTxNA_sDDnAioo66w:0 com.android.server.wifi.ClientModeImpl$$ExternalSyntheticLambda13.send:0 
+01-04 23:27:09.713   697  1808 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.SystemConfigService
+01-04 23:27:09.719  1481  1677 D CompatChangeReporter: Compat change id reported: 312399441; UID 10147; state: ENABLED
+01-04 23:27:09.747   697  1809 D SystemServerTimingAsync: ssm.onCompletedEventUser-0_{|Unlocked|}_com.android.server.ondeviceintelligence.OnDeviceIntelligenceManagerService
+01-04 23:27:09.750  1244  1244 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.scheduler.ACTION_PROXY_SCHEDULE dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+01-04 23:27:09.750  1244  1244 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.scheduler.ACTION_PROXY_SCHEDULE dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+01-04 23:27:09.772  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:09.772  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:09.782  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:09.785  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:09.785  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:09.819   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.821   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.821   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.821   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.821   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.883   697   861 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:09.891  1546  1775 V FuseDaemonThread: Waiting 100ms for FUSE start. Count 47
+01-04 23:27:09.892   619  1155 I Codec2InfoBuilder: adding type 'audio/vorbis'
+01-04 23:27:09.903  1546  1806 I FuseDaemonThread: Starting thread for emulated;0 ...
+01-04 23:27:09.904  1546  1806 I FuseDaemon: fuse-bpf is enabled because /sys/fs/fuse/features/fuse_bpf reads 'supported'
+01-04 23:27:09.904  1546  1806 I FuseDaemon: Using FUSE BPF, BPF prog fd fetched
+01-04 23:27:09.904  1546  1806 I FuseDaemon: Starting fuse...
+01-04 23:27:09.959   697   736 W Looper  : Slow dispatch took 141ms android.ui app=system_server main=false group=TOP_APP h=com.android.server.am.ActivityManagerService$UiHandler c=com.android.server.am.UidObserverController$$ExternalSyntheticLambda0@a8f3ed2 m=0
+01-04 23:27:09.991  1546  1775 V FuseDaemonThread: Waiting 100ms for FUSE start. Count 46
+01-04 23:27:10.002  1559  1559 I InteractorInitializer: Initialized process com.google.android.googlequicksearchbox:interactor
+01-04 23:27:10.003   697  1737 D CountryDetector: The first listener is added
+01-04 23:27:10.024  1551  1551 I AiAiLocation: Creating location tracker with config: LocationConfig(minUpdateIntervalSeconds=21600, minTravelDistanceMeters=100000)
+01-04 23:27:10.040  1418  1771 I DialerLoggingTelephonyCache: com.google.android.dialershared.telephony.LoggingTelephonyCache.setUpNetworkMemoize:97 getNetworkOperatorName
+01-04 23:27:10.040  1551  1551 I AiAiTextClassifier: Updating text classifier flags in CutoffProvider.
+01-04 23:27:10.043   697   725 I system_server: Background concurrent mark compact GC freed 25MB AllocSpace bytes, 98(3808KB) LOS objects, 42% free, 31MB/55MB, paused 379.215ms,51.100ms total 8.970s
+01-04 23:27:10.044   619  1155 I Codec2InfoBuilder: adding type 'video/x-vnd.on2.vp8'
+01-04 23:27:10.046   697   726 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+01-04 23:27:10.046   629  1190 I C2SoftVpxEnc: setting temporal layering 0 + 0
+01-04 23:27:10.060   629  1190 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+01-04 23:27:10.061   629  1190 I C2SoftVpxEnc: setting temporal layering 0 + 0
+01-04 23:27:10.061   629  1190 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+01-04 23:27:10.061   619  1155 I Codec2InfoBuilder: adding type 'video/x-vnd.on2.vp8'
+01-04 23:27:10.072   619  1155 I Codec2InfoBuilder: adding type 'video/x-vnd.on2.vp9'
+01-04 23:27:10.075  1653  1653 I ContactsDatabaseHelper: updateUseStrictPhoneNumberComparison: US
+01-04 23:27:10.080   629  1067 I C2SoftVpxEnc: setting temporal layering 0 + 0
+01-04 23:27:10.080   629  1067 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+01-04 23:27:10.080  1418  1771 I DialerLoggingTelephonyCache: com.google.android.dialershared.telephony.LoggingTelephonyCache.setUpNetworkMemoize:106 getNetworkCountryIso
+01-04 23:27:10.080   629  1067 I C2SoftVpxEnc: setting temporal layering 0 + 0
+01-04 23:27:10.081   629  1067 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+01-04 23:27:10.081  1418  1816 I DialerLoggingTelephonyCache: com.google.android.dialershared.telephony.LoggingTelephonyCache.setUpNetworkMemoize:115 getNetworkOperator
+01-04 23:27:10.091  1546  1775 V FuseDaemonThread: Waiting 100ms for FUSE start. Count 45
+01-04 23:27:10.096   962   962 W SystemUIService: Initialization of com.android.systemui.power.PowerUI took 1274 ms
+01-04 23:27:10.112   619  1155 I Codec2InfoBuilder: adding type 'video/x-vnd.on2.vp9'
+01-04 23:27:10.113   629  1067 D C2SoftVpxEnc: Given level 0 does not cover current configuration: adjusting to 7000
+01-04 23:27:10.122  1653  1653 I ContactsDatabaseHelper: updateUseStrictPhoneNumberComparison: US
+01-04 23:27:10.125  1546  1759 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+01-04 23:27:10.126   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:10.126   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:10.126   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:10.126   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:10.127   962  1785 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+01-04 23:27:10.129  1546  1759 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+01-04 23:27:10.130   962  1786 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+01-04 23:27:10.159   697   727 W System  : A resource failed to call close. 
+01-04 23:27:10.159   697   727 W System  : A resource failed to call close. 
+01-04 23:27:10.159   697   727 W System  : A resource failed to call close. 
+01-04 23:27:10.160   697  1589 W AppSearchIcing: embedding-index.h:107: Failed to persist embedding index to disk while destructing /data/system_ce/0/appsearch/icing/embedding_index_dir
+01-04 23:27:10.166  1551  1778 D nativeloader: Load libtextclassifier3_jni_agsa.so using class loader ns product-clns-9 (caller=/product/priv-app/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08.apk!classes2.dex): dlopen failed: library "libtextclassifier3_jni_agsa.so" not found
+01-04 23:27:10.176   697  1736 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@ADA
+01-04 23:27:10.176   697  1736 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@ADA
+01-04 23:27:10.193  1418  1816 I DialerLoggingTelephonyCache: com.google.android.dialershared.telephony.LoggingTelephonyCache.setUpNetworkMemoize:139 getSimCarrierIdName
+01-04 23:27:10.193  1418  1816 I DialerLoggingTelephonyCache: com.google.android.dialershared.telephony.LoggingTelephonyCache.setUpNetworkMemoize:148 getSimCountryIso
+01-04 23:27:10.198  1045  1045 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {3b3b31c}, hasService=false, callingPackage=com.android.server.telecom
+01-04 23:27:10.246  1551  1551 I AiAiEcho: SearchBE[TrackerImpl]: initialized.
+01-04 23:27:10.311  1010  1216 D DhcpClient: Scheduling renewal in 43199s
+01-04 23:27:10.312  1010  1216 D DhcpClient: Scheduling rebind in 75599s
+01-04 23:27:10.312  1010  1216 D DhcpClient: Scheduling expiry in 86399s
+01-04 23:27:10.347  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:10.347  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:10.353  1045  1045 D CarrierKeyDownloadManager [0]: Carrier not enabled or invalid values. mKeyAvailability=0 mURL=null
+01-04 23:27:10.353  1045  1045 D CarrierKeyDownloadManager [0]: Cleaning up existing renewal alarms
+01-04 23:27:10.354  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:10.354  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:10.354  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:10.382  1653  1821 D ContactsDatabaseHelper: WAL enabled for contacts2.db: true
+01-04 23:27:10.385  1045  1045 E CarrierKeyDownloadManager [0]: handleAlarmOrConfigChange ActiveSubscriptionInfoList = 1
+01-04 23:27:10.386  1045  1045 I CarrierInfoManager: deleting carrier key from db for subId=1
+01-04 23:27:10.397   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:10.437  1418  1418 I DialerShortcutsJobScheduler: com.android.dialer.shortcuts.ShortcutsJobScheduler.schedule:59 schedule
+01-04 23:27:10.450  1418  1418 D CompatChangeReporter: Compat change id reported: 311402873; UID 10142; state: ENABLED
+01-04 23:27:10.450  1418  1418 D CompatChangeReporter: Compat change id reported: 323349338; UID 10142; state: ENABLED
+01-04 23:27:10.536  1052  1416 I HWUI    : Davey! duration=964ms; Flags=0, FrameTimelineVsyncId=2814, IntendedVsync=108951618936, Vsync=109401618918, InputEventId=0, HandleInputStart=109409107463, AnimationStart=109409108055, PerformTraversalsStart=109409841535, DrawStart=109409882433, FrameDeadline=109634952242, FrameStartTime=109408930296, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=109410406029, SyncStart=109607618943, IssueDrawCommandsStart=109607669510, SwapBuffers=109635861441, FrameCompleted=110113787811, DequeueBufferDuration=4904, QueueBufferDuration=217066, GpuCompleted=110113787811, SwapBuffersCompleted=110099515388, DisplayPresentTime=0, CommandSubmissionCompleted=109635861441, 
+01-04 23:27:10.556  1244  1249 W .gms.persistent: Suspending all threads took: 562.007ms
+01-04 23:27:10.643   458   458 D Zygote  : Forked child process 1824
+01-04 23:27:10.810  1052  1170 I Choreographer: Skipped 45 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:10.817   697   746 W ActivityManager: Slow operation: 433ms so far, now at startProcess: returned from zygote!
+01-04 23:27:10.852   697   745 I ActivityManager: Extending process start timeout by 9933ms for ProcessRecord{47ac368 1418:com.google.android.dialer/u0a142}
+01-04 23:27:10.864  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:10.866  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:10.867   697   746 W ActivityManager: Slow operation: 483ms so far, now at startProcess: done updating battery stats
+01-04 23:27:10.868   697   746 W ActivityManager: Slow operation: 483ms so far, now at startProcess: building log message
+01-04 23:27:10.868   697   746 I ActivityManager: Start proc 1824:com.android.localtransport/1000 for service {com.android.localtransport/com.android.localtransport.LocalTransportService}
+01-04 23:27:10.868   697   746 W ActivityManager: Slow operation: 484ms so far, now at startProcess: starting to update pids map
+01-04 23:27:10.868   697   746 I ActivityManager: ProcessObserver broadcast disabled
+01-04 23:27:10.868   697   746 W ActivityManager: Slow operation: 484ms so far, now at startProcess: done updating pids map
+01-04 23:27:10.870   697   729 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:10.876   697   729 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:10.876   697   729 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:10.878   697   861 D ConnectivityService: Setting DNS servers for network 100 to [/10.0.2.3]
+01-04 23:27:10.879   697   861 D DnsManager: sendDnsConfigurationForNetwork(ResolverParamsParcel{netId: 100, sampleValiditySeconds: 1800, successThreshold: 25, minSamples: 8, maxSamples: 64, baseTimeoutMsec: 0, retryCount: 0, servers: [10.0.2.3], domains: [], tlsName: , tlsServers: [], tlsFingerprints: [], caCertificate: , tlsConnectTimeoutMs: 0, resolverOptions: null, transportTypes: [1], meteredNetwork: false, dohParams: null, interfaceNames: [wlan0]})
+01-04 23:27:10.885  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:10.885  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:10.885  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: Retrieving snapshot for com.google.android.dialer failed
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: java.util.concurrent.TimeoutException: Timed out waiting for Task
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at ttj.o(PG:48)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at uac.c(PG:15)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at uac.d(PG:38)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at nmf.call(PG:149)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at aakn.call(PG:17)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at aanf.a(PG:3)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at aamh.run(PG:19)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at aang.run(PG:5)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at umz.run(PG:7)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at tdt.run(PG:78)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at ubo.run(PG:476)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at java.lang.Thread.run(Thread.java:1119)
+01-04 23:27:10.885  1418  1765 E PhenotypeFlagCommitter: 	at uoe.run(PG:61)
+01-04 23:27:10.898  1452  1452 D nativeloader: Load /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk!/lib/x86_64/libintegrated_shared_object.so using class loader ns product-clns-9 (caller=/product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk): ok
+01-04 23:27:10.903  1824  1824 I .localtransport: Using CollectorTypeCMC GC.
+01-04 23:27:10.979  1452  1452 I NativeLibHelper: NativeLibHelper.loadLibrary():162 Loaded native library:integrated_shared_object (result=true)
+01-04 23:27:10.980   240   240 I vold    : fuse-bpf is enabled because /sys/fs/fuse/features/fuse_bpf reads 'supported'
+01-04 23:27:10.980   240   240 I vold    : Setting ro.fuse.bpf.is_running to true
+01-04 23:27:10.984   240   240 I vold    : Configuring read_ahead of /mnt/user/0/emulated fuse filesystem to 256kb
+01-04 23:27:10.985   240   240 I vold    : Writing 256 to /sys/class/bdi/0:93/read_ahead_kb
+01-04 23:27:10.985   240   240 I vold    : Configuring max_ratio of /mnt/user/0/emulated fuse filesystem to 40
+01-04 23:27:10.985   240   240 I vold    : Writing 40 to /sys/class/bdi/0:93/max_ratio
+01-04 23:27:10.999   697   831 I StorageManagerService: Mounted volume VolumeInfo{emulated;0}:
+01-04 23:27:10.999   697   831 I StorageManagerService:     type=EMULATED diskId=null partGuid= mountFlags=PRIMARY|VISIBLE_FOR_WRITE 
+01-04 23:27:10.999   697   831 I StorageManagerService:     mountUserId=0 state=MOUNTED 
+01-04 23:27:10.999   697   831 I StorageManagerService:     fsType=null fsUuid=null fsLabel=null 
+01-04 23:27:10.999   697   831 I StorageManagerService:     path=/storage/emulated internalPath=/data/media 
+01-04 23:27:11.007  1418  1816 I DialerFlags: com.android.dialer.phenotype.Flags$1.onSuccess:123 finished with result: false
+01-04 23:27:11.014   697   831 I StorageSessionController: Notifying volume state changed for session with id: emulated;0
+01-04 23:27:11.023  1452  1452 I NativeLibHelper: NativeLibHelper.loadLibrary():162 Loaded native library:integrated_shared_object (result=true)
+01-04 23:27:11.036  1546  1775 V MediaProvider: detachVolume() received for external_primary
+01-04 23:27:11.038  1052  1416 I HWUI    : Davey! duration=989ms; Flags=0, FrameTimelineVsyncId=2829, IntendedVsync=109418285584, Vsync=109618285576, InputEventId=0, HandleInputStart=109650013455, AnimationStart=109650015643, PerformTraversalsStart=109652133755, DrawStart=109652177121, FrameDeadline=110134952222, FrameStartTime=109620266445, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=109892429546, SyncStart=110099573939, IssueDrawCommandsStart=110129748767, SwapBuffers=110135702699, FrameCompleted=110614930224, DequeueBufferDuration=101512399, QueueBufferDuration=39147182, GpuCompleted=110513328913, SwapBuffersCompleted=110614930224, DisplayPresentTime=0, CommandSubmissionCompleted=110135702699, 
+01-04 23:27:11.089  1045  1045 D CarrierProvider:   delete.count=0
+01-04 23:27:11.089  1045  1045 I CarrierInfoManager: Deleting the number of entries = 0   for carrierId = 1
+01-04 23:27:11.089  1045  1045 D CarrierKeyDownloadManager [0]: Cleaning up download info
+01-04 23:27:11.089  1045  1045 I Telephony: TelecomAccountRegistry: Carrier-config changed, checking for phone account updates.
+01-04 23:27:11.089  1045  1045 D Telephony: TelecomAccountRegistry: handleCarrierConfigChange: subId=1, accountSubId=1
+01-04 23:27:11.158  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:11.158  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:11.159  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:11.173  1045  1508 D ONS     : SIM state changed
+01-04 23:27:11.190  1452  1452 I OemConfigs: OemConfigs.<init>():149 OEM configs apply status: 1
+01-04 23:27:11.273   697  1095 D AccessibilityManagerService: notifyQuickSettingsTilesChanged userId: 0, tileComponentNames: []
+01-04 23:27:11.273  1052  1416 I HWUI    : Davey! duration=961ms; Flags=0, FrameTimelineVsyncId=2844, IntendedVsync=109668285574, Vsync=110118285556, InputEventId=0, HandleInputStart=110130023649, AnimationStart=110130024082, PerformTraversalsStart=110130208577, DrawStart=110130245051, FrameDeadline=110534952206, FrameStartTime=110129877231, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=110130481289, SyncStart=110614983634, IssueDrawCommandsStart=110615059810, SwapBuffers=110648167376, FrameCompleted=111114208273, DequeueBufferDuration=4920, QueueBufferDuration=540675, GpuCompleted=111114103802, SwapBuffersCompleted=111114208273, DisplayPresentTime=0, CommandSubmissionCompleted=110648167376, 
+01-04 23:27:11.274  1452  1452 I ModuleManager: ModuleManager.<init>():160 ModuleManager is created on process com.google.android.inputmethod.latin
+01-04 23:27:11.275   697  1736 D FileUtils: Rounded bytes from 2067255296 to 4000000000
+01-04 23:27:11.290   962   962 W SceneFramework: Scene framework is disabled [NOT MET] com.android.systemui.scene_container
+01-04 23:27:11.290   962   962 W SceneFramework: [NOT MET] com.android.systemui.keyguard_wm_state_refactor
+01-04 23:27:11.290   962   962 W SceneFramework:     [MET] com.android.systemui.notification_avalanche_throttle_hun
+01-04 23:27:11.292   962   962 D ShadeStateTraceLogger: New configuration change from Shade window. smallestScreenWidthDp: 411, densityDpi: 420
+01-04 23:27:11.354   962   962 D NotificationMemory: NotificationMemoryMonitor initialized.
+01-04 23:27:11.354   962   962 I NotificationMemory: Registered dumpable.
+01-04 23:27:11.355   962   962 D DLObserver: add alignment listener: com.android.systemui.statusbar.KeyguardIndicationController$$ExternalSyntheticLambda15@491c684
+01-04 23:27:11.359   697  1736 I StatusBarManagerService: registerStatusBar bar=com.android.internal.statusbar.IStatusBar$Stub$Proxy@8222f19
+01-04 23:27:11.377  1653  1821 I PhoneAccountHandleMigrationUtils_ContactsDatabaseHelper: updatePhoneAccountHandleMigrationPendingStatus false
+01-04 23:27:11.391   962  1787 D CCodec  : allocate(c2.android.vorbis.decoder)
+01-04 23:27:11.392   962  1790 D CCodec  : allocate(c2.android.vorbis.decoder)
+01-04 23:27:11.409  1045  1045 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+01-04 23:27:11.410  1045  1045 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+01-04 23:27:11.410  1045  1045 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+01-04 23:27:11.411  1045  1045 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+01-04 23:27:11.411  1045  1045 I Telephony:  isRttSupported: false
+01-04 23:27:11.411  1045  1045 I Telephony:  alwaysAllowWhileRoaming: false
+01-04 23:27:11.411  1045  1045 I Telephony:  isRoaming: false
+01-04 23:27:11.411  1045  1045 I Telephony:  isOnWfc: false
+01-04 23:27:11.415  1244  1738 I SQLiteConnection: Long db operation: /data/user/0/com.google.android.gms/databases/phenotype.db
+01-04 23:27:11.430  1244  1363 W TracingHelper: No RequestContext found in the trace or trace not available. [CONTEXT service_id=259 ratelimit_count=100000 ]
+01-04 23:27:11.431   697   745 W ActivityManager: Timeout executing service: ServiceRecord{4ef29e8 u0 com.android.systemui/.keyguard.KeyguardService c:android}
+01-04 23:27:11.436   697   855 D WifiScoreReport: startConnectedNetworkScorer(100, false)
+01-04 23:27:11.436   697   855 W WifiScoreReport: Cannot start external scoring netId=100 currentNetId=100 sessionId=1008
+01-04 23:27:11.447   962  1787 I ApexCodecsLazy: Failed to load libcom.android.media.swcodec.apexcodecs.so: dlopen failed: library "libcom.android.media.swcodec.apexcodecs.so" not found
+01-04 23:27:11.448   962  1787 I Codec2Client: Available Codec2 services: "default" "software"
+01-04 23:27:11.450   962  1787 I CCodec  : setting up 'default' as default (vendor) store
+01-04 23:27:11.450   962  1790 I CCodec  : setting up 'default' as default (vendor) store
+01-04 23:27:11.477   697   855 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1698 com.android.server.wifi.ClientModeImpl.sendNetworkChangeBroadcast:3140 com.android.server.wifi.ClientModeImpl.lambda$sendNetworkChangeBroadcastWithCurrentState$14:3117 com.android.server.wifi.ClientModeImpl.$r8$lambda$mtuS9ulugUkTxNA_sDDnAioo66w:0 com.android.server.wifi.ClientModeImpl$$ExternalSyntheticLambda13.send:0 
+01-04 23:27:11.496  1551  1551 I AiAi    : AiAi onCreate: process=com.google.android.as, isDebug=false
+01-04 23:27:11.498   697   861 D ConnectivityService: [100 WIFI] EVENT_NETWORK_INFO_CHANGED, going from CONNECTING to CONNECTED
+01-04 23:27:11.499   697   861 W DnsManager: updatePrivateDns(100, PrivateDnsConfig{opportunistic:/[], dohName=, dohIps=[], dohPath=, dohPort=-1})
+01-04 23:27:11.499   697   861 D ConnectivityService: Setting DNS servers for network 100 to [/10.0.2.3]
+01-04 23:27:11.500   697   861 D DnsManager: sendDnsConfigurationForNetwork(ResolverParamsParcel{netId: 100, sampleValiditySeconds: 1800, successThreshold: 25, minSamples: 8, maxSamples: 64, baseTimeoutMsec: 0, retryCount: 0, servers: [10.0.2.3], domains: [], tlsName: , tlsServers: [10.0.2.3], tlsFingerprints: [], caCertificate: , tlsConnectTimeoutMs: 0, resolverOptions: null, transportTypes: [1], meteredNetwork: false, dohParams: null, interfaceNames: [wlan0]})
+01-04 23:27:11.514   455  1835 W resolv  : Validating DnsTlsServer {10.0.2.3/} with mark 0xf0064
+01-04 23:27:11.518  1824  1824 W .localtransport: Unexpected CPU variant for x86: x86_64.
+01-04 23:27:11.518  1824  1824 W .localtransport: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, default
+01-04 23:27:11.520  1824  1824 E .localtransport: Not starting debugger since process cannot load the jdwp agent.
+01-04 23:27:11.539  1546  1829 D CCodec  : allocate(c2.goldfish.hevc.decoder)
+01-04 23:27:11.571   697   736 W Looper  : Slow dispatch took 131ms android.ui app=system_server main=false group=TOP_APP h=com.android.server.am.ActivityManagerService$UiHandler c=com.android.server.am.UidObserverController$$ExternalSyntheticLambda0@a8f3ed2 m=0
+01-04 23:27:11.630   697   944 W ActivityManager: Slow operation: 233ms so far, now at finishAttachApplicationInner: after dispatching broadcasts
+01-04 23:27:11.655  1546  1829 I ApexCodecsLazy: Failed to load libcom.android.media.swcodec.apexcodecs.so: dlopen failed: library "libcom.android.media.swcodec.apexcodecs.so" not found
+01-04 23:27:11.656  1546  1829 I Codec2Client: Available Codec2 services: "default" "software"
+01-04 23:27:11.657  1546  1829 I CCodec  : setting up 'default' as default (vendor) store
+01-04 23:27:11.658   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, android$contacts/builtin:ContactPoint) not found.
+01-04 23:27:11.658   474   525 I GoldfishComponentStore: in init
+01-04 23:27:11.658   474   525 I GoldfishComponentStore: loading dll of path libcodec2_goldfish_hevcdec.so
+01-04 23:27:11.658   474   525 I GoldfishComponentStore: Create()
+01-04 23:27:11.659   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, android$contacts/builtin:Person) not found.
+01-04 23:27:11.659   474   525 I android.hardware.media.c2@1.0-service-goldfish: missing struct descriptor #Param::CoreIndex(--005) for field values of struct #Param::CoreIndex(F-10821)
+01-04 23:27:11.659   474   525 I GoldfishComponentStore: created interface
+01-04 23:27:11.659   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.settings.intelligence$settings/SettingsAppSearchDocument) not found.
+01-04 23:27:11.659   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.gms$cpg/cpg:GroupContactOrder) not found.
+01-04 23:27:11.660   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.gms$cpg/cpg:ActionPreference) not found.
+01-04 23:27:11.660   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:AlarmInstance) not found.
+01-04 23:27:11.660   474   525 I android.hardware.media.c2@1.0-service-goldfish: missing struct descriptor #Param::CoreIndex(--005) for field values of struct #Param::CoreIndex(F-10821)
+01-04 23:27:11.661   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:StopwatchLap) not found.
+01-04 23:27:11.668   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:PotentialAction) not found.
+01-04 23:27:11.669   474   525 I GoldfishComponentStore: created component
+01-04 23:27:11.669   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:Stopwatch) not found.
+01-04 23:27:11.669   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:Alarm) not found.
+01-04 23:27:11.669   697  1589 W AppSearchIcing: status-util.h:31: Error: 5, Message: Document (VS#Pkg$VS#AndroidVDb/androidVOverlay, com.google.android.deskclock$clock/builtin:Timer) not found.
+01-04 23:27:11.674  1546  1829 I CCodec  : Created component [c2.goldfish.hevc.decoder] for [c2.goldfish.hevc.decoder]
+01-04 23:27:11.690  1546  1829 D CCodecConfig: read media type: video/hevc
+01-04 23:27:11.711  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+01-04 23:27:11.714  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+01-04 23:27:11.714  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+01-04 23:27:11.715  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+01-04 23:27:11.716  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+01-04 23:27:11.716  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+01-04 23:27:11.716  1546  1829 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+01-04 23:27:11.718  1824  1824 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+01-04 23:27:11.718  1546  1829 D ReflectedParamUpdater: ignored struct field coded.color-format.locations
+01-04 23:27:11.718  1546  1829 D ReflectedParamUpdater: ignored struct field resources.needed.values
+01-04 23:27:11.718  1546  1829 D CCodecConfig: ignoring local param raw.size (0xd2001800) as it is already supported
+01-04 23:27:11.718  1546  1829 D CCodecConfig: ignoring local param default.color (0x5200180b) as it is already supported
+01-04 23:27:11.718  1546  1829 D ReflectedParamUpdater: ignored struct field raw.hdr-static-info.mastering
+01-04 23:27:11.721   697  1736 I ActivityManager: Broadcasting: Intent { act=com.android.emulator.multidisplay.START flg=0x400000 cmp=com.android.emulator.multidisplay/.MultiDisplayServiceReceiver }
+01-04 23:27:11.728  1546  1829 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+01-04 23:27:11.729  1546  1829 D CCodecConfig: c2 config diff is Dict {
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.pl.level = 24584
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.pl.profile = 24576
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.vui.color.range = 2
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 default.color.matrix = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 default.color.primaries = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 default.color.range = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 default.color.transfer = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 6291456
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 input.delay.value = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   string input.media-type.value = "video/hevc"
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 output.delay.value = 8
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   string output.media-type.value = "video/raw"
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.color.range = 2
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.max-size.height = 240
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.max-size.width = 320
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.pixel-format.value = 35
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::i32 raw.rotation.flip = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::i32 raw.rotation.value = 0
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.sar.height = 1
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.sar.width = 1
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.size.height = 240
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2::u32 raw.size.width = 320
+01-04 23:27:11.729  1546  1829 D CCodecConfig:   c2
+01-04 23:27:11.729  1546  1829 W ColorUtils: expected specified color aspects (2:0:0:0)
+01-04 23:27:11.733   962   962 I KeyguardSecurityView: Switching mode from Uninitialized to Default
+01-04 23:27:11.734   697   745 I ActivityManager: Extending process start timeout by 8910ms for ProcessRecord{707f53 1452:com.google.android.inputmethod.latin/u0a157}
+01-04 23:27:11.751   455  1835 W resolv  : SSL_connect ssl error =5, mark 0xf0064: Connection refused
+01-04 23:27:11.751   455  1835 W resolv  : TLS Handshake failed
+01-04 23:27:11.752   455  1835 W resolv  : query failed
+01-04 23:27:11.752   455  1835 W resolv  : validateDnsTlsServer returned 0 for {10.0.2.3/}
+01-04 23:27:11.752   455  1835 W resolv  : Validation failed
+01-04 23:27:11.753   697   855 E WifiStaIfaceAidlImpl: setRoamingMode failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+01-04 23:27:11.753   697   855 E WifiRoamingModeManager: Failed to set roaming mode due to unknown error.
+01-04 23:27:11.779  1452  1452 I NativeLibHelper: NativeLibHelper.loadLibrary():162 Loaded native library:integrated_shared_object (result=true)
+01-04 23:27:11.810   962   962 E LauncherProxyService: Failed to get launcher proxy for disable flags.
+01-04 23:27:11.810   962   962 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+01-04 23:27:11.816  1452  1452 I ModuleManager: ModuleManager.initModules():312 frt is forbidden by device ram size 1971 MB
+01-04 23:27:11.819   697   736 W Looper  : Slow dispatch took 248ms android.ui app=system_server main=false group=TOP_APP h=com.android.server.am.ActivityManagerService$UiHandler c=null m=68
+01-04 23:27:11.821   962   962 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+01-04 23:27:11.857   697  1736 I ActivityManager: Enqueued broadcast Intent { act=com.android.emulator.multidisplay.START flg=0x400000 cmp=com.android.emulator.multidisplay/.MultiDisplayServiceReceiver }: 0
+01-04 23:27:11.868   697  1831 D ActivityManager: created ANR temporary file:/data/anr/temp_anr_2528961129231452603.txt
+01-04 23:27:11.869   697  1831 I ActivityManager: Collecting stacks for pid 962 into temporary file temp_anr_2528961129231452603.txt
+01-04 23:27:11.878   697  1832 I ActivityManager: dumpStackTraces pids={}
+01-04 23:27:11.888  1052  1416 I HWUI    : Davey! duration=1335ms; Flags=0, FrameTimelineVsyncId=2859, IntendedVsync=110134952222, Vsync=110884952192, InputEventId=0, HandleInputStart=111047841796, AnimationStart=111047846644, PerformTraversalsStart=111055489791, DrawStart=111055584630, FrameDeadline=111134952182, FrameStartTime=110885613561, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=111056468687, SyncStart=111114344876, IssueDrawCommandsStart=111124073360, SwapBuffers=111124813221, FrameCompleted=111528448396, DequeueBufferDuration=4070, QueueBufferDuration=191962, GpuCompleted=111528448396, SwapBuffersCompleted=111469974254, DisplayPresentTime=0, CommandSubmissionCompleted=111124813221, 
+01-04 23:27:11.890   697   855 E WifiStaIfaceAidlImpl: stopRssiMonitoring failed with service-specific exception: android.os.ServiceSpecificException:  (code 5)
+01-04 23:27:11.919   455   480 E NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'INTERFACE' not found
+01-04 23:27:11.919   455   480 E NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'STATE' not found
+01-04 23:27:11.919   455   480 E NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'TIME_NS' not found
+01-04 23:27:11.919   455   480 E NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'UID' not found
+01-04 23:27:11.930  1052  1170 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:11.938   697  1831 E system_server: Could not open /dev/binderfs/binder_logs/transactions. Likely a permissions issue. errno: 2
+01-04 23:27:11.939   697  1831 E android.os.Debug: Failed to get binder state info for pid: 962 status: -2: No such file or directory
+01-04 23:27:11.940  1045  1045 I Telephony: reRegisterPstnPhoneAccount: subId: 1 - no change
+01-04 23:27:11.952  1045  1045 I ImsResolver: Received Carrier Config Changed for SlotId: 0, SubId: 1, sim state: 5
+01-04 23:27:11.968  1045  1045 I TelephonyRcsService: updateFeatureControllerSubscription: slotId=0, oldSubId= -1, subId=1, existing feature=false
+01-04 23:27:11.971   697  1172 D BufferPoolAccessor2.0: bufferpool2 0x7c12b708b7d8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/24 (fetch/transfer)
+01-04 23:27:11.971   697  1172 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b708b7d8 cached: 0/0M, 0/0% in use; allocs: 7, 29% recycled; transfers: 24, 79% unfetched
+01-04 23:27:11.973   697  1172 D BufferPoolAccessor2.0: bufferpool2 0x7c12b708c118 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/26 (fetch/transfer)
+01-04 23:27:11.973   697  1172 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b708c118 cached: 0/0M, 0/0% in use; allocs: 7, 29% recycled; transfers: 26, 81% unfetched
+01-04 23:27:11.974   697  1172 D BufferPoolAccessor2.0: bufferpool2 0x7c12b7081f38 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 7/24 (fetch/transfer)
+01-04 23:27:11.974   697  1172 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b7081f38 cached: 0/0M, 0/0% in use; allocs: 7, 29% recycled; transfers: 24, 71% unfetched
+01-04 23:27:11.975   962  1790 I CCodec  : Created component [c2.android.vorbis.decoder] for [c2.android.vorbis.decoder]
+01-04 23:27:11.975   962  1790 D CCodecConfig: read media type: audio/vorbis
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+01-04 23:27:11.977   697   820 D BufferPoolAccessor2.0: bufferpool2 0x7c12b7088998 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/18 (fetch/transfer)
+01-04 23:27:11.977   697   820 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b7088998 cached: 0/0M, 0/0% in use; allocs: 7, 29% recycled; transfers: 18, 72% unfetched
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+01-04 23:27:11.977   962  1790 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+01-04 23:27:11.979   962  1790 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:11.979   962  1790 D CCodecConfig: c2 config diff is Dict {
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 input.delay.value = 0
+01-04 23:27:11.979   962  1790 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+01-04 23:27:11.979   962  1790 D CCodecConfig:   string output.media-type.value = "audio/raw"
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+01-04 23:27:11.979   962  1790 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+01-04 23:27:11.979   962  1790 D CCodecConfig: }
+01-04 23:27:11.980   962  1787 I CCodec  : Created component [c2.android.vorbis.decoder] for [c2.android.vorbis.decoder]
+01-04 23:27:11.988   962  1787 D CCodecConfig: read media type: audio/vorbis
+01-04 23:27:11.993  1653  1821 I ContactLocale: AddressBook Labels [[en_US]]: […, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω, …, А, Б, В, Г, Д, Ђ, Е, Є, Ж, З, И, І, Й, Ј, К, Л, Љ, М, Н, Њ, О, П, Р, С, Т, Ћ, У, Ф, Х, Ц, Ч, Џ, Ш, Щ, Ю, Я, …, א, ב, ג, ד, ה, ו, ז, ח, ט, י, כ, ל, מ, נ, ס, ע, פ, צ, ק, ר, ש, ת, …, ا, ب, ت, ث, ج, ح, خ, د, ذ, ر, ز, س, ش, ص, ض, ط, ظ, ع, غ, ف, ق, ك, ل, م, ن, ه, و, ي, …, ก, ข, ฃ, ค, ฅ, ฆ, ง, จ, ฉ, ช, ซ, ฌ, ญ, ฎ, ฏ, ฐ, ฑ, ฒ, ณ, ด, ต, ถ, ท, ธ, น, บ, ป, ผ, ฝ, พ, ฟ, ภ, ม, ย, ร, ฤ, ล, ฦ, ว, ศ, ษ, ส, ห, ฬ, อ, ฮ, …, ㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ, ㅅ, ㅇ, ㅈ, ㅊ, ㅋ, ㅌ, ㅍ, ㅎ, …, あ, か, さ, た, な, は, ま, や, ら, わ, #, …]
+01-04 23:27:11.994   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+01-04 23:27:11.994   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+01-04 23:27:11.994   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+01-04 23:27:11.994   697  1831 I system_server: libdebuggerd_client: started dumping process 962
+01-04 23:27:11.994   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+01-04 23:27:11.994   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+01-04 23:27:11.995   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+01-04 23:27:11.995   962  1787 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+01-04 23:27:11.996   284   284 I tombstoned: registered intercept for pid 962 and type kDebuggerdJavaBacktrace
+01-04 23:27:11.999  1551  1551 I AiAiSpeechRecognition: Scheduling background LanguagePack tasks periodically and onLocaleChange...
+01-04 23:27:12.000   697  1182 D BufferPoolAccessor2.0: bufferpool2 0x7c12b7085908 : 0(0 size) total buffers - 0(0 size) used buffers - 1/7 (recycle/alloc) - 6/34 (fetch/transfer)
+01-04 23:27:12.000   697  1182 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b7085908 cached: 0/0M, 0/0% in use; allocs: 7, 14% recycled; transfers: 34, 82% unfetched
+01-04 23:27:12.000   697  1182 D BufferPoolAccessor2.0: bufferpool2 0x7c12b7086dd8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/34 (fetch/transfer)
+01-04 23:27:12.000   697  1182 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7c12b7086dd8 cached: 0/0M, 0/0% in use; allocs: 7, 29% recycled; transfers: 34, 85% unfetched
+01-04 23:27:12.019   962  1787 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:12.019   962  1787 D CCodecConfig: c2 config diff is Dict {
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 input.delay.value = 0
+01-04 23:27:12.019   962  1787 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+01-04 23:27:12.019   962  1787 D CCodecConfig:   string output.media-type.value = "audio/raw"
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+01-04 23:27:12.019   962  1787 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+01-04 23:27:12.019   962  1787 D CCodecConfig: }
+01-04 23:27:12.031  1551  1551 I AiAiSpeechRecognition: LocaleChangeListener LanguagePack task scheduled successfully
+01-04 23:27:12.056   697  1832 I ActivityManager: Dumping to /data/anr/anr_2026-01-04-23-27-12-056
+01-04 23:27:12.066  1045  1045 I VvmSimStateTracker: android.telephony.action.CARRIER_CONFIG_CHANGED
+01-04 23:27:12.069  1045  1276 D ImsResolver: updateBoundDeviceServices: called
+01-04 23:27:12.069  1045  1276 I ImsResolver: updateBoundServices - carrier package changed:  -> com.google.android.ims on slot 0, hasConfigChanged=true
+01-04 23:27:12.069  1045  1276 I ImsResolver: updateBoundServices - carrier package changed:  -> com.google.android.ims on slot 0, hasConfigChanged=true
+01-04 23:27:12.069  1045  1276 I ImsResolver: updateBoundServices - carrier package changed:  -> com.google.android.ims on slot 0, hasConfigChanged=true
+01-04 23:27:12.082   962  1786 E MediaCodec: Media Quality Service not found.
+01-04 23:27:12.100   697   861 D ConnectivityService: Switching to new default network for: uid/pid:1000/697 activeRequest: 1 callbackRequest: 1 [NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 1 order: 2147483647 isUidTracked: false declaredMethods: NONE using NetworkAgentInfo{network{100}  handle{432902426637}  ni{WIFI CONNECTED extra: } created=2026-01-04T18:27:03.375Z Score(Policies : TRANSPORT_PRIMARY&IS_UNMETERED ; KeepConnected : 0)  created 103869  lp{{InterfaceName: wlan0 LinkAddresses: [ fe80::ed96:554:9d6a:d2f9/64,fec0::8f56:49ab:2eca:99e/64,fec0::c59e:8464:c2ab:33d6/64,10.0.2.16/24 ] DnsAddresses: [ /10.0.2.3 ] Domains: null MTU: 0 ServerAddress: /10.0.2.2 TcpBufferSizes: 524288,1048576,2097152,262144,524288,1048576 Routes: [ fe80::/64 -> :: wlan0 mtu 0,::/0 -> fe80::2 wlan0 mtu 0,fec0::/64 -> :: wlan0 mtu 0,10.0.2.0/24 -> 0.0.0.0 wlan0 mtu 0,0.0.0.0/0 -> 10.0.2.2 wlan0 mtu 0 ]}}  nc{[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps Specifier: <WifiNetworkAgentSpecifier [WifiConfiguration=, SSID="AndroidWifi", BSSID=00:13:10:85:fe:01, band=1, mMatchLocalOnlySpecifiers=false]> TransportInfo: <SSID: "AndroidWifi", BSSID: 00:13:10:85:fe:01, MAC: 02:15:b2:00:00:00, IP: /10.0.2.16, Security type: 0, Supplicant state: COMPLETED, Wi-Fi standard: legacy, RSSI: -50, Link speed: 1Mbps, Tx Link speed: 1Mbps, Max Supported Tx Link speed: 11Mbps, Rx Link speed: -1Mbps, Max Supported Rx Link speed: 11Mbps, Frequency: 2447MHz, Net ID: 0, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none>"AndroidWifi"openMLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -50 OwnerUid: 10178 AdminUids: [10178] SSID: "AndroidWifi" UnderlyingNetworks: Null]}  factorySerialNumber=6}
+01-04 23:27:12.101  1045  1045 I VvmSimStateTracker: onReceive: ACTION_CARRIER_CONFIG_CHANGED; subId=1
+01-04 23:27:12.102   962  1785 E MediaCodec: Media Quality Service not found.
+01-04 23:27:12.103   962  1787 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+01-04 23:27:12.103   962  1787 D CCodecConfig: no c2 equivalents for durationUs
+01-04 23:27:12.103   962  1787 D CCodecConfig: no c2 equivalents for track-id
+01-04 23:27:12.103   962  1787 D CCodecConfig: no c2 equivalents for csd-1
+01-04 23:27:12.103   962  1787 D CCodecConfig: no c2 equivalents for flags
+01-04 23:27:12.106   962  1787 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 160000
+01-04 23:27:12.106   962  1787 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+01-04 23:27:12.106   962  1787 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+01-04 23:27:12.106   962  1790 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+01-04 23:27:12.106   962  1790 D CCodecConfig: no c2 equivalents for durationUs
+01-04 23:27:12.106   962  1790 D CCodecConfig: no c2 equivalents for track-id
+01-04 23:27:12.106   962  1790 D CCodecConfig: no c2 equivalents for csd-1
+01-04 23:27:12.106   962  1790 D CCodecConfig: no c2 equivalents for flags
+01-04 23:27:12.107   962  1790 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 160000
+01-04 23:27:12.107   962  1790 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+01-04 23:27:12.107   962  1790 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+01-04 23:27:12.108   962  1787 W Codec2Client: query -- param skipped: index = 1107298332.
+01-04 23:27:12.108   962  1787 D CCodec  : encoding statistics level = 0
+01-04 23:27:12.108   962  1787 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t bitrate = 160000
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t max-input-size = 32768
+01-04 23:27:12.108   962  1787 D CCodec  :   string mime = "audio/vorbis"
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t sample-rate = 44100
+01-04 23:27:12.108   962  1787 D CCodec  : }
+01-04 23:27:12.108   962  1787 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.108   962  1787 D CCodec  :   string mime = "audio/raw"
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t sample-rate = 44100
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t channel-mask = 3
+01-04 23:27:12.108   962  1787 D CCodec  :   int32_t android._config-pcm-encoding = 2
+01-04 23:27:12.108   962  1787 D CCodec  : }
+01-04 23:27:12.108  1546  1759 E MediaCodec: Media Quality Service not found.
+01-04 23:27:12.109   962  1787 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:11.860   697   697 W AnrMainProcessD: type=1400 audit(0.0:163): avc:  denied  { read } for  name="transactions" dev="binder" ino=1048587 scontext=u:r:system_server:s0 tcontext=u:object_r:binderfs_logs_transactions:s0 tclass=file permissive=0
+01-04 23:27:12.109  1546  1829 D CCodec  : [c2.goldfish.hevc.decoder] buffers are bound to CCodec for this session
+01-04 23:27:12.110  1546  1829 D CCodec  : Client requested ByteBuffer mode decoder w/o color format set: using default planar color format
+01-04 23:27:12.110  1546  1829 D CCodecConfig: no c2 equivalents for flags
+01-04 23:27:12.117  1546  1829 D CCodecConfig: c2 config diff is   c2::u32 raw.size.height = 1080
+01-04 23:27:12.117  1546  1829 D CCodecConfig:   c2::u32 raw.size.width = 1920
+01-04 23:27:12.118  1546  1829 W ColorUtils: expected specified color aspects (2:0:0:0)
+01-04 23:27:12.118  1546  1829 W Codec2Client: query -- param skipped: index = 1107298332.
+01-04 23:27:12.118  1546  1829 D CCodec  : encoding statistics level = 0
+01-04 23:27:12.119  1546  1829 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t height = 1080
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t level = 65536
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t max-input-size = 6291456
+01-04 23:27:12.119  1546  1829 D CCodec  :   string mime = "video/hevc"
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t profile = 1
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t width = 1920
+01-04 23:27:12.119  1546  1829 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t color-transfer-request = 0
+01-04 23:27:12.119  1546  1829 D CCodec  : }
+01-04 23:27:12.119  1546  1829 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t android._color-format = 2135033992
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t android._video-scaling = 1
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t rotation-degrees = 0
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t color-standard = 0
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t color-range = 2
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t color-transfer = 0
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t sar-height = 1
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t sar-width = 1
+01-04 23:27:12.119  1546  1829 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t width = 1920
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t height = 1080
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t max-height = 240
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t max-width = 320
+01-04 23:27:12.119  1546  1829 D CCodec  :   string mime = "video/raw"
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t android._dataspace = 268435456
+01-04 23:27:12.119  1546  1829 D CCodec  :   int32_t color-format = 19
+01-04 23:27:12.119  1546  1829 D CCodec  : }
+01-04 23:27:12.119  1546  1829 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+01-04 23:27:12.119  1546  1829 D CCodecConfig: c2 config diff is   c2::u32 raw.max-size.height = 1080
+01-04 23:27:12.119  1546  1829 D CCodecConfig:   c2::u32 raw.max-size.width = 1920
+01-04 23:27:12.119  1546  1829 W ColorUtils: expected specified color aspects (2:0:0:0)
+01-04 23:27:12.120   962  1787 E ndroid.systemui: Failed to query component interface for required system resources: 6
+01-04 23:27:12.120   962  1790 W Codec2Client: query -- param skipped: index = 1107298332.
+01-04 23:27:12.120   962  1790 D CCodec  : encoding statistics level = 0
+01-04 23:27:12.121   962  1790 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t bitrate = 160000
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t max-input-size = 32768
+01-04 23:27:12.121   962  1790 D CCodec  :   string mime = "audio/vorbis"
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t sample-rate = 44100
+01-04 23:27:12.121   962  1790 D CCodec  : }
+01-04 23:27:12.121   962  1790 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.121   962  1790 D CCodec  :   string mime = "audio/raw"
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t sample-rate = 44100
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t channel-mask = 3
+01-04 23:27:12.121   962  1790 D CCodec  :   int32_t android._config-pcm-encoding = 2
+01-04 23:27:12.121   962  1790 D CCodec  : }
+01-04 23:27:12.137   962   966 I ndroid.systemui: Thread[2,tid=966,WaitingInMainSignalCatcherLoop,Thread*=0x7c13e70366f0,peer=0x20015f8,"Signal Catcher"]: reacting to signal 3
+01-04 23:27:12.137   962   966 I ndroid.systemui: 
+01-04 23:27:12.168   962  1790 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:12.168   962  1790 E ndroid.systemui: Failed to query component interface for required system resources: 6
+01-04 23:27:12.170   962  1787 W Codec2Client: query -- param skipped: index = 1342179345.
+01-04 23:27:12.170   962  1787 W Codec2Client: query -- param skipped: index = 2415921170.
+01-04 23:27:12.171   962  1787 D C2Store : Using DMABUF Heaps
+01-04 23:27:12.172   962  1787 D CCodecBufferChannel: [c2.android.vorbis.decoder#650] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+01-04 23:27:12.178  1045  1045 I VvmSimStateTracker: onCarrierConfigChanged: in service; send connected ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+01-04 23:27:12.178  1045  1045 I VvmSimStateTracker: sendConnected: Service connected on ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+01-04 23:27:12.188   697   729 W ActivityManager: Slow operation: 73ms so far, now at attachApplicationLocked: immediately after bindApplication
+01-04 23:27:12.188   697   729 W ActivityManager: Slow operation: 85ms so far, now at attachApplicationLocked: after updateLruProcessLocked
+01-04 23:27:12.189   697   729 W ActivityManager: Slow operation: 85ms so far, now at attachApplicationLocked: after updateOomAdjLocked
+01-04 23:27:12.202   962  1787 I CCodecBufferChannel: [c2.android.vorbis.decoder#650] Created output block pool with allocatorID 16 => poolID 31 - OK
+01-04 23:27:12.203   962  1787 D CCodecBufferChannel: [c2.android.vorbis.decoder#650] Configured output block pool ids 31 => OK
+01-04 23:27:12.209   629   961 E Codec2-ComponentInterface: We have a failed config
+01-04 23:27:12.211   962  1787 I DMABUFHEAPS: Using DMA-BUF heap named: system
+01-04 23:27:12.241   629  1858 D SimpleC2Component: Using output block pool with poolID 31 => got 31 - 0
+01-04 23:27:12.291   697   861 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:12.293  1546  1775 V MediaStore: Examining volume emulated;0 with name external_primary and state mounted
+01-04 23:27:12.293  1481  1649 D CompatChangeReporter: Compat change id reported: 311402873; UID 10147; state: ENABLED
+01-04 23:27:12.293  1481  1649 D CompatChangeReporter: Compat change id reported: 323349338; UID 10147; state: ENABLED
+01-04 23:27:12.293  1546  1775 V MediaStore: Examining volume public:253,80 with name null and state unmounted
+01-04 23:27:12.311  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:12.311  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:12.313  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:12.313  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:12.314  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:12.324   962  1790 W Codec2Client: query -- param skipped: index = 1342179345.
+01-04 23:27:12.324   962  1790 W Codec2Client: query -- param skipped: index = 2415921170.
+01-04 23:27:12.325   962  1790 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+01-04 23:27:12.326   962  1790 I CCodecBufferChannel: [c2.android.vorbis.decoder#383] Created output block pool with allocatorID 16 => poolID 32 - OK
+01-04 23:27:12.327   962  1790 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] Configured output block pool ids 32 => OK
+01-04 23:27:12.327   629  1190 E Codec2-ComponentInterface: We have a failed config
+01-04 23:27:12.330   629  1859 D SimpleC2Component: Using output block pool with poolID 32 => got 32 - 0
+01-04 23:27:12.349  1045  1045 I CallNotifier: onCallForwardingIndicatorChanged(): subId=1, visible=N
+01-04 23:27:12.350  1045  1045 I CallNotifier: updatePhoneStateListeners: update CF/MWI for subId=1
+01-04 23:27:12.350  1045  1045 I NotificationMgr: updateCfi: subId= 1, visible=N
+01-04 23:27:12.358  1045  1045 I NotificationMgr: updateMwi(): subId:1 isRefresh:true state:N->N (changed:N)
+01-04 23:27:12.360  1045  1045 I NotificationMgr: maybeSendVoicemailNotificationUsingDefaultDialer: count: 0->0 (changed=false)
+01-04 23:27:12.365   697   831 I StorageManagerService: Mounting volume VolumeInfo{public:253,80}:
+01-04 23:27:12.365   697   831 I StorageManagerService:     type=PUBLIC diskId=disk:253,80 partGuid= mountFlags=VISIBLE_FOR_WRITE 
+01-04 23:27:12.365   697   831 I StorageManagerService:     mountUserId=0 state=UNMOUNTED 
+01-04 23:27:12.365   697   831 I StorageManagerService:     fsType=null fsUuid=null fsLabel=null 
+01-04 23:27:12.365   697   831 I StorageManagerService:     path=null internalPath=null 
+01-04 23:27:12.377  1546  1759 I TranscodeHelper: Device HDR Plugin is available: false
+01-04 23:27:12.380   474   525 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:12.380   474   525 I GoldfishComponentStore: in ~ComponentModule
+01-04 23:27:12.380   474   525 I GoldfishComponentStore: unloading dll
+01-04 23:27:12.380  1546  1829 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:12.395  1045  1045 I NotificationMgr: maybeSendVoicemailNotificationUsingDefaultDialer: skip bcast to:com.google.android.dialer, user:UserHandle{0}
+01-04 23:27:12.426  1045  1045 D SatelliteController: Satellite for carrier is not supported.
+01-04 23:27:12.427  1045  1045 D SatelliteController: Satellite for carrier is not supported.
+01-04 23:27:12.427  1045  1045 D SatelliteController: registerForSatelliteModemStateChanged: add Listeners for ModemState
+01-04 23:27:12.427  1045  1045 E SatelliteController: registerForSatelliteModemStateChanged: mSatelliteSessionController is not initialized yet
+01-04 23:27:12.485   697   831 I Watchdog: Pausing of HandlerChecker: monitor thread for reason: #mount might be slow. Pause end time: 142559
+01-04 23:27:12.485   240   240 D vold    : /system/bin/blkid
+01-04 23:27:12.485   240   240 D vold    :     -c
+01-04 23:27:12.485   240   240 D vold    :     /dev/null
+01-04 23:27:12.485   240   240 D vold    :     -s
+01-04 23:27:12.485   240   240 D vold    :     TYPE
+01-04 23:27:12.485   240   240 D vold    :     -s
+01-04 23:27:12.485   240   240 D vold    :     UUID
+01-04 23:27:12.485   240   240 D vold    :     -s
+01-04 23:27:12.485   240   240 D vold    :     LABEL
+01-04 23:27:12.485   240   240 D vold    :     /dev/block/vold/public:253,80
+01-04 23:27:12.504  1045  1045 D SatelliteController: registerForSatelliteModemStateChanged: add Listeners for ModemState
+01-04 23:27:12.504  1045  1045 E SatelliteController: registerForSatelliteModemStateChanged: mSatelliteSessionController is not initialized yet
+01-04 23:27:12.538  1052  1416 I HWUI    : Davey! duration=765ms; Flags=0, FrameTimelineVsyncId=2882, IntendedVsync=111118285516, Vsync=111468285502, InputEventId=0, HandleInputStart=111470316064, AnimationStart=111470316719, PerformTraversalsStart=111470543221, DrawStart=111470578642, FrameDeadline=111968285482, FrameStartTime=111470173560, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=111470805858, SyncStart=111955221795, IssueDrawCommandsStart=111955742614, SwapBuffers=111974431587, FrameCompleted=112368391574, DequeueBufferDuration=8172, QueueBufferDuration=873395, GpuCompleted=112368391574, SwapBuffersCompleted=112347050907, DisplayPresentTime=0, CommandSubmissionCompleted=111974431587, 
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: Unable to schedule fully persist job for 0
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: java.lang.IllegalArgumentException: Tried to schedule job for non-existent component: ComponentInfo{android/com.android.server.appsearch.AppSearchMaintenanceService}
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.job.JobSchedulerService$JobSchedulerStub.enforceValidJobRequest(JobSchedulerService.java:4829)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.job.JobSchedulerService$JobSchedulerStub.schedule(JobSchedulerService.java:5042)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at android.app.JobSchedulerImpl.schedule(JobSchedulerImpl.java:89)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.appsearch.AppSearchMaintenanceService.scheduleFullyPersistJob(AppSearchMaintenanceService.java:91)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.appsearch.AppSearchManagerService.lambda$onUserUnlocking$1(AppSearchManagerService.java:379)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.appsearch.AppSearchManagerService.$r8$lambda$7li-QUZvrsDk5ZvsFzpgCXuGV7s(AppSearchManagerService.java:0)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at com.android.server.appsearch.AppSearchManagerService$$ExternalSyntheticLambda3.run(R8$$SyntheticClass:0)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+01-04 23:27:12.598   697  1589 E AppSearchManagerService: 	at java.lang.Thread.run(Thread.java:1119)
+01-04 23:27:12.600   697   729 D CompatChangeReporter: Compat change id reported: 311402873; UID 10147; state: ENABLED
+01-04 23:27:12.600   697   729 D CompatChangeReporter: Compat change id reported: 323349338; UID 10147; state: ENABLED
+01-04 23:27:12.607   697   794 D WifiMemoryStoreImpl: Set cluster Gc365705a91b8ed50 for W56c0a8e7f5056568: SUCCESS
+01-04 23:27:12.615  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:12.615  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:12.634  1551  1863 W JobInfo : Requested important-while-foreground flag for job24 is ignored and takes no effect
+01-04 23:27:12.635  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:12.635  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:12.635  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:12.651  1418  1822 I DialerShortcutsJobScheduler: com.android.dialer.shortcuts.ShortcutsJobScheduler.scheduleJobInternal:99 job already scheduled.
+01-04 23:27:12.705  1551  1863 W JobInfo : Requested important-while-foreground flag for job12 is ignored and takes no effect
+01-04 23:27:12.722  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:12.723  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:12.723  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:12.761   962  1790 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] MediaCodec discarded an unknown buffer
+01-04 23:27:12.761   962  1790 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] MediaCodec discarded an unknown buffer
+01-04 23:27:12.761   962  1790 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] MediaCodec discarded an unknown buffer
+01-04 23:27:12.769  1010  1861 D NetworkMonitor/100: PROBE_DNS www.google.com 647ms OK 142.251.37.68
+01-04 23:27:12.776   962  1790 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:12.811  1653  1821 D ContactsDatabaseHelper: WAL enabled for profile.db: false
+01-04 23:27:12.826  1418  1418 I DialerTidepodsRevelioTipsContentProvider: com.android.dialer.revelio.impl.tidepods.impl.TidepodsRevelioTipsContentProvider.onCreate:42 enter
+01-04 23:27:12.827  1418  1418 I DialerRevelioTipsContentProvider: com.android.dialer.revelio.impl.RevelioTipsContentProvider.onCreate:32 enter
+01-04 23:27:12.840  1418  1418 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+01-04 23:27:12.893  1551  1778 D nativeloader: Load libtextclassifier3_jni_agsa.so using class loader ns product-clns-9 (caller=/product/priv-app/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08.apk!classes2.dex): dlopen failed: library "libtextclassifier3_jni_agsa.so" not found
+01-04 23:27:12.908  1452  1452 I ModuleManager: ModuleManager.initModules():288 jil is forbidden to run on current process
+01-04 23:27:12.914  1052  1104 I HWUI    : Davey! duration=987ms; Flags=0, FrameTimelineVsyncId=2896, IntendedVsync=111501618834, Vsync=112001618814, InputEventId=0, HandleInputStart=112006897253, AnimationStart=112006898240, PerformTraversalsStart=112145469744, DrawStart=112145551022, FrameDeadline=112401618798, FrameStartTime=112005454112, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=112145931811, SyncStart=112366199714, IssueDrawCommandsStart=112366304946, SwapBuffers=112368092274, FrameCompleted=112709556957, DequeueBufferDuration=4518, QueueBufferDuration=335206, GpuCompleted=112709556957, SwapBuffersCompleted=112691011248, DisplayPresentTime=0, CommandSubmissionCompleted=112368092274, 
+01-04 23:27:12.930   962  1786 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+01-04 23:27:12.931  1452  1452 W ModuleManager: ModuleManager.initModules():298 lyu is forbidden by min_api_level (28) or max_api_level (28): 36
+01-04 23:27:12.933  1452  1452 I ModuleManager: ModuleManager.initModules():288 mev is forbidden to run on current process
+01-04 23:27:12.940   962  1881 D CCodec  : allocate(c2.android.vorbis.decoder)
+01-04 23:27:12.942   962  1881 I CCodec  : setting up 'default' as default (vendor) store
+01-04 23:27:12.959   629   961 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:12.963  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:12.979  1452  1452 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+01-04 23:27:12.980   962  1881 I CCodec  : Created component [c2.android.vorbis.decoder] for [c2.android.vorbis.decoder]
+01-04 23:27:12.980   962  1881 D CCodecConfig: read media type: audio/vorbis
+01-04 23:27:12.981  1452  1452 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = true
+01-04 23:27:12.992   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+01-04 23:27:12.992   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+01-04 23:27:12.992   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+01-04 23:27:12.992   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+01-04 23:27:12.992   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+01-04 23:27:12.993   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+01-04 23:27:12.993   962  1881 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+01-04 23:27:12.994   962  1881 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:12.994   962  1881 D CCodecConfig: c2 config diff is Dict {
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 input.delay.value = 0
+01-04 23:27:12.994   962  1881 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+01-04 23:27:12.994   962  1881 D CCodecConfig:   string output.media-type.value = "audio/raw"
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+01-04 23:27:12.994   962  1881 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+01-04 23:27:12.994   962  1881 D CCodecConfig: }
+01-04 23:27:12.997   962  1786 E MediaCodec: Media Quality Service not found.
+01-04 23:27:12.998   962  1881 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+01-04 23:27:12.998   962  1881 D CCodecConfig: no c2 equivalents for durationUs
+01-04 23:27:12.998   962  1881 D CCodecConfig: no c2 equivalents for track-id
+01-04 23:27:12.998   962  1881 D CCodecConfig: no c2 equivalents for csd-1
+01-04 23:27:12.998   962  1881 D CCodecConfig: no c2 equivalents for flags
+01-04 23:27:12.998   962  1881 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 160000
+01-04 23:27:12.998   962  1881 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+01-04 23:27:12.999   962  1881 W Codec2Client: query -- param skipped: index = 1107298332.
+01-04 23:27:12.999   962  1881 D CCodec  : encoding statistics level = 0
+01-04 23:27:12.999   962  1881 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t bitrate = 160000
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t max-input-size = 32768
+01-04 23:27:12.999   962  1881 D CCodec  :   string mime = "audio/vorbis"
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t sample-rate = 48000
+01-04 23:27:12.999   962  1881 D CCodec  : }
+01-04 23:27:12.999   962  1881 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t channel-count = 2
+01-04 23:27:12.999   962  1881 D CCodec  :   string mime = "audio/raw"
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t sample-rate = 48000
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t channel-mask = 3
+01-04 23:27:12.999   962  1881 D CCodec  :   int32_t android._config-pcm-encoding = 2
+01-04 23:27:12.999   962  1881 D CCodec  : }
+01-04 23:27:12.999   962  1881 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+01-04 23:27:13.000   962  1881 E ndroid.systemui: Failed to query component interface for required system resources: 6
+01-04 23:27:13.000   962  1881 W Codec2Client: query -- param skipped: index = 1342179345.
+01-04 23:27:13.000   962  1881 W Codec2Client: query -- param skipped: index = 2415921170.
+01-04 23:27:13.001   962  1881 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] Created input block pool with allocatorID 16 => poolID 19 - OK (0)
+01-04 23:27:13.009   962  1881 I CCodecBufferChannel: [c2.android.vorbis.decoder#383] Created output block pool with allocatorID 16 => poolID 34 - OK
+01-04 23:27:13.009   962  1881 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] Configured output block pool ids 34 => OK
+01-04 23:27:13.009   629   664 E Codec2-ComponentInterface: We have a failed config
+01-04 23:27:13.010   629  1882 D SimpleC2Component: Using output block pool with poolID 34 => got 34 - 0
+01-04 23:27:13.025   697   729 D CompatChangeReporter: Compat change id reported: 297989574; UID 10157; state: ENABLED
+01-04 23:27:13.027   629   961 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7b4554b1fe48 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+01-04 23:27:13.061   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.061   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.061   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.061   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.062   697   855 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.062  1010  1862 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 941ms OK 142.250.202.99
+01-04 23:27:13.068  1244  1249 W .gms.persistent: Suspending all threads took: 1.434s
+01-04 23:27:13.098  1045  1278 E SatelliteController: registerForSatelliteCommunicationAccessStateChanged: SatelliteManager is null
+01-04 23:27:13.099  1045  1278 D SatelliteController: isCarrierRoamingNtnEligible: satellite access is not allowed
+01-04 23:27:13.099  1045  1278 D SatelliteController: evaluateCarrierRoamingNtnEligibilityChange: isCarrierRoamingNtnEligible=false
+01-04 23:27:13.099  1045  1278 D SatelliteController: getSelectedSatelliteSubId: subId=-1
+01-04 23:27:13.099  1045  1278 D SatelliteController: notifyNtnEligibility: phoneId=0 currentNtnEligibility=false
+01-04 23:27:13.099  1045  1278 V SatelliteController: getWwanIsInService: return true
+01-04 23:27:13.128  1045  1278 D SatelliteController: updateLastNotifiedNtnModeAndNotify: subId=1 initialized=true lastNotifiedNtnMode=false currNtnMode=false
+01-04 23:27:13.129  1418  1418 I DialerAtlasPixelTipsContentProvider: com.android.incallui.atlas.ui.impl.pixeltipsintegration.AtlasPixelTipsContentProvider.onCreate:40 enter
+01-04 23:27:13.138   697   794 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1319 android.content.Context.sendBroadcastMultiplePermissions:2583 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4159 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1848 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 
+01-04 23:27:13.152  1452  1452 I DeviceStatusMonitor: DeviceStatusMonitor.notifyIfNetworkChanged():180 notifyIfNetworkChanged: newState = NON_METERED, airplaneModeOn = false, notifyAnyway = true
+01-04 23:27:13.183   240   240 D vold    : /dev/block/vold/public:253,80: LABEL="SDCARD" UUID="0000-0000" TYPE="vfat" 
+01-04 23:27:13.188   962  1881 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] MediaCodec discarded an unknown buffer
+01-04 23:27:13.188   962  1881 D CCodecBufferChannel: [c2.android.vorbis.decoder#383] MediaCodec discarded an unknown buffer
+01-04 23:27:13.197  1045  1278 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+01-04 23:27:13.215  1887  1887 D vold    : /system/bin/fsck_msdos
+01-04 23:27:13.215  1887  1887 D vold    :     -p
+01-04 23:27:13.215  1887  1887 D vold    :     -f
+01-04 23:27:13.215  1887  1887 D vold    :     -y
+01-04 23:27:13.215  1887  1887 D vold    :     /dev/block/vold/public:253,80
+01-04 23:27:13.218  1452  1452 I DeviceLockTags: DeviceLockTags.notifyDeviceLockStatusChanged():108 notifyDeviceLockStatusChanged(): deviceLocked=false, blockPersonalData=false
+01-04 23:27:13.221   962  1165 W Looper  : Slow dispatch took 1485ms BroadcastRunning app=com.android.systemui main=false group=FOREGROUND h=com.android.systemui.broadcast.BroadcastDispatcher$handler$1 c=null m=0
+01-04 23:27:13.222   629  1034 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:13.224   962  1884 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:13.232   697   794 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1352 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4164 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1848 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1421 
+01-04 23:27:13.233   629  1034 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7b4554b25d18 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+01-04 23:27:13.252   697   794 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1352 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4173 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1848 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1421 
+01-04 23:27:13.258  1452  1452 D CompatChangeReporter: Compat change id reported: 352594277; UID 10157; state: ENABLED
+01-04 23:27:13.306  1052  1104 I HWUI    : Davey! duration=815ms; Flags=0, FrameTimelineVsyncId=2912, IntendedVsync=112018285480, Vsync=112351618800, InputEventId=0, HandleInputStart=112488793298, AnimationStart=112488794302, PerformTraversalsStart=112489079127, DrawStart=112489146770, FrameDeadline=112734952118, FrameStartTime=112367894424, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=112489507667, SyncStart=112691071046, IssueDrawCommandsStart=112692606614, SwapBuffers=112709738382, FrameCompleted=113035110651, DequeueBufferDuration=5370, QueueBufferDuration=516123, GpuCompleted=113035110651, SwapBuffersCompleted=113034464652, DisplayPresentTime=0, CommandSubmissionCompleted=112709738382, 
+01-04 23:27:13.320   697   861 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.321   697   861 D ConnectivityService: Switching to new default network for: uid/pid:1000/697 activeRequest: 11 callbackRequest: 11 [NetworkRequest [ TRACK_DEFAULT id=11, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], NetworkRequest [ REQUEST id=12, [ Transports: SATELLITE Capabilities: INTERNET&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10145 UnderlyingNetworks: Null] ]] callback flags: 0 order: 40 isUidTracked: false declaredMethods: NONE using NetworkAgentInfo{network{100}  handle{432902426637}  ni{WIFI CONNECTED extra: } created=2026-01-04T18:27:03.375Z Score(Policies : TRANSPORT_PRIMARY&IS_UNMETERED ; KeepConnected : 0)  created 103869  lp{{InterfaceName: wlan0 LinkAddresses: [ fe80::ed96:554:9d6a:d2f9/64,fec0::8f56:49ab:2eca:99e/64,fec0::c59e:8464:c2ab:33d6/64,10.0.2.16/24 ] DnsAddresses: [ /10.0.2.3 ] Domains: null MTU: 0 ServerAddress: /10.0.2.2 TcpBufferSizes: 524288,1048576,2097152,262144,524288,1048576 Routes: [ fe80::/64 -> :: wlan0 mtu 0,::/0 -> fe80::2 wlan0 mtu 0,fec0::/64 -> :: wlan0 mtu 0,10.0.2.0/24 -> 0.0.0.0 wlan0 mtu 0,0.0.0.0/0 -> 10.0.2.2 wlan0 mtu 0 ]}}  nc{[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps Specifier: <WifiNetworkAgentSpecifier [WifiConfiguration=, SSID="AndroidWifi", BSSID=00:13:10:85:fe:01, band=1, mMatchLocalOnlySpecifiers=false]> TransportInfo: <SSID: "AndroidWifi", BSSID: 00:13:10:85:fe:01, MAC: 02:15:b2:00:00:00, IP: /10.0.2.16, Security type: 0, Supplicant state: COMPLETED, Wi-Fi standard: legacy, RSSI: -50, Link speed: 1Mbps, Tx Link speed: 1Mbps, Max Supported Tx Link speed: 11Mbps, Rx Link speed: -1Mbps, Max Supported Rx Link speed: 11Mbps, Frequency: 2447MHz, Net ID: 0, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none>"AndroidWifi"openMLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -50 OwnerUid: 10178 AdminUids: [10178] SSID: "AndroidWifi" UnderlyingNetworks: Null]}  factorySerialNumber=6}
+01-04 23:27:13.340  1824  1824 D nativeloader: Configuring clns-shared-9 for other apk /system/priv-app/LocalTransport/LocalTransport.apk. target_sdk_version=36, uses_libraries=, library_path=/system/priv-app/LocalTransport/lib/x86_64:/system/priv-app/LocalTransport/LocalTransport.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.localtransport:/system/priv-app/LocalTransport:/system/lib64:/system_ext/lib64
+01-04 23:27:13.360  1594  1594 D PrimesLoggerHolder: Primes instant initialization
+01-04 23:27:13.369   240   240 I vold    : Filesystem check completed OK
+01-04 23:27:13.374   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.375   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.376   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.376   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.408  1418  1883 E ActivityThread: Failed to find provider info for androidx.car.app.connection
+01-04 23:27:13.427  1244  1244 E .gms.persistent: hiddenapi: Accessing hidden method Landroid/net/ConnectivityManager;->isNetworkTypeMobile(I)Z (runtime_flags=0, domain=platform, api=max-target-p) from Lbsxz; (domain=app) using reflection: denied
+01-04 23:27:13.427  1244  1244 E .gms.persistent: hiddenapi: Accessing hidden method Landroid/os/PowerManager;->isLightDeviceIdleMode()Z (runtime_flags=0, domain=platform, api=max-target-s) from Lbsxz; (domain=app) using reflection: denied
+01-04 23:27:13.443   697   794 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1352 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4179 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1848 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1421 
+01-04 23:27:13.456  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:13.456  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:13.445  1452  1452 I LatinApp: LatinApp.initialize():202 initialize()
+01-04 23:27:13.488   240   240 I vold    : Mounting public fuse volume
+01-04 23:27:13.489   240   240 I vold    : Creating mount directory /mnt/user/0
+01-04 23:27:13.527   240   240 I vold    : Bind mounting /mnt/media_rw/0000-0000 to /mnt/pass_through/0/0000-0000
+01-04 23:27:13.541   697   831 I StorageSessionController: On volume mount VolumeInfo{public:253,80}:
+01-04 23:27:13.541   697   831 I StorageSessionController:     type=PUBLIC diskId=disk:253,80 partGuid= mountFlags=VISIBLE_FOR_WRITE 
+01-04 23:27:13.541   697   831 I StorageSessionController:     mountUserId=0 state=CHECKING 
+01-04 23:27:13.541   697   831 I StorageSessionController:     fsType=vfat fsUuid=0000-0000 fsLabel=SDCARD 
+01-04 23:27:13.541   697   831 I StorageSessionController:     path=/storage/0000-0000 internalPath=/mnt/media_rw/0000-0000 
+01-04 23:27:13.541   697   831 W UserManager: The System (uid 1000) is fetching a copy of UserProperties on behalf of callingUid 0. Possibly it should carefully first clearCallingIdentity or perhaps use UserManagerInternal.getUserProperties() instead?
+01-04 23:27:13.541   697   831 W UserManager: java.lang.Throwable
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.UserManager.getUserProperties(UserManager.java:4049)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.UserManager.isMediaSharedWithParent(UserManager.java:6288)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.storage.StorageSessionController.getConnectionUserIdForVolume(StorageSessionController.java:87)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.storage.StorageSessionController.onVolumeMount(StorageSessionController.java:121)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.StorageManagerService$8.onVolumeChecking(StorageManagerService.java:2424)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.IVoldMountCallback$Stub.onTransact(IVoldMountCallback.java:94)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.Binder.execTransactInternal(Binder.java:1426)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.Binder.execTransact(Binder.java:1365)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.BinderProxy.transactNative(Native Method)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.BinderProxy.transact(BinderProxy.java:592)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.IVold$Stub$Proxy.mount(IVold.java:1761)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.StorageManagerService.mount(StorageManagerService.java:2413)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.StorageManagerService.-$$Nest$mmount(StorageManagerService.java:0)
+01-04 23:27:13.541   697   831 W UserManager: 	at com.android.server.StorageManagerService$StorageManagerServiceHandler.handleMessage(StorageManagerService.java:784)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.Looper.loopOnce(Looper.java:248)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.Looper.loop(Looper.java:338)
+01-04 23:27:13.541   697   831 W UserManager: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+01-04 23:27:13.541   697   831 I StorageSessionController: Creating and starting session with id: public:253,80
+01-04 23:27:13.544  1546  1775 I ExternalStorageServiceImpl: Starting session for id: public:253,80
+01-04 23:27:13.548  1546  1775 V FuseDaemonThread: Waiting 100ms for FUSE start. Count 49
+01-04 23:27:13.549  1546  1894 I FuseDaemonThread: Starting thread for public:253,80 ...
+01-04 23:27:13.549  1546  1894 I FuseDaemon: fuse-bpf is enabled because of property ro.fuse.bpf.is_running
+01-04 23:27:13.549  1546  1894 I FuseDaemon: Using FUSE BPF, BPF prog fd fetched
+01-04 23:27:13.549  1546  1894 I FuseDaemon: Starting fuse...
+01-04 23:27:13.574  1551  1863 W JobInfo : Requested important-while-foreground flag for job13 is ignored and takes no effect
+01-04 23:27:13.643   697   894 D NetworkTimeUpdateService: New default network 100; checking time.
+01-04 23:27:13.648   962  1787 D CCodecBufferChannel: [c2.android.vorbis.decoder#650] MediaCodec discarded an unknown buffer
+01-04 23:27:13.648   962  1787 D CCodecBufferChannel: [c2.android.vorbis.decoder#650] MediaCodec discarded an unknown buffer
+01-04 23:27:13.648   962  1787 D CCodecBufferChannel: [c2.android.vorbis.decoder#650] MediaCodec discarded an unknown buffer
+01-04 23:27:13.648  1452  1914 D CompatChangeReporter: Compat change id reported: 279646685; UID 10157; state: ENABLED
+01-04 23:27:13.649  1418  1418 I DialerMainActivityStartupMonitor: com.android.dialer.startup.mainactivitystartup.MainActivityStartupMonitor.onApplicationCreated$lambda$0:32 mainActivityCreated: false
+01-04 23:27:13.703   962  1787 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:13.703   629  1034 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:13.704   629  1034 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+01-04 23:27:13.713   629  1034 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7b4554b21568 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+01-04 23:27:13.721  1824  1824 I .localtransport: AssetManager2(0x7c130702ca18) locale list changing from [] to [en-US]
+01-04 23:27:13.731   697   729 D ConnectivityService: requestNetwork for uid/pid:1000/697 asUid: 10147 activeRequest: null callbackRequest: 66 [NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10147 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|BLK
+01-04 23:27:13.785  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:13.785  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:13.785  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:13.801  1418  1418 I DialerInternalSemanticEventLoggerImpl: com.android.dialer.cui.impl.InternalSemanticEventLoggerImpl.handleEvent:146 CUI event: APP_ON_CREATE_RUNNABLE_COMPLETED_BEFORE_MAIN_ACTIVITY_CREATED; uniqueCallId: null
+01-04 23:27:13.818  1418  1816 I DialerInternalSemanticEventLoggerImpl: com.android.dialer.cui.impl.InternalSemanticEventLoggerImpl.processPotentialCancelEvent:232 Cancelled logging CUI AppStartToMainActivity to GIL due to cancelEvent
+01-04 23:27:13.820  1594  1594 I efqm    : SslGuard completed installation.
+01-04 23:27:13.872   697   889 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.872   697   889 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment: Currently set values for:
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment: com.android.localtransport is not listed in per-application setting
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment: ANGLE allowlist from config: com.dreamgames.royalmatch com.dts.freefiremax com.dxx.firenow com.gramgames.mergedragons com.ludo.king com.mojang.minecraftpe com.my.defense com.nintendo.zaka com.os.airforce com.playrix.fishdomdd.gplay io.teslatech.callbreak jp.konami.prospia net.peakgames.toonblast
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment: com.android.localtransport is not listed in ANGLE allowlist or settings, returning default
+01-04 23:27:13.902  1824  1824 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+01-04 23:27:13.908  1010  1862 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=466ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sun, 04 Jan 2026 18:27:14 GMT], X-Android-Received-Millis=[1767551233908], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1767551233857]}
+01-04 23:27:14.025  1052  1170 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:14.100  1481  1649 W JobInfo : Requested important-while-foreground flag for job42 is ignored and takes no effect
+01-04 23:27:14.105  1052  1104 I HWUI    : Davey! duration=863ms; Flags=0, FrameTimelineVsyncId=2942, IntendedVsync=112701618786, Vsync=113034952106, InputEventId=0, HandleInputStart=113035352270, AnimationStart=113035352732, PerformTraversalsStart=113035828807, DrawStart=113036526971, FrameDeadline=113518285420, FrameStartTime=113035185213, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=113169311834, SyncStart=113468686744, IssueDrawCommandsStart=113468887055, SwapBuffers=113495263897, FrameCompleted=113864822759, DequeueBufferDuration=154194377, QueueBufferDuration=429411, GpuCompleted=113855895960, SwapBuffersCompleted=113864822759, DisplayPresentTime=0, CommandSubmissionCompleted=113495263897, 
+01-04 23:27:14.124   697   861 D ConnectivityService: Sending CONNECTED broadcast for type 1 [100 WIFI] isDefaultNetwork=true
+01-04 23:27:14.135   697   861 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1698 android.net.connectivity.com.android.server.ConnectivityService.sendStickyBroadcast:4081 android.net.connectivity.com.android.server.ConnectivityService.sendGeneralBroadcast:4051 android.net.connectivity.com.android.server.ConnectivityService.sendConnectedBroadcast:4024 android.net.connectivity.com.android.server.ConnectivityService.sendLegacyNetworkBroadcast:12439 
+01-04 23:27:14.145   697  1737 D WifiMemoryStoreImpl: Set cluster Gc365705a91b8ed50 for Wc365705a91b8ed50: SUCCESS
+01-04 23:27:14.164  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:14.164  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:14.204  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:14.204  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:14.204  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:14.204   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:14.206   697   853 W BestClock: java.time.DateTimeException: No network time available
+01-04 23:27:14.261  1452  1452 I DeviceModeNotification: DeviceModeNotification.getCurrentDeviceMode():75 device mode is unknown before initializing the notification.
+01-04 23:27:14.265  1452  1452 I DeviceModeModule: DeviceModeModule.calculateAndNotify():196 Window metrics is not available, fallback to app context.
+01-04 23:27:14.266  1452  1452 I DeviceModeModule: DeviceModeModule.calculateAndNotify():223 Device mode 'phone' from display metrics 'DisplayMetrics{density=0.0, width=1080, height=2400, scaledDensity=0.0, xdpi=420.0, ydpi=420.0}' or smallestScreenWidthDp: 411
+01-04 23:27:14.274  1452  1452 I ShortcutKeyAvailableChecker: ShortcutKeyAvailableChecker.updateShortcutKeysBlocklist():66 ShortcutKeysBlocklist: 
+01-04 23:27:14.280   697  1138 D CompatChangeReporter: Compat change id reported: 349487600; UID 10148; state: ENABLED
+01-04 23:27:14.314  1010  1150 D UpstreamNetworkMonitor: New default Internet network: 100
+01-04 23:27:14.324  1418  1418 I DialerSingletonScopedExternalsLogging: com.google.android.dialershared.externals.logging.SingletonScopedExternalsLogging.recordCallMethodInvocation:75 event: BROADCAST_RECEIVER_INTENT_EXTRAS, function parameters: [fyt,android.telephony.action.SHOW_VOICEMAIL_NOTIFICATION,[0,false]], return value: <empty>
+01-04 23:27:14.324  1418  1418 I DialerLegacyVoicemailNotificationReceiver: com.android.dialer.app.calllog.LegacyVoicemailNotificationReceiver.onReceive:74 intent was handled by MwiNotificationReceiver
+01-04 23:27:14.324  1481  1739 D CompatChangeReporter: Compat change id reported: 270674727; UID 10147; state: ENABLED
+01-04 23:27:14.325  1418  1418 W CarApp.Conn: Null response from content provider when checking connection to the car, treating as disconnected
+01-04 23:27:14.327  1418  1418 I DialerAndroidAutoStatusLookupImpl: com.android.dialer.androidautostatuslookup.impl.AndroidAutoStatusLookupImpl.awaitCallbackWithTimeout:133 liveData timeout exception.
+01-04 23:27:14.335  1418  1771 I DialerAndroidAutoStatusLookupImpl: com.android.dialer.androidautostatuslookup.impl.AndroidAutoStatusLookupImpl.isAndroidAutoConnected:97 Android Auto connected in 0 mode [CONTEXT ratelimit_period="1 MINUTES" ]
+01-04 23:27:14.341   697   894 D SntpClient: round trip: 321ms, clock offset: 412ms
+01-04 23:27:14.341  1418  1771 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:54 Impression: CALL_SCREEN_INIT_AT_STARTUP
+01-04 23:27:14.341   697   894 W AlarmManager: Unrecognized alarm listener com.android.server.timedetector.NetworkTimeUpdateService$ScheduledRefreshAlarmListener@e33ee20
+01-04 23:27:14.341  1418  1771 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:47 Impression: APP_LAUNCHED
+01-04 23:27:14.357   697   854 I system_server: AssetManager2(0x7c1307058618) locale list changing from [] to [en-US]
+01-04 23:27:14.362   697  1138 D ConnectivityService: requestNetwork for uid/pid:10148/1244 activeRequest: null callbackRequest: 69 [NetworkRequest [ REQUEST id=70, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10148 RequestorUid: 10148 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOSING|LOST|UNAVAIL|NC|LP|BLK
+01-04 23:27:14.386   697   861 D ConnectivityService: NetReassign [65 : null → 100, 39 : null → 100, 11 : 52 → 100, 45 : null → 100, 31 : null → 100, 6 : null → 100, 29 : null → 100, 25 : null → 100, 17 : null → 100, 27 : null → 100, 19 : null → 100, 50 : null → 100, 40 : null → 100, 33 : null → 100, 21 : null → 100, 55 : null → 100, 37 : null → 100, 35 : null → 100, 59 : null → 100, 41 : null → 100, 1 : null → 100, 23 : null → 100, 48 : null → 100, 43 : null → 100, 61 : null → 100] [c 0] [a 2248] [i 45]
+01-04 23:27:14.435   697   799 E JobScheduler.Quota: <0>com.google.android.dialer has 0 EJ quota without running anything
+01-04 23:27:14.439  1045  1071 W m.android.phone: Suspending all threads took: 586.373ms
+01-04 23:27:14.465   697   861 D ConnectivityService: NetReassign [67 : null → 100] [c 0] [a 0] [i 27]
+01-04 23:27:14.477   962   962 D InputMonitorCompat: Input monitor (edge-swipe-disp0) created
+01-04 23:27:14.477   962   962 D InputMonitorCompat: Input event receiver for monitor (edge-swipe-disp0) created
+01-04 23:27:14.481   697   855 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10147 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+01-04 23:27:14.481  1551  1551 I AiAiNotificationIntelli: Notification Intelligence initialization.
+01-04 23:27:14.481   697   855 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10147 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+01-04 23:27:14.481   697   855 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10147 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+01-04 23:27:14.481  1551  1551 I AiAiNotificationIntelli: Notification Intelligence initialization.
+01-04 23:27:14.481   697   855 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10147 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+01-04 23:27:14.493   240   240 I vold    : Configuring read_ahead of /mnt/user/0/0000-0000 fuse filesystem to 256kb
+01-04 23:27:14.494   240   240 I vold    : Writing 256 to /sys/class/bdi/0:124/read_ahead_kb
+01-04 23:27:14.494   240   240 I vold    : Configuring max_ratio of /mnt/user/0/0000-0000 fuse filesystem to 40
+01-04 23:27:14.494   240   240 I vold    : Writing 40 to /sys/class/bdi/0:124/max_ratio
+01-04 23:27:14.495   697   831 I StorageManagerService: Mounted volume VolumeInfo{public:253,80}:
+01-04 23:27:14.495   697   831 I StorageManagerService:     type=PUBLIC diskId=disk:253,80 partGuid= mountFlags=VISIBLE_FOR_WRITE 
+01-04 23:27:14.495   697   831 I StorageManagerService:     mountUserId=0 state=CHECKING 
+01-04 23:27:14.495   697   831 I StorageManagerService:     fsType=vfat fsUuid=0000-0000 fsLabel=SDCARD 
+01-04 23:27:14.495   697   831 I StorageManagerService:     path=/storage/0000-0000 internalPath=/mnt/media_rw/0000-0000 
+01-04 23:27:14.495   697   831 W StorageSessionController: No available storage user connection for userId : -1
+01-04 23:27:14.498   697   861 D ConnectivityService: NetReassign [no changes] [c 0] [a 10] [i 22]
+01-04 23:27:14.500   697   831 W BroadcastLoopers: Found previously unknown looper Thread[StorageManagerService,5,main]
+01-04 23:27:14.503   697  1138 D OomAdjuster: Not killing cached processes
+01-04 23:27:14.506   697   831 I StorageSessionController: Notifying volume state changed for session with id: emulated;0
+01-04 23:27:14.520  1824  1824 I LocalTransport: Creating LocalTransport for user 0 (DEBUG=false)
+01-04 23:27:14.534  1546  1775 I ExternalStorageServiceImpl: Ignoring volume state for vol:external_primary. State: checking
+01-04 23:27:14.537   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:14.538  1546  1775 V MediaStore: Examining volume emulated;0 with name external_primary and state mounted
+01-04 23:27:14.538  1546  1775 V MediaStore: Examining volume public:253,80 with name 0000-0000 and state mounted
+01-04 23:27:14.544   697   861 D ConnectivityService: NetReassign [70 : null → 100] [c 0] [a 41] [i 4]
+01-04 23:27:14.556   697   855 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=70, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10148 RequestorUid: 10148 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+01-04 23:27:14.556   697   855 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=70, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10148 RequestorUid: 10148 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+01-04 23:27:14.556   697   855 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=70, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10148 RequestorUid: 10148 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+01-04 23:27:14.557   697   855 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=70, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10148 RequestorUid: 10148 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+01-04 23:27:14.558  1551  1863 W JobInfo : Requested important-while-foreground flag for job14 is ignored and takes no effect
+01-04 23:27:14.581  1045  1045 D ServiceStateProvider: subId=1
+01-04 23:27:14.606  1551  1863 W JobInfo : Requested important-while-foreground flag for job15 is ignored and takes no effect
+01-04 23:27:14.665  1551  1928 I AiAiSuperpacks: Enum name "UNRECOGNIZED" does not exist
+01-04 23:27:14.685  1551  1928 I AiAiSuperpacks: Enum name "UNRECOGNIZED" does not exist
+01-04 23:27:14.686  1244  1359 I AlarmManager: set [name: SystemMemoryCache type: 2 triggerAtMillis: 315360114761 windowMillis: -1 intervalMillis: 0]
+01-04 23:27:14.701  1551  1928 I AiAiSuperpacks: Enum name "UNRECOGNIZED" does not exist
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: Failed to get boot count.
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: java.util.concurrent.TimeoutException: Timed out waiting for Task
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at ewxt.o(:com.google.android.gms@253830038@25.38.30 (260800-807569344):53)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at azpj.B(:com.google.android.gms@253830038@25.38.30 (260800-807569344):21)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at azlk.run(:com.google.android.gms@253830038@25.38.30 (260800-807569344):13)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at bbvj.c(:com.google.android.gms@253830038@25.38.30 (260800-807569344):50)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at bbvj.run(:com.google.android.gms@253830038@25.38.30 (260800-807569344):70)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at bcba.run(:com.google.android.gms@253830038@25.38.30 (260800-807569344):8)
+01-04 23:27:14.701  1244  1389 E CCTFlatFileLogStore: 	at java.lang.Thread.run(Thread.java:1119)
+01-04 23:27:14.705  1551  1928 I AiAiSuperpacks: Enum name "UNRECOGNIZED" does not exist
+01-04 23:27:14.721   697   831 I StorageSessionController: Notifying volume state changed for session with id: emulated;0
+01-04 23:27:14.724  1546  1775 V MediaProvider: attachVolume() called for external_primary with state:mounted
+01-04 23:27:14.727  1546  1775 D MediaProvider: Received db backup Fuse Daemon for: external_primary
+01-04 23:27:14.733  1546  1775 E FuseDaemon: Leveldb setup is missing for: internal
+01-04 23:27:14.744   697   910 D BackgroundInstallControlService: Package event received: 0
+01-04 23:27:14.746  1551  1863 W JobInfo : Requested important-while-foreground flag for job23 is ignored and takes no effect
+01-04 23:27:14.777   697   944 W ActivityManager: Slow operation: 242ms so far, now at finishAttachApplicationInner: after mServices.attachApplicationLocked
+01-04 23:27:14.777   697   944 W ActivityManager: Slow operation: 242ms so far, now at finishAttachApplicationInner: after dispatching broadcasts
+01-04 23:27:14.779  1052  1448 I HWUI    : Davey! duration=1034ms; Flags=0, FrameTimelineVsyncId=2957, IntendedVsync=113051618772, Vsync=113468285422, InputEventId=0, HandleInputStart=113478875464, AnimationStart=113478875859, PerformTraversalsStart=113479175938, DrawStart=113479220011, FrameDeadline=113884952072, FrameStartTime=113477632344, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=113479541622, SyncStart=113864973054, IssueDrawCommandsStart=113874173363, SwapBuffers=113874955849, FrameCompleted=114471883414, DequeueBufferDuration=3906, QueueBufferDuration=270984, GpuCompleted=114471883414, SwapBuffersCompleted=114236802724, DisplayPresentTime=0, CommandSubmissionCompleted=113874955849, 
+01-04 23:27:14.781  1594  1898 D nativeloader: Load /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64/libnative_crash_handler_jni.so using class loader ns product-clns-10 (caller=/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!classes4.dex): ok
+01-04 23:27:14.795  1052  1170 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:14.865  1509  1776 V Configuration: Updating configuration, locales updated from [] to [en_US]
+01-04 23:27:14.865  1509  1776 I gle.android.gms: AssetManager2(0x7c13070291d8) locale list changing from [] to [en-US]
+01-04 23:27:14.881  1509  1776 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+01-04 23:27:14.881  1509  1776 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+01-04 23:27:14.881  1509  1776 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+01-04 23:27:14.901  1452  1452 I BrellaConfigModule: BrellaConfigModule.onCreate():33 set BrellaInit fields for in-app training.
+01-04 23:27:14.905  1452  1452 W NotificationCenter: NotificationCenter$NotificationQueue.notifyPendingNotificationsOnExecutor():877 Heavy notify work detected on UI thread: [irt->lhf, irt->lhf, mds->lhf] takes 642ms
+01-04 23:27:14.982  1653  1821 V ContactsProvider: 0 Dangling Contacts have been cleaned up.
+01-04 23:27:14.983  1045  1045 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+01-04 23:27:15.002  1244  1738 I SQLiteConnection: Long db operation: /data/user/0/com.google.android.gms/databases/phenotype.db
+01-04 23:27:15.021  1551  1863 W JobInfo : Requested important-while-foreground flag for job28 is ignored and takes no effect
+01-04 23:27:15.024  1551  1863 W JobInfo : Requested important-while-foreground flag for job29 is ignored and takes no effect
+01-04 23:27:15.038  1551  1863 W JobInfo : Requested important-while-foreground flag for job30 is ignored and takes no effect
+01-04 23:27:15.063  1052  1448 I HWUI    : Davey! duration=1265ms; Flags=0, FrameTimelineVsyncId=2972, IntendedVsync=113484952088, Vsync=114084952064, InputEventId=0, HandleInputStart=114121070454, AnimationStart=114121071377, PerformTraversalsStart=114132495429, DrawStart=114132570687, FrameDeadline=114501618714, FrameStartTime=114100041927, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=114132984467, SyncStart=114236889634, IssueDrawCommandsStart=114237047457, SwapBuffers=114241122984, FrameCompleted=114854171983, DequeueBufferDuration=275639220, QueueBufferDuration=228546, GpuCompleted=114850319682, SwapBuffersCompleted=114854171983, DisplayPresentTime=0, CommandSubmissionCompleted=114241122984, 
+01-04 23:27:15.074   962   962 E LauncherProxyService: Failed to get launcher proxy for disable flags.
+01-04 23:27:15.088  1824  1824 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+01-04 23:27:15.145  1418  1433 W .android.dialer: Suspending all threads took: 729.462ms
+01-04 23:27:15.211  1244  1244 I .gms.persistent: Waiting for a blocking GC ClassLinker
+01-04 23:27:15.211  1045  1045 V SimultaneousCallingTracker: Received EVENT 101
+01-04 23:27:15.211  1045  1045 D SimultaneousCallingTracker: Ignoring updatePhoneMapAndSimultaneousCallSupportMap since device is not DSDA capable.
+01-04 23:27:15.269   697   697 I TransportConnection: LocalTransportService#0: Notifying [TransportManager.registerTransport()] transport = BackupTransportClient
+01-04 23:27:15.284   697   926 W ActivityManager: Slow operation: 248ms so far, now at finishAttachApplicationInner: after mServices.attachApplicationLocked
+01-04 23:27:15.284   697   926 W ActivityManager: Slow operation: 248ms so far, now at finishAttachApplicationInner: after dispatching broadcasts
+01-04 23:27:15.346  1551  1551 I AiAiVC  : Created AiAiContentCaptureService.
+01-04 23:27:15.354   962   970 W ndroid.systemui: Suspending all threads took: 275.823ms
+01-04 23:27:15.366  1551  1863 W JobInfo : Requested important-while-foreground flag for job31 is ignored and takes no effect
+01-04 23:27:15.369  1551  1551 I AiAiCaptions: SystemCaptionsManagerService::onCreate()
+01-04 23:27:15.437  1551  1551 I AiAiCaptions: SystemCaptionsManagerService::onBind()
+01-04 23:27:15.439  1551  1551 I AiAiAutofill: Created AiAiAugmentedAutofillService.
+01-04 23:27:15.659  1452  1452 I putmethod.latin: AssetManager2(0x7c130702e958) locale list changing from [] to [en-US]
+01-04 23:27:15.675   697   745 I ActivityManager: Extending process start timeout by 9543ms for ProcessRecord{8108a5 1559:com.google.android.googlequicksearchbox:interactor/u0a149}
+01-04 23:27:15.692  1052  1170 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:15.733  1452  1452 I putmethod.latin: AssetManager2(0x7c1307030578) locale list changing from [] to [en-US]
+01-04 23:27:15.740  1452  1452 I GoogleInputMethodService: GoogleInputMethodService.onCreate():602 
+01-04 23:27:15.932  1452  1452 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+01-04 23:27:15.934  1452  1452 I GoogleInputMethodService: GoogleInputMethodService.onCreate():612 Maybe update OEM display config because of service creation
+01-04 23:27:15.946  1010  1860 D NetworkMonitor/100: PROBE_FALLBACK http://www.google.com/gen_204 time=911ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Content-Security-Policy=[object-src 'none';base-uri 'self';script-src 'nonce-iLfCIDU9oQLzVbGFhJzb_Q' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other], Content-Type=[text/html; charset=UTF-8], Date=[Sun, 04 Jan 2026 18:27:16 GMT], Permissions-Policy=[unload=()], Server=[gws], X-Android-Received-Millis=[1767551235938], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1767551235559], X-Frame-Options=[SAMEORIGIN], X-XSS-Protection=[0]}
+01-04 23:27:15.948  1452  1452 I DeviceModeModule: DeviceModeModule.calculateAndNotify():223 Device mode 'phone' from display metrics 'DisplayMetrics{density=0.0, width=1080, height=2400, scaledDensity=0.0, xdpi=420.0, ydpi=420.0}' or smallestScreenWidthDp: 411
+01-04 23:27:15.949  1452  1452 I WindowMetricsNotification: WindowMetricsNotification.notify():159 mub[bounds=Rect(0, 132 - 1080, 2400), insets=Rect(0, 0 - 0, 0), densityDpi=420, smallestScreenWidthDp=411, displayWidth=1080, displayHeight=2400, xdpi=420.0, ydpi=420.0, isTrustable=true, displayId=0]; DisplayMetrics{density=2.625, width=1080, height=2400, scaledDensity=2.625, xdpi=420.0, ydpi=420.0}
+01-04 23:27:15.949  1452  1452 I WindowMetricsHelper: WindowMetricsHelper.predictAndNotify():140 Window metrics predicted.
+01-04 23:27:15.952  1452  1452 I InputMethodEntryManager: InputMethodEntryManager.notifyCurrentInputMethodEntryOnContextChanged():545 notifyCurrentInputMethodEntryOnContextChanged()
+01-04 23:27:15.952  1452  1452 I InputMethodEntryManager: InputMethodEntryManager.notifyCurrentInputMethodEntryOnContextChanged():550 The context is changed before initialized
+01-04 23:27:15.953  1452  1452 I KeyboardContextProvider: KeyboardContextProvider.setBaseContextAndInvalidKeyboardContextCache():88 setBaseContextAndInvalidKeyboardContextCache(): com.android.inputmethod.latin.LatinIME@7c6a11a
+01-04 23:27:15.953  1045  1045 D TelephonyProvider: subId:1 mccmnc=310260 carrierId=1, match current APN size:  1
+01-04 23:27:15.954  1045  1045 D TelephonyProvider: match MNO APN: 1
+01-04 23:27:15.954  1045  1045 D TelephonyProvider: match carrier id APN: 0
+01-04 23:27:15.964  1452  1452 E GoogleInputMethodService: GoogleInputMethodService.getAppEditorInfo():1807 App EditorInfo should never be null.
+01-04 23:27:15.997   962  1077 W Looper  : Slow dispatch took 2645ms SysUiBg app=com.android.systemui main=false group=FOREGROUND h=android.os.Handler c=android.telephony.TelephonyCallback$IPhoneStateListenerStub$$ExternalSyntheticLambda79@c38ba81 m=0
+01-04 23:27:16.017  1052  1416 I HWUI    : Davey! duration=1474ms; Flags=0, FrameTimelineVsyncId=3003, IntendedVsync=114284952056, Vsync=114868285366, InputEventId=0, HandleInputStart=115133068152, AnimationStart=115133068982, PerformTraversalsStart=115133318274, DrawStart=115133366260, FrameDeadline=115351618680, FrameStartTime=114869958135, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=115133656405, SyncStart=115138354070, IssueDrawCommandsStart=115138577803, SwapBuffers=115249188994, FrameCompleted=115764345443, DequeueBufferDuration=233995510, QueueBufferDuration=334762, GpuCompleted=115732554511, SwapBuffersCompleted=115764345443, DisplayPresentTime=0, CommandSubmissionCompleted=115249188994, 
+01-04 23:27:16.021  1551  1778 D nativeloader: Load libtextclassifier3_jni_agsa.so using class loader ns product-clns-9 (caller=/product/priv-app/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08/DevicePersonalizationPrebuiltPixel2021-bfinal_aiai_20250217.00_RC08.apk!classes2.dex): dlopen failed: library "libtextclassifier3_jni_agsa.so" not found
+01-04 23:27:16.051  1452  1461 W putmethod.latin: Cleared Reference was only reachable from finalizer (only reported once)
+01-04 23:27:16.054   697   745 I ActivityManager: Extending process start timeout by 9523ms for ProcessRecord{23f03cb 1594:com.google.android.apps.messaging:rcs/u0a145}
+01-04 23:27:16.075   697  1138 D FileUtils: Rounded bytes from 2067255296 to 4000000000
+01-04 23:27:16.083  1452  1452 I KeyboardThemeProvider: KeyboardThemeProvider.applyKeyboardTheme():27 Apply keyboard theme: theme_400_border_bottom4dp_display_size_adaptive_400_gsans_keyboard_mode_screen_size_5_5_light_noshadow_overlay_builtin_dynamic_color_light_base.binarypb:gm3-light-fffaf8ff-ff475d92-6dac7c28fa7faa76f8370bbfdbc77981_phone_port_silkpopup_stylesheet
+01-04 23:27:16.088  1452  1452 I HardKeyTracker: HardKeyTracker.registerKeySequence():138 Register key sequence lsr{labelResId=0, callback=jlb@fdb5aad, lastModifier=0, keyCodes=[204], actions=[0]}
+01-04 23:27:16.089  1452  1452 I HardKeyTracker: HardKeyTracker.registerKeySequence():138 Register key sequence lsr{labelResId=2132020174, callback=buq@bfff4a9, lastModifier=2, keyCodes=[47], actions=[0]}
+01-04 23:27:16.092   962  1077 W Looper  : Slow delivery took 2265ms SysUiBg app=com.android.systemui main=false group=FOREGROUND h=android.net.ConnectivityManager$CallbackHandler c=null m=2
+01-04 23:27:16.102  1452  1452 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():740 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}, LanguageTagVariantTuple{languageTag=zz, variant=qwerty}]
+01-04 23:27:16.104  1452  1452 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():872 update loading task with resetImplicitlyEnabledEntries is false
+01-04 23:27:16.124  1546  1693 D SyncWorkManager: EndlessWorker has been enqueued
+01-04 23:27:16.125  1546  1693 I SyncWorkManager: Scheduling periodic proactive syncs
+01-04 23:27:16.126  1481  1649 W JobInfo : Requested important-while-foreground flag for job48 is ignored and takes no effect
+01-04 23:27:16.194  1551  1940 I AiAiSpeechRecognition: Found 1 pre-existing WorkInfos for LanguagePacks: [WorkInfo{id='adfbc2ed-a991-45eb-bfd3-4277403ce3d7', state=ENQUEUED, outputData=Data {}, tags=[com.google.android.libraries.speech.modeldownload.languagepacks.backgroundtask.workmanager.LanguagePackAutoUpdateWorker], progress=Data {}, runAttemptCount=0, generation=0, constraints=Constraints{requiredNetworkType=NOT_REQUIRED, requiresCharging=true, requiresDeviceIdle=false, requiresBatteryNotLow=true, requiresStorageNotLow=false, contentTriggerUpdateDelayMillis=-1, contentTriggerMaxDelayMillis=-1, contentUriTriggers=[], }, initialDelayMillis=0, periodicityInfo=PeriodicityInfo{repeatIntervalMillis=14400000, flexIntervalMillis=14400000}, nextScheduleTimeMillis=1767547649193}, stopReason=-256]
+01-04 23:27:16.244   697   826 D InputMethodManagerService: Initializing Handwriting Spy
+01-04 23:27:16.275  1551  1927 I AiAiSuperpacks: No superpacks to release, will no-op
+01-04 23:27:16.346  1418  1418 I DialerVoicemailModule: com.android.voicemail.impl.VoicemailModule.provideVoicemailClient:66 Providing stub due to flag
+01-04 23:27:16.367  1452  1452 I putmethod.latin: AssetManager2(0x7c130702f8f8) locale list changing from [] to [en-US]
+01-04 23:27:16.379  1418  1418 I DialerMwiNotificationReceiver: com.android.dialer.voicemail.notification.receivers.MwiNotificationReceiver.onReceive:77 enter
+01-04 23:27:16.379  1418  1418 I DialerSingletonScopedExternalsLogging: com.google.android.dialershared.externals.logging.SingletonScopedExternalsLogging.recordCallMethodInvocation:75 event: BROADCAST_RECEIVER_INTENT_EXTRAS, function parameters: [psd,android.telephony.action.SHOW_VOICEMAIL_NOTIFICATION,[0,false,null]], return value: <empty>
+01-04 23:27:16.381  1418  1418 I DialerSingletonScopedExternalsLogging: com.google.android.dialershared.externals.logging.SingletonScopedExternalsLogging.recordCallMethodInvocation:75 event: BROADCAST_RECEIVER_INTENT_EXTRAS, function parameters: [psd,android.telephony.action.SHOW_VOICEMAIL_NOTIFICATION,[[com.android.phone/com.android.services.telephony.TelephonyConnectionService : [PII]49]]], return value: <empty>
+01-04 23:27:16.381  1418  1418 I DialerMwiNotificationReceiver: com.android.dialer.voicemail.notification.receivers.MwiNotificationReceiver.handleNotification:113 clear the MWI notification
+01-04 23:27:16.478  1546  1693 I SyncWorkManager: Scheduling periodic picker album data resets
+01-04 23:27:16.484  1551  1927 D androidtc: Initializing SystemTextClassifier, type = System
+01-04 23:27:16.534  1418  1816 I DialerSingletonScopedExternalsLogging: com.google.android.dialershared.externals.logging.SingletonScopedExternalsLogging.recordCallMethodInvocation:75 event: BROADCAST_RECEIVER, function parameters: [Broadcast to com.android.dialer.app.calllog.LegacyVoicemailNotificationReceiver_Receiver android.telephony.action.SHOW_VOICEMAIL_NOTIFICATION,2026-01-04 23:27:14.319], return value: <empty>
+01-04 23:27:16.535  1551  1927 W SystemServiceRegistry: No service published for: persistent_data_block
+01-04 23:27:16.552  1418  1418 I DialerBroadcastReceiverStrategyImpl: com.android.dialer.broadcastreceiverstrategy.impl.BroadcastReceiverStrategyImpl.backgroundThenInlineThenForeground:78 try doing work using a background service
+01-04 23:27:16.566   697  1095 D CompatChangeReporter: Compat change id reported: 319471980; UID 10142; state: ENABLED
+01-04 23:27:16.614   697   796 D WifiNl80211Manager: Scan result ready event
+01-04 23:27:16.614   697   796 D WifiNative: Scan result ready event
+01-04 23:27:16.632  1546  1750 D WM-GreedyScheduler: Ignoring {WorkSpec: 397ce892-95bc-4494-a3a9-f71d1539c889}. Requires device idle.
+01-04 23:27:16.632  1546  1750 D WM-GreedyScheduler: Ignoring {WorkSpec: eaecfd55-c276-4cdd-90a9-5285146c213d}. Requires device idle.
+01-04 23:27:16.736  1418  1768 I DialerSingletonScopedExternalsLogging: com.google.android.dialershared.externals.logging.SingletonScopedExternalsLogging.recordCallMethodInvocation:75 event: NOTIFICATION_CANCEL, function parameters: [LegacyVoicemail,1], return value: <empty>
+01-04 23:27:16.743   697  1011 D CompatChangeReporter: Compat change id reported: 311208629; UID 10142; state: ENABLED
+01-04 23:27:16.752   697   855 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+01-04 23:27:16.795  1052  1170 I Choreographer: Skipped 46 frames!  The application may be doing too much work on its main thread.
+01-04 23:27:16.820  1551  1942 I TrainerClient: Preparing to schedule training for population:aiai/playstore/pecanconversationfragmentevents session_name:pecanconversationfragmentevents

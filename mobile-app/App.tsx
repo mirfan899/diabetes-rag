@@ -1,5 +1,6 @@
+console.error('[App.tsx] EVALUATING');
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -14,12 +15,15 @@ import { AuthService } from './src/services/auth';
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
+  console.error('[App] function execution started');
   const [isLoading, setIsLoading] = useState(true);
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Eula');
 
   useEffect(() => {
+    console.error('[App] useEffect checkState started');
     const checkState = async () => {
       try {
+        console.error('[App] checking isEulaAccepted');
         const eulaAccepted = await AuthService.isEulaAccepted();
         if (!eulaAccepted) {
           setInitialRoute('Eula');
@@ -34,6 +38,7 @@ export default function App() {
       } catch (e) {
         console.error(e);
       } finally {
+        console.error('[App] checkState finished, initialRoute:', initialRoute);
         setIsLoading(false);
       }
     };
