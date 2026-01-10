@@ -1,4 +1,4 @@
-console.error('[ResultScreen] EVALUATING');
+
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useRoute } from '@react-navigation/native';

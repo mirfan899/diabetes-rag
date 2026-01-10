@@ -1,4 +1,4 @@
-console.error('[HomeScreen] EVALUATING');
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, ScrollView, StyleSheet, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -79,10 +79,7 @@ const HomeScreen = () => {
 
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-            {/* Explicit Back Button for better UX */}
-            <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('DoctorProfile')}>
-                <Text style={styles.backButtonText}>← Back to Dashboard</Text>
-            </TouchableOpacity>
+
 
             <Text style={styles.title}>Diabetes RAG Advisor</Text>
 

@@ -1,19 +1,27 @@
-console.error('[DoctorProfileScreen] EVALUATING');
+
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AuthService } from '../services/auth';
+import EulaModal from '../components/EulaModal';
 
 const DoctorProfileScreen = () => {
     const navigation = useNavigation<any>();
     const [doctorName, setDoctorName] = useState<string | null>('');
+    const [showEula, setShowEula] = useState(false);
 
     useEffect(() => {
-        const loadDoctorName = async () => {
-            const name = await AuthService.getDoctorName();
+        const checkState = async () => {
+            const [name, eulaAccepted] = await Promise.all([
+                AuthService.getDoctorName(),
+                AuthService.isEulaAccepted()
+            ]);
             setDoctorName(name);
+            if (!eulaAccepted) {
+                setTimeout(() => setShowEula(true), 100);
+            }
         };
-        loadDoctorName();
+        checkState();
     }, []);
 
     const handleLogout = async () => {
@@ -57,6 +65,8 @@ const DoctorProfileScreen = () => {
             <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
                 <Text style={styles.logoutText}>Logout</Text>
             </TouchableOpacity>
+
+            <EulaModal visible={showEula} onAccept={() => setShowEula(false)} />
         </View>
     );
 };

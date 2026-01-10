@@ -1,6 +1,5 @@
 
 export type RootStackParamList = {
-    Eula: undefined;
     Login: undefined;
     DoctorProfile: undefined;
     Home: undefined;

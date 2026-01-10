@@ -6,9 +6,7 @@ const DOCTOR_NAME_KEY = 'DOCTOR_NAME';
 
 export const AuthService = {
     async isEulaAccepted(): Promise<boolean> {
-        console.error('[AuthService] isEulaAccepted started');
         const value = await AsyncStorage.getItem(EULA_ACCEPTED_KEY);
-        console.error('[AuthService] isEulaAccepted finished, value:', value);
         return value === 'true';
     },
 
@@ -31,9 +29,9 @@ export const AuthService = {
     },
 
     async isAuthenticated(): Promise<boolean> {
-        console.error('[AuthService] isAuthenticated started');
+
         const token = await AsyncStorage.getItem(AUTH_TOKEN_KEY);
-        console.error('[AuthService] isAuthenticated finished');
+
         return !!token;
     },
 
